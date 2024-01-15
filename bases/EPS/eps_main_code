@@ -1,1 +1,380 @@
+********************************************************************************
+*********************************CREACION PANEL EPS*****************************
+*PASO 1: DEBEMOS USAR LOS MERGE REALIZADOS DE CADA UNO DE LOS AÑOS:
+*BASES SON: eps_2006_vivos_clean, eps_2012_vivos_clean, eps_2015_vivos_clean
+*DEBEMOS ENCONTRAR EL MAYOR SET DE DATOS EN COMÚN:
+
+
+
+
+
+
+
+
+
+
+use "D:\plataforma_migra\EPS_clean\eps_2006_vivos_clean.dta" , clear
+
+keep region a6a a6b a6c a7 a8 a9 a10 a12n factor_EPS06  c31_1m c31_2m c31_3m c31_4m d1  d3_1 i26 d39 d7 d27_1m d27_2m d27_3m d27_4m d27_5m d27_6m d27_7m d27_8m d27_9m d27_10m d19 d25_1 d25_2 d25_3 d25_4 d30_1 d30_2 d30_3 d30_4 d37_1m d37_2m d37_3m d37_4m d37_5m d37_6m d37_7m d37_8m d37_9m d37_10m d37_11m d37_12m  j7a j7b j7c j7d k8 k9
+
+***************************GENERAMOS VARIABLES DE INTERES**********************
+gen extranjero=.
+replace extranjero=1 if a6a==14
+replace extranjero=0 if a6a!=14
+
+
+replace d27_1m =0 if d27_1m==.
+replace d27_2m =0 if d27_2m==.
+replace d27_3m =0 if d27_3m==.
+replace d27_4m =0 if d27_4m==.
+replace d27_5m =0 if d27_5m==.
+replace d27_6m =0 if d27_6m==.
+replace d27_7m =0 if d27_7m==.
+replace d27_8m =0 if d27_8m==.
+replace d27_9m =0 if d27_9m==.
+replace d27_10m =0 if d27_10m==.
+
+replace d37_1m =0 if d37_1m==.
+replace d37_2m =0 if d37_2m==.
+replace d37_3m =0 if d37_3m==.
+replace d37_4m =0 if d37_4m==.
+replace d37_5m =0 if d37_5m==.
+replace d37_6m =0 if d37_6m==.
+replace d37_7m =0 if d37_7m==.
+replace d37_8m =0 if d37_8m==.
+replace d37_9m =0 if d37_9m==.
+replace d37_10m =0 if d37_10m==.
+replace d37_11m =0 if d37_11m==.
+replace d37_12m =0 if d37_12m==.
+
+replace d30_1 =0 if d30_1==.
+replace d30_2 =0 if d30_2==.
+replace d30_3 =0 if d30_3==.
+replace d30_4 =0 if d30_4==.
+
+replace c31_1m =0 if c31_1m==.
+replace c31_2m =0 if c31_2m==.
+replace c31_3m =0 if c31_3m==.
+replace c31_4m =0 if c31_4m==.
+
+
+replace d25_1=0 if d25_1==.
+replace d25_2=0 if d25_2==.
+replace d25_3=0 if d25_3==.
+replace d25_4=0 if d25_4==.
+
+
+
+gen ahorros= d27_1m + d27_2m + d27_3m + d27_4m + d27_5m + d27_6m + d27_7m + d27_8m + d27_9m + d27_10m
+
+gen deuda= d37_1m + d37_2m + d37_3m + d37_4m + d37_5m + d37_6m + d37_7m + d37_8m + d37_9m   + d37_10m + d37_11m + d37_12m
+gen valor_propiedades=d19
+gen valor_vehiculos= d25_1 + d25_2 + d25_3+ d25_4
+gen deuda_vehiculos= d30_1 + d30_2 + d30_3 + d30_4
+gen carga_familiar=d39
+gen otros_ingresos=c31_1m + c31_2m + c31_3m + c31_4m
+
+
+gen anio=2006
+
+
+
+*************************************RENOMBRAMOS VARIABLES**********************
+
+rename a8 sexo
+rename a9 edad
+rename a7 desde_chile
+rename a6a lugar_nacimiento
+rename a6b lugar_nacimiento_comuna
+rename a6c cod_pais
+rename a10 estado_salud
+rename a12n nivel_educ
+rename d1 tipo_vivienda
+rename d3_1 habitaciones
+rename d7 dueño_casa
+rename k8 dinero_retiro
+rename k9 plan_ahorro
+rename d39 menores_a_cargo
+rename i26 futuros_hijos
+rename factor_EPS06 factor_exp
+decode cod_pais , gen(pais)
+decode lugar_nacimiento_comuna , gen(comuna)
+drop d27_1m d27_2m d27_3m d27_4m d27_5m d27_6m d27_7m d27_8m d27_9m d27_10m d37_1m d37_2m d37_3m d37_4m d37_5m d37_6m d37_7m d37_8m d37_9m  d37_10m d37_11m d37_12m d25_1 d25_2 d25_3 d25_4 d30_1 d30_2 d30_3 d30_4 c31_1m c31_2m c31_3m c31_4m d19
+
+save "D:\plataforma_migra\EPS_clean\eps_2006_clean_panel.dta", replace
+
+
+*************************************2012***************************************
+
+use "D:\plataforma_migra\EPS_clean\eps_2012_vivos_clean.dta", clear
+
+keep  d7 d1 a8 a9 a7 a6b  a6b_cod a10 a10a a12n a6c a6c_cod d17 a6a a10 b26a b31c b32a b38 b38j d17 d34 d25_1  d30_1 d30_2 d30_3 d30_4 f30a  e20 i26   d37m_01 d37m_02 d37m_03 d37m_04 d37m_05 d37m_06 d37m_07 d37m_08 d37m_09 d37m_10 d37m_11 d37m_12 d27m_1 d27m_2 d27m_3 d27m_4 d27m_5 d27m_6 d27m_7 f38_01 f38_02 f38_03 f38_04 f38_05 f38_06 f38_07 f38_08 f38_09 f38_10 f38_11 f38_1_01 f38_1_02 f38_1_03 f38_1_04 f38_1_05 f38_1_06 f38_1_07 f38_1_08 f38_1_09 f38_1_10 f38_1_11 f38_2_01 f38_2_02 f38_2_03 f38_2_04 f38_2_05 f38_2_06 f38_2_07 f38_2_08 f38_2_09 f38_2_10 f38_2_11 c31m_1 c31m_2 c31m_3 c31m_4 factor_EPS2012 d3_01 k11 k9 i26 d3_01 j0a j0b j4a j4b j4c j4d
+rename a6c_cod cod_pais
+
+
+***************************GENERAMOS VARIABLES DE INTERES**********************
+gen extranjero=.
+replace extranjero=1 if a6a==80
+replace extranjero=0 if a6a!=80
+
+
+replace d27m_1 =0 if d27m_1==.
+replace d27m_2 =0 if d27m_2==.
+replace d27m_3 =0 if d27m_3==.
+replace d27m_4 =0 if d27m_4==.
+replace d27m_5 =0 if d27m_5==.
+replace d27m_6 =0 if d27m_6==.
+replace d27m_7 =0 if d27m_7==.
+
+
+replace d37m_01 =0 if d37m_01==.
+replace d37m_02 =0 if d37m_02==.
+replace d37m_03 =0 if d37m_03==.
+replace d37m_04 =0 if d37m_04==.
+replace d37m_05 =0 if d37m_05==.
+replace d37m_06 =0 if d37m_06==.
+replace d37m_07 =0 if d37m_07==.
+replace d37m_08 =0 if d37m_08==.
+replace d37m_09 =0 if d37m_09==.
+replace d37m_10 =0 if d37m_10==.
+replace d37m_11 =0 if d37m_11==.
+replace d37m_12 =0 if d37m_12==.
+
+replace d30_1 =0 if d30_1==.
+replace d30_2 =0 if d30_2==.
+replace d30_3 =0 if d30_3==.
+replace d30_4 =0 if d30_4==.
+
+replace c31m_1 =0 if c31m_1==.
+replace c31m_2 =0 if c31m_2==.
+replace c31m_3 =0 if c31m_3==.
+replace c31m_4 =0 if c31m_4==.
+
+
+replace d25_1=0 if d25_1==.
+
+
+gen ahorros= d27m_1 + d27m_2 + d27m_3 + d27m_4 + d27m_5 + d27m_6 + d27m_7 
+
+gen deuda= d37m_01 + d37m_02 + d37m_03 + d37m_04 + d37m_05 + d37m_06 + d37m_07 + d37m_08 + d37m_09   + d37m_10 + d37m_11 + d37m_12
+
+
+gen valor_propiedades=d17
+gen valor_vehiculos= d25_1
+gen deuda_vehiculos= d30_1 + d30_2 + d30_3 + d30_4
+gen otros_ingresos=c31m_1 + c31m_2 + c31m_3 + c31m_4
+
+gen anio=2012
+drop d37m_01 d37m_02 d37m_03 d37m_04 d37m_05 d37m_06 d37m_07 d37m_08 d37m_09 d37m_10 d37m_11 d37m_12 d27m_1 d27m_2 d27m_3 d27m_4 d27m_5 d27m_6 d27m_7 d25_1 d17 d30_1 d30_2 d30_3 d30_4 c31m_1 c31m_2 c31m_3 c31m_4
+
+
+rename a8 sexo
+rename a9 edad
+rename a7 desde_chile
+rename a6a lugar_nacimiento
+rename a6b_cod lugar_nacimiento_comuna
+rename a6b comuna
+rename a6c pais
+rename a10 estado_salud
+rename a12n nivel_educ
+rename d1 tipo_vivienda
+rename d3_01 habitaciones
+rename d7 dueño_casa
+rename k9 dinero_retiro
+rename k11 plan_ahorro
+rename i26 futuros_hijos
+rename a10a alfabetizacion
+rename b26a explotacion
+rename b31c auto_proteccion
+rename b32a riesgo_laboral
+rename b38 sufrio_accidente
+rename b38j quien_paga_costos_accidente
+rename f30a licencia_medica
+rename factor_EPS2012 factor_exp
+
+rename f38_01 enfermedad_enfisema
+rename f38_02 enfermedad_depresion
+rename f38_03 enfermedad_diabetes
+rename f38_04 enfermedad_hipertension
+rename f38_05 enfermedad_cardiaca
+rename f38_06 enfermedad_cancer
+rename f38_07 enfermedad_artritis
+rename f38_08 enfermedad_renal
+rename f38_09 enfermedad_derrame_cerebral
+rename f38_10 enfermedad_mental
+rename f38_11 enfermedad_sida
+rename f38_1_01 limita_enfisema_hogar
+rename f38_1_02 limita_depresion_hogar
+rename f38_1_03 limita_diabetes_hogar 
+rename f38_1_04 limita_hipertension_hogar
+rename f38_1_05 limita_cardiaca_hogar
+rename f38_1_06 limita_cancer_hogar
+rename f38_1_07 limita_artritis_hogar
+rename f38_1_08 limita_renal_hogar
+rename f38_1_09 limita_derrame_hogar
+rename f38_1_10 limita_mental_hogar
+rename f38_1_11 limita_sida_hogar
+
+rename f38_2_01 limita_enfisema_trabajo
+rename f38_2_02 limita_depresion_trabajo
+rename f38_2_03 limita_diabetes_trabajo
+rename f38_2_04 limita_hipertension_trabajo
+rename f38_2_05 limita_cardiaca_trabajo
+rename f38_2_06 limita_cancer_trabajo
+rename f38_2_07 limita_artritis_trabajo
+rename f38_2_08 limita_renal_trabajo
+rename f38_2_09 limita_derrame_trabajo
+rename f38_2_10 limita_mental_trabajo
+rename f38_2_11 limita_sida_trabajo
+
+
+
+save "D:\plataforma_migra\EPS_clean\eps_2012_clean_panel.dta", replace
+
+
+
+*************************************2015***************************************
+
+
+
+use "D:\plataforma_migra\EPS_clean\eps_2015_vivos_clean.dta", clear
+
+
+keep a7 a6a  a8 a9 a6b_cod  a6c_cod a10 a12n b31c b38 b39 c6 c9 d1 d3_1 d9b d19  e69 f1 f9  f30 i18 f38_1 f38_2 f38_3 f38_4 f38_5 f38_6 f38_7 f38_8 f38_9 f38_10 f38_11 f38a_1 f38a_2 f38a_3 f38a_4 f38a_5 f38a_6 f38a_7 f38a_8 f38a_9 f38a_10 f38a_11 f30a d1 d3_1 d7 d27a_1 d27m_1 d27m_2 d27m_3 d27m_4 d27m_5 d27m_6 d27m_7 d37m_2 d37m_3 d37m_4 d37m_5 d37m_6 d37m_7 d37m_8 d37m_9 d37m_10 d37m_11 d37m_12 d17 d19 d25_1 d25_2 d25_3 d25_4 d29_1 d29_2 d29_3 d29_4 i26 b31c b32a b38j  c31m_1 c31m_2 c31m_3 c31m_4 d30_1 d30_2 d30_3 d30_4 j0a j0b j4a j4b j4c j4d factor_EPS2015
+rename a6c_cod cod_pais
+
+
+
+
+***************************GENERAMOS VARIABLES DE INTERES**********************
+gen extranjero=.
+replace extranjero=1 if a6a==80
+replace extranjero=0 if a6a!=80
+
+
+replace d27m_1 =0 if d27m_1==.
+replace d27m_2 =0 if d27m_2==.
+replace d27m_3 =0 if d27m_3==.
+replace d27m_4 =0 if d27m_4==.
+replace d27m_5 =0 if d27m_5==.
+replace d27m_6 =0 if d27m_6==.
+replace d27m_7 =0 if d27m_7==.
+
+
+
+replace d37m_2 =0 if d37m_2==.
+replace d37m_3 =0 if d37m_3==.
+replace d37m_4 =0 if d37m_4==.
+replace d37m_5 =0 if d37m_5==.
+replace d37m_6 =0 if d37m_6==.
+replace d37m_7 =0 if d37m_7==.
+replace d37m_8 =0 if d37m_8==.
+replace d37m_9 =0 if d37m_9==.
+replace d37m_10 =0 if d37m_10==.
+replace d37m_11 =0 if d37m_11==.
+replace d37m_12 =0 if d37m_12==.
+
+replace d30_1 =0 if d30_1==.
+replace d30_2 =0 if d30_2==.
+replace d30_3 =0 if d30_3==.
+replace d30_4 =0 if d30_4==.
+
+replace c31m_1 =0 if c31m_1==.
+replace c31m_2 =0 if c31m_2==.
+replace c31m_3 =0 if c31m_3==.
+replace c31m_4 =0 if c31m_4==.
+
+
+replace d25_1=0 if d25_1==.
+replace d25_2=0 if d25_2==.
+replace d25_3=0 if d25_3==.
+replace d25_4=0 if d25_4==.
+
+replace d17=0 if d17==.
+replace d19=0 if d19==.
+
+
+gen ahorros= d27m_1 + d27m_2 + d27m_3 + d27m_4 + d27m_5 + d27m_6 + d27m_7 +  d29_1 + d29_2 + d29_3 + d29_4
+
+gen deuda=   d37m_2 + d37m_3 + d37m_4 + d37m_5 + d37m_6 + d37m_7 + d37m_8 + d37m_9   + d37m_10 + d37m_11 + d37m_12
+
+gen valor_propiedades=d17 +d19
+gen valor_vehiculos= d25_1 +d25_2 +d25_3 + d25_4
+gen deuda_vehiculos= d30_1 + d30_2 + d30_3 + d30_4
+gen otros_ingresos=c31m_1 + c31m_2 + c31m_3 + c31m_4
+
+gen anio=2015
+drop d27m_1 d27m_2 d27m_3 d27m_4 d27m_5 d27m_6 d27m_7  d37m_2 d37m_3 d37m_4 d37m_5 d37m_6 d37m_7 d37m_8 d37m_9   d37m_10 d37m_11 d37m_12 d17 d19  d25_1 d25_2 d25_3 d25_4 d30_1 d30_2 d30_3 d30_4 c31m_1 c31m_2 c31m_3 c31m_4 d29_1 d29_2 d29_3 d29_4 d27a_1
+
+
+
+
+rename a8 sexo
+rename a9 edad
+rename a7 desde_chile
+rename a6b_cod lugar_nacimiento_comuna
+rename a6a lugar_nacimiento
+rename a10 estado_salud
+rename a12n nivel_educ
+rename d1 tipo_vivienda
+rename d3_1 habitaciones
+rename d7 dueño_casa
+rename i26 futuros_hijos
+rename b31c auto_proteccion
+rename b32a riesgo_laboral
+rename b38 sufrio_accidente
+rename b38j quien_paga_costos_accidente
+rename f30a licencia_medica
+rename b39 enfermedad_por_trabajo
+rename f9 deporte
+rename i18 cantidad_hijos
+rename c6 bonificacion_laboral
+rename c9 otras_preocupaciones_trabajo
+rename e69 postulacion_bono_hijo
+rename d9b como_compra_vivienda
+rename f1 afiliacion_salud
+rename factor_EPS2015 factor_exp
+decode lugar_nacimiento_comuna , gen(comuna)
+decode cod_pais , gen(pais)
+
+
+rename f30 gastos_medicos
+rename f38_1 enfermedad_enfisema
+rename f38_2 enfermedad_depresion
+rename f38_3 enfermedad_diabetes
+rename f38_4 enfermedad_hipertension
+rename f38_5 enfermedad_cardiaca
+rename f38_6 enfermedad_cancer
+rename f38_7 enfermedad_artritis
+rename f38_8 enfermedad_renal
+rename f38_9 enfermedad_derrame_cerebral
+rename f38_10 enfermedad_mental
+rename f38_11 enfermedad_sida
+rename f38a_1 limita_enfisema
+rename f38a_2 limita_depresion
+rename f38a_3 limita_diabetes
+rename f38a_4 limita_hipertension
+rename f38a_5 limita_cardiaca
+rename f38a_6 limita_cancer
+rename f38a_7 limita_artritis
+rename f38a_8 limita_renal
+rename f38a_9 limita_derrame
+rename f38a_10 limita_mental
+rename f38a_11 limita_sida
+
+
+
+
+save "D:\plataforma_migra\EPS_clean\eps_2015_clean_panel.dta", replace
+
+
+
+
+append using "D:\plataforma_migra\EPS_clean\eps_2006_clean_panel.dta"
+
+append using "D:\plataforma_migra\EPS_clean\eps_2012_clean_panel.dta"
+
+
+
+save "D:\plataforma_migra\EPS_clean\eps_panel_2006_2015.dta", replace
 
