@@ -1,1 +1,204 @@
 
+*******************************MAPAS BASE_SNM***********************************
+*BASE CONTIENE DATOS RESPECTIVOS DE EXTRANJEROS POR PAIS CON SITUACION REGULAR
+*IRREGULAR EN CHILE.
+*SE CREARAN LOS SIGUIENTES MAPAS:
+
+*RATIO DE MIGRANTES IRREGULARES POR REGION, POR CADA PAÍS DE LATINOAMERICA.
+*RATIO DE INMIGRANTES TOTALES DE LATINOMAERICA INCLUIDO HAITÍ
+*(ARGENTINA, COLOMBIA, PERU, PARAGUAY, URUGUAY, VENEZUELA, HAITÍ , BOLIVIA , ECUADOR, BRASIL  )
+
+*********************MAPA INMIGRANTES TOTALES*************
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "ARGENTINA" | pais == "COLOMBIA" | pais == "PERU" | ///
+        pais == "PARAGUAY" | pais == "URUGUAY" | pais == "VENEZUELA" | ///
+        pais == "HAITÍ" | pais == "BOLIVIA" | pais == "ECUADOR" | pais == "BRASIL"
+
+collapse (sum) rraa_regular rraa_irregular rraa_total,by( region codregeo )
+rename codregeo cir_sena
+drop if region=="REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio= (rraa_irregular/(rraa_irregular +rraa_regular))
+
+
+grmap ratio , ///
+		clmethod(eqint) clnumber(5)  fcolor(Reds2)   ///
+		title("Ratio Inmigrantes Irregulares Argentinos", size(*0.8))  ///
+		subtitle("Año 2022", size(*0.8))  ///
+		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") saving(latinoamerica, replace) 	
+
+
+
+
+// Argentina
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "ARGENTINA"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Argentinos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Argentina", replace)
+
+// Colombia
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "COLOMBIA"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Colombianos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Colombia", replace)
+
+// Peru
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "PERÚ"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Peruanos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Peru", replace)
+
+// Paraguay
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "PARAGUAY"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Paraguayos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Paraguay", replace)
+
+// Uruguay
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "URUGUAY"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Uruguayos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Uruguay", replace)
+
+// Haiti
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "HAITÍ"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Haitianos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Haiti", replace)
+	
+	
+	
+// Venezuela
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "VENEZUELA"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Venezolanos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Venezuela", replace)	
+	
+	
+// Brasil
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "BRASIL"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Brasileños", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Brasil", replace)	
+	
+// Bolivia
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "BOLIVIA"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Bolivianos", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Bolivia", replace)
+	
+// Ecuador
+import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
+keep if pais == "ECUADOR"
+xtset, clear
+collapse (sum) rraa_regular rraa_irregular rraa_total, by(pais region codregeo)
+rename codregeo cir_sena
+drop if region == "REGIÓN IGNORADA"
+merge 1:1 cir_sena using "D:\plataforma_migra\maps\Regional"
+gen ratio = (rraa_irregular / (rraa_irregular + rraa_regular))
+grmap ratio, ///
+    clmethod(eqint) clnumber(5) fcolor(Reds2) ///
+    title("Ratio Inmigrantes Irregulares Brasileños", size(*0.8)) ///
+    subtitle("Año 2022", size(*0.8)) ///
+    legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") ///
+    saving("Ecuador", replace)	
+	
+		
+	
+gr combine Argentina.gph  Peru.gph Colombia.gph Paraguay.gph Uruguay.gph Brasil.gph Ecuador.gph Bolivia.gph Venezuela.gph Haiti.gph
+
+
+
+
+
+
