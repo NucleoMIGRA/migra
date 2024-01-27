@@ -1,1 +1,922 @@
+clear all
+set more off
+set scheme modern
+import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
 
+**** Crearemos variables a partir de la base a partir de lo siguiente:
+
+
+*Nacionalidad por region, comuna.
+*Cant_hog, cantidad de hogares por vivienda.
+*Cant_per, cantidad de personas por vivienda.
+*Tipo_hogar, unipersonal, nuclear monoparental, biparental sin hijos, etc.
+*P01, tipo de vivienda.
+*P02, ocupación de vivienda.
+*P05, origen del agua.
+*P15, nivel educativo más alto.
+*P15a, termina dicho nivel de educación más alto.
+*P17, trabaja durante la semana pasada.
+*P18, rama de actividad económica.
+*P19, hijos nacidos vivos.
+*P20, hijos actualmente vivos (quizás se pueda generar variable de que si la persona entrevistada se hace cargo o no de su hijo (presencialmente)).
+*ESCOLARIDAD, años de escolaridad.
+
+
+
+********************************* Cant_hog promedio por pais**************************************
+*hogares promedio por vivienda por país.
+*el objetivo es que es posible la existencia de mas de una familia / hogar por vivienda entrevistada
+
+collapse (mean) nhogar, by(p12)
+
+
+* Define labels for each value
+label define labels ///
+    1 "Chile" ///
+    2 "Chile" ///
+    3 "Perú" ///
+    4 "Argentina" ///
+    5 "Bolivia" ///
+    6 "Ecuador" ///
+    7 "Colombia" ///
+    8 "Otro" ///
+    98 "No aplica" ///
+    99 "Missing"
+
+* Apply labels to the variable
+label values p12 labels
+replace p12=1 if p12==2
+
+
+graph bar (mean) nhogar,   over(p12)  ///
+ ytitle("Hogares Promedio") b1title("Censo 2017") ///
+ title("Hogares Promedio por Vivienda")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_1.png", as(png) name("Graph") replace
+********************************* HIJOS NACIDOS EN CHILE*********************
+
+import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+* Define labels for each value
+label define labels ///
+    1 "Chile" ///
+    2 "Chile" ///
+    3 "Perú" ///
+    4 "Argentina" ///
+    5 "Bolivia" ///
+    6 "Ecuador" ///
+    7 "Colombia" ///
+    8 "Otro" ///
+    98 "No aplica" ///
+    99 "Missing"
+
+label values p12 labels
+
+replace p12=1 if p12==2
+gen extranjero =1
+replace extranjero=1 if p12!=1
+replace extranjero=0 if p12==1
+gen chileno=.
+replace chileno=1 if p12==1
+replace chileno=0 if p12!=1
+
+**********************************IDENTIFICAMOS EXTRANJERAS  QUE TIENEN ULTIMO HIJO NACIDO EN CHILE*********************
+
+*P12A_LLEGADA NOS INDICA AÑO EN QUE EXTRANJERO ENTRA AL PAIS
+*P21A AÑO EN NACE EL ULTIMO HIJO
+*SI P12A_LLEGADA<P21A, TIENE HIJO NACIDO EN CHILE
+*DEJAMOS EXTRANJERAS Y CHILENAS ENTRE 18 Y 50 AÑOS.
+drop if p12a_llegada==9999
+drop if p21a==9999
+replace p12a_llegada= 0 if p12a_llegada==9998
+keep if p08==2
+keep if p09 > 17 & p09 < 51
+
+gen hijo_en_chile=.
+
+replace hijo_en_chile=1 if p12a_llegada<=p21a & extranjero==1 
+replace hijo_en_chile=1 if p19>0 & extranjero==0
+replace hijo_en_chile=0 if hijo_en_chile==. 
+
+
+collapse (sum) hijo_en_chile  extranjero chileno, by(p12)
+
+replace extranjero=chileno if p12==1
+drop chileno
+
+gen porc_hijos_chile=hijo_en_chile/extranjero
+
+ 
+graph bar  porc_hijos_chile,   over(p12)  ///
+ ytitle("Porcentaje") b1title("Censo 2017") ///
+ title("Porcentaje de Mujeres en Edad Fértil con al Menos un Hijo Nacido en Chile")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_2.png", as(png) name("Graph") replace
+ 
+ 
+ ********************************* ESCOLARIDAD PROMEDIO POR PAIS*********************
+
+ 
+ 
+import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+
+
+
+ * Define labels for each value
+label define labels ///
+    1 "Chile" ///
+    2 "Chile" ///
+    3 "Perú" ///
+    4 "Argentina" ///
+    5 "Bolivia" ///
+    6 "Ecuador" ///
+    7 "Colombia" ///
+    8 "Otro" ///
+    98 "No aplica" ///
+    99 "Missing"
+
+* Apply labels to the variable
+label values p12 labels
+replace p12=1 if p12==2
+
+collapse (mean) escolaridad, by(p12)
+drop if p12==99
+
+ graph bar  escolaridad,   over(p12)  ///
+ ytitle("Años") b1title("Censo 2017") ///
+ title("Años Promedio de Escolaridad por País")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_3.png", as(png) name("Graph") replace
+ 
+ 
+ 
+
+  ******************  PORCENTAJE DE PERSONAS CON EDUC SUPERIOR******************
+  
+  
+import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+
+  
+label define labels ///
+    1 "Chile" ///
+    2 "Chile" ///
+    3 "Perú" ///
+    4 "Argentina" ///
+    5 "Bolivia" ///
+    6 "Ecuador" ///
+    7 "Colombia" ///
+    8 "Otro" ///
+    98 "No aplica" ///
+    99 "Missing"
+
+* Apply labels to the variable
+label values p12 labels
+replace p12=1 if p12==2
+* Define labels
+label define edu_level 1 "Sala cuna o jardín infantil" ///
+                     2 "Prekínder" ///
+                     3 "Kínder" ///
+                     4 "Especial o diferencial" ///
+                     5 "Educación básica" ///
+                     6 "Primaria o preparatorio (sistema antiguo)" ///
+                     7 "Científico-humanista" ///
+                     8 "Técnica profesional" ///
+                     9 "Humanidades (sistema antiguo)" ///
+                     10 "Técnica comercial, industrial/normalista (sistema antiguo)" ///
+                     11 "Técnico superior (1-3 años)" ///
+                     12 "Profesional (4 o más años)" ///
+                     13 "Magíster" ///
+                     14 "Doctorado" ///
+                     98 "No aplica" ///
+                     99 "Missing"
+
+* Apply labels to variable
+label values p15 edu_level
+
+ 
+ drop if p12==99
+ 
+ 
+ gen educ_sup=.
+ drop if p15==98
+ drop if p15==99
+ replace educ_sup=1 if p15>=11
+ replace educ_sup=0 if p15<=10
+ 
+ collapse (mean) educ_sup, by(p12)
+ 
+ 
+ graph bar  educ_sup,   over(p12)  ///
+ ytitle("Porcentaje") b1title("Censo 2017") ///
+ title("Porcentaje de Personas con Educación Superior")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_4.png", as(png) name("Graph") replace
+ 
+ 
+ 
+ ******************  HIJOS NACIDOS PROMEDIO ******************
+  
+  
+import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+
+ 
+ label define labels ///
+    1 "Chile" ///
+    2 "Chile" ///
+    3 "Perú" ///
+    4 "Argentina" ///
+    5 "Bolivia" ///
+    6 "Ecuador" ///
+    7 "Colombia" ///
+    8 "Otro" ///
+    98 "No aplica" ///
+    99 "Missing"
+drop if p12==99
+* Apply labels to the variable
+label values p12 labels
+replace p12=1 if p12==2
+
+drop if p20==98
+drop if p20==99
+
+collapse (mean) p20, by(p12)
+
+graph bar  p20,   over(p12)  ///
+ ytitle("Hijos") b1title("Censo 2017") ///
+ title("Hijos Nacidos Promedio")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_5.png", as(png) name("Graph") replace
+ 
+ 
+ **************************PRUEBA CON TODOS LOS PAISES*************************
+ **************************AL MENOS UN HIJO NACIDO EN CHILE POR PAIS************
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+
+ by p12pais, sort: drop if _N < 500
+
+ 
+ * Define labels
+label define pais 2 "África" ///
+                     5 "Sudamérica" ///
+                     9 "Oceanía" ///
+                     10 "Antártida" ///
+                     12 "Argelia" ///
+                     13 "Centroamérica" ///
+                     21 "Norteamérica" ///
+                     29 "Caribe" ///
+                     32 "Argentina" ///
+                     36 "Australia" ///
+                     40 "Austria" ///
+                     51 "Armenia" ///
+                     56 "Bélgica" ///
+                     68 "Bolivia" ///
+                     76 "Brasil" ///
+                     96 "Brunei Darussalam" ///
+                     100 "Bulgaria" ///
+                     124 "Canadá" ///
+                     136 "Islas Caimán" ///
+                     142 "Asia" ///
+                     150 "Europa" ///
+                     156 "China" ///
+                     158 "Taiwán" ///
+                     170 "Colombia" ///
+                     188 "Costa Rica" ///
+                     191 "Croacia" ///
+                     192 "Cuba" ///
+                     203 "República Checa" ///
+                     208 "Dinamarca" ///
+                     214 "República Dominicana" ///
+                     218 "Ecuador" ///
+                     222 "El Salvador" ///
+                     246 "Finlandia" ///
+                     250 "Francia" ///
+                     258 "Polinesia Francesa" ///
+                     275 "Palestina" ///
+                     276 "Alemania" ///
+                     300 "Grecia" ///
+                     320 "Guatemala" ///
+                     332 "Haití" ///
+                     340 "Honduras" ///
+                     348 "Hungría" ///
+                     356 "India" ///
+                     360 "Indonesia" ///
+                     364 "Irán" ///
+                     372 "Irlanda" ///
+                     376 "Israel" ///
+                     380 "Italia" ///
+                     392 "Japón" ///
+                     400 "Jordania" ///
+                     410 "Corea del Sur" ///
+                     422 "Líbano" ///
+                     484 "México" ///
+                     504 "Marruecos" ///
+                     524 "Nepal" ///
+                     528 "Países Bajos" ///
+                     548 "Vanuatu" ///
+                     554 "Nueva Zelandia" ///
+                     558 "Nicaragua" ///
+                     578 "Noruega" ///
+                     586 "Pakistán" ///
+                     591 "Panamá" ///
+                     600 "Paraguay" ///
+                     604 "Perú" ///
+                     608 "Filipinas" ///
+                     616 "Polonia" ///
+                     620 "Portugal" ///
+                     626 "Timor-Leste" ///
+                     630 "Puerto Rico" ///
+                     642 "Rumania" ///
+                     643 "Rusia" ///
+                     688 "Serbia" ///
+                     710 "Sudáfrica" ///
+                     724 "España" ///
+                     752 "Suecia" ///
+                     756 "Suiza" ///
+                     760 "Siria" ///
+                     764 "Tailandia" ///
+                     792 "Turquía" ///
+                     804 "Ucrania" ///
+                     818 "Egipto" ///
+                     826 "Reino Unido" ///
+                     840 "Estados Unidos" ///
+                     858 "Uruguay" ///
+                     862 "Venezuela" ///
+                     997 "País no declarado" ///
+                     998 "Chile" ///
+                     999 "Missing"
+
+* Apply labels to variable
+label values p12pais pais
+
+replace p12=1 if p12==2
+gen extranjero =1
+replace extranjero=1 if p12!=1
+replace extranjero=0 if p12==1
+gen chileno=.
+replace chileno=1 if p12==1
+replace chileno=0 if p12!=1
+
+**********************************IDENTIFICAMOS EXTRANJERAS  QUE TIENEN ULTIMO HIJO NACIDO EN CHILE*********************
+
+*P12A_LLEGADA NOS INDICA AÑO EN QUE EXTRANJERO ENTRA AL PAIS
+*P21A AÑO EN NACE EL ULTIMO HIJO
+*SI P12A_LLEGADA<P21A, TIENE HIJO NACIDO EN CHILE
+*DEJAMOS EXTRANJERAS Y CHILENAS ENTRE 18 Y 50 AÑOS.
+drop if p12a_llegada==9999
+drop if p21a==9999
+replace p12a_llegada= 0 if p12a_llegada==9998
+keep if p08==2
+keep if p09 > 17 & p09 < 51
+
+gen hijo_en_chile=.
+
+replace hijo_en_chile=1 if p12a_llegada<=p21a & extranjero==1 
+replace hijo_en_chile=1 if p19>0 & extranjero==0
+replace hijo_en_chile=0 if hijo_en_chile==. 
+
+
+
+
+collapse (sum) hijo_en_chile extranjero chileno, by(p12pais)
+
+drop if p12pais==997
+drop if p12pais==999
+drop if p12pais==2
+drop if p12pais==5
+drop if p12pais==9
+drop if p12pais==10
+drop if p12pais==13
+drop if p12pais==21
+drop if p12pais==29
+drop if p12pais==96
+drop if p12pais==136
+drop if p12pais==142
+drop if p12pais==150
+drop if p12pais==258
+drop if p12pais==548
+drop if p12pais==626
+replace extranjero=chileno if p12pais==998
+drop chileno
+gen porc_ext_hijos=hijo_en_chile/extranjero
+graph bar  porc_ext_hijos,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ ytitle("Porcentaje") b1title("Censo 2017") ///
+ title("Porcentaje de Población con al Menos un Hijo Nacido en Chile")  
+ 
+  graph export "D:\plataforma_migra\CENSO_2017\figura_6.png", as(png) name("Graph") replace
+  
+**************************PRUEBA CON TODOS LOS PAISES*************************
+ **************************HOGARES POR VIVIENDA*******************************
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+ 
+  by p12pais, sort: drop if _N < 500
+
+ 
+label define pais 2 "África" ///
+                     5 "Sudamérica" ///
+                     9 "Oceanía" ///
+                     10 "Antártida" ///
+                     12 "Argelia" ///
+                     13 "Centroamérica" ///
+                     21 "Norteamérica" ///
+                     29 "Caribe" ///
+                     32 "Argentina" ///
+                     36 "Australia" ///
+                     40 "Austria" ///
+                     51 "Armenia" ///
+                     56 "Bélgica" ///
+                     68 "Bolivia" ///
+                     76 "Brasil" ///
+                     96 "Brunei Darussalam" ///
+                     100 "Bulgaria" ///
+                     124 "Canadá" ///
+                     136 "Islas Caimán" ///
+                     142 "Asia" ///
+                     150 "Europa" ///
+                     156 "China" ///
+                     158 "Taiwán" ///
+                     170 "Colombia" ///
+                     188 "Costa Rica" ///
+                     191 "Croacia" ///
+                     192 "Cuba" ///
+                     203 "República Checa" ///
+                     208 "Dinamarca" ///
+                     214 "República Dominicana" ///
+                     218 "Ecuador" ///
+                     222 "El Salvador" ///
+                     246 "Finlandia" ///
+                     250 "Francia" ///
+                     258 "Polinesia Francesa" ///
+                     275 "Palestina" ///
+                     276 "Alemania" ///
+                     300 "Grecia" ///
+                     320 "Guatemala" ///
+                     332 "Haití" ///
+                     340 "Honduras" ///
+                     348 "Hungría" ///
+                     356 "India" ///
+                     360 "Indonesia" ///
+                     364 "Irán" ///
+                     372 "Irlanda" ///
+                     376 "Israel" ///
+                     380 "Italia" ///
+                     392 "Japón" ///
+                     400 "Jordania" ///
+                     410 "Corea del Sur" ///
+                     422 "Líbano" ///
+                     484 "México" ///
+                     504 "Marruecos" ///
+                     524 "Nepal" ///
+                     528 "Países Bajos" ///
+                     548 "Vanuatu" ///
+                     554 "Nueva Zelandia" ///
+                     558 "Nicaragua" ///
+                     578 "Noruega" ///
+                     586 "Pakistán" ///
+                     591 "Panamá" ///
+                     600 "Paraguay" ///
+                     604 "Perú" ///
+                     608 "Filipinas" ///
+                     616 "Polonia" ///
+                     620 "Portugal" ///
+                     626 "Timor-Leste" ///
+                     630 "Puerto Rico" ///
+                     642 "Rumania" ///
+                     643 "Rusia" ///
+                     688 "Serbia" ///
+                     710 "Sudáfrica" ///
+                     724 "España" ///
+                     752 "Suecia" ///
+                     756 "Suiza" ///
+                     760 "Siria" ///
+                     764 "Tailandia" ///
+                     792 "Turquía" ///
+                     804 "Ucrania" ///
+                     818 "Egipto" ///
+                     826 "Reino Unido" ///
+                     840 "Estados Unidos" ///
+                     858 "Uruguay" ///
+                     862 "Venezuela" ///
+                     997 "País no declarado" ///
+                     998 "Chile" ///
+                     999 "Missing"
+
+* Apply labels to variable
+label values p12pais pais
+
+drop if p12pais==997
+drop if p12pais==999
+drop if p12pais==2
+drop if p12pais==5
+drop if p12pais==9
+drop if p12pais==10
+drop if p12pais==13
+drop if p12pais==21
+drop if p12pais==29
+drop if p12pais==96
+drop if p12pais==136
+drop if p12pais==142
+drop if p12pais==150
+drop if p12pais==258
+drop if p12pais==548
+drop if p12pais==626
+ 
+ collapse (mean) nhogar, by(p12pais)
+
+ 
+ graph bar  nhogar,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ ytitle("Hogares Promedio") b1title("Censo 2017") ///
+ title("Hogares Promedio por Vivienda")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_7.png", as(png) name("Graph") replace
+  
+ **************************HOGARES POR VIVIENDA*******************************
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+ 
+  by p12pais, sort: drop if _N < 500
+
+ 
+label define pais 2 "África" ///
+                     5 "Sudamérica" ///
+                     9 "Oceanía" ///
+                     10 "Antártida" ///
+                     12 "Argelia" ///
+                     13 "Centroamérica" ///
+                     21 "Norteamérica" ///
+                     29 "Caribe" ///
+                     32 "Argentina" ///
+                     36 "Australia" ///
+                     40 "Austria" ///
+                     51 "Armenia" ///
+                     56 "Bélgica" ///
+                     68 "Bolivia" ///
+                     76 "Brasil" ///
+                     96 "Brunei Darussalam" ///
+                     100 "Bulgaria" ///
+                     124 "Canadá" ///
+                     136 "Islas Caimán" ///
+                     142 "Asia" ///
+                     150 "Europa" ///
+                     156 "China" ///
+                     158 "Taiwán" ///
+                     170 "Colombia" ///
+                     188 "Costa Rica" ///
+                     191 "Croacia" ///
+                     192 "Cuba" ///
+                     203 "República Checa" ///
+                     208 "Dinamarca" ///
+                     214 "República Dominicana" ///
+                     218 "Ecuador" ///
+                     222 "El Salvador" ///
+                     246 "Finlandia" ///
+                     250 "Francia" ///
+                     258 "Polinesia Francesa" ///
+                     275 "Palestina" ///
+                     276 "Alemania" ///
+                     300 "Grecia" ///
+                     320 "Guatemala" ///
+                     332 "Haití" ///
+                     340 "Honduras" ///
+                     348 "Hungría" ///
+                     356 "India" ///
+                     360 "Indonesia" ///
+                     364 "Irán" ///
+                     372 "Irlanda" ///
+                     376 "Israel" ///
+                     380 "Italia" ///
+                     392 "Japón" ///
+                     400 "Jordania" ///
+                     410 "Corea del Sur" ///
+                     422 "Líbano" ///
+                     484 "México" ///
+                     504 "Marruecos" ///
+                     524 "Nepal" ///
+                     528 "Países Bajos" ///
+                     548 "Vanuatu" ///
+                     554 "Nueva Zelandia" ///
+                     558 "Nicaragua" ///
+                     578 "Noruega" ///
+                     586 "Pakistán" ///
+                     591 "Panamá" ///
+                     600 "Paraguay" ///
+                     604 "Perú" ///
+                     608 "Filipinas" ///
+                     616 "Polonia" ///
+                     620 "Portugal" ///
+                     626 "Timor-Leste" ///
+                     630 "Puerto Rico" ///
+                     642 "Rumania" ///
+                     643 "Rusia" ///
+                     688 "Serbia" ///
+                     710 "Sudáfrica" ///
+                     724 "España" ///
+                     752 "Suecia" ///
+                     756 "Suiza" ///
+                     760 "Siria" ///
+                     764 "Tailandia" ///
+                     792 "Turquía" ///
+                     804 "Ucrania" ///
+                     818 "Egipto" ///
+                     826 "Reino Unido" ///
+                     840 "Estados Unidos" ///
+                     858 "Uruguay" ///
+                     862 "Venezuela" ///
+                     997 "País no declarado" ///
+                     998 "Chile" ///
+                     999 "Missing"
+
+* Apply labels to variable
+label values p12pais pais
+
+drop if p12pais==997
+drop if p12pais==999
+drop if p12pais==2
+drop if p12pais==5
+drop if p12pais==9
+drop if p12pais==10
+drop if p12pais==13
+drop if p12pais==21
+drop if p12pais==29
+drop if p12pais==96
+drop if p12pais==136
+drop if p12pais==142
+drop if p12pais==150
+drop if p12pais==258
+drop if p12pais==548
+drop if p12pais==626
+ 
+ collapse (mean) escolaridad, by(p12pais)
+ 
+  graph bar  escolaridad,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ ytitle("Años") b1title("Censo 2017") ///
+ title("Años de Escolaridad Promedio")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_8.png", as(png) name("Graph") replace
+
+ 
+  **************************PORCENTAJE DE EDUCACION SUPERIOR*******************************
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+ 
+ by p12pais, sort: drop if _N < 500
+
+ 
+label define pais 2 "África" ///
+                     5 "Sudamérica" ///
+                     9 "Oceanía" ///
+                     10 "Antártida" ///
+                     12 "Argelia" ///
+                     13 "Centroamérica" ///
+                     21 "Norteamérica" ///
+                     29 "Caribe" ///
+                     32 "Argentina" ///
+                     36 "Australia" ///
+                     40 "Austria" ///
+                     51 "Armenia" ///
+                     56 "Bélgica" ///
+                     68 "Bolivia" ///
+                     76 "Brasil" ///
+                     96 "Brunei Darussalam" ///
+                     100 "Bulgaria" ///
+                     124 "Canadá" ///
+                     136 "Islas Caimán" ///
+                     142 "Asia" ///
+                     150 "Europa" ///
+                     156 "China" ///
+                     158 "Taiwán" ///
+                     170 "Colombia" ///
+                     188 "Costa Rica" ///
+                     191 "Croacia" ///
+                     192 "Cuba" ///
+                     203 "República Checa" ///
+                     208 "Dinamarca" ///
+                     214 "República Dominicana" ///
+                     218 "Ecuador" ///
+                     222 "El Salvador" ///
+                     246 "Finlandia" ///
+                     250 "Francia" ///
+                     258 "Polinesia Francesa" ///
+                     275 "Palestina" ///
+                     276 "Alemania" ///
+                     300 "Grecia" ///
+                     320 "Guatemala" ///
+                     332 "Haití" ///
+                     340 "Honduras" ///
+                     348 "Hungría" ///
+                     356 "India" ///
+                     360 "Indonesia" ///
+                     364 "Irán" ///
+                     372 "Irlanda" ///
+                     376 "Israel" ///
+                     380 "Italia" ///
+                     392 "Japón" ///
+                     400 "Jordania" ///
+                     410 "Corea del Sur" ///
+                     422 "Líbano" ///
+                     484 "México" ///
+                     504 "Marruecos" ///
+                     524 "Nepal" ///
+                     528 "Países Bajos" ///
+                     548 "Vanuatu" ///
+                     554 "Nueva Zelandia" ///
+                     558 "Nicaragua" ///
+                     578 "Noruega" ///
+                     586 "Pakistán" ///
+                     591 "Panamá" ///
+                     600 "Paraguay" ///
+                     604 "Perú" ///
+                     608 "Filipinas" ///
+                     616 "Polonia" ///
+                     620 "Portugal" ///
+                     626 "Timor-Leste" ///
+                     630 "Puerto Rico" ///
+                     642 "Rumania" ///
+                     643 "Rusia" ///
+                     688 "Serbia" ///
+                     710 "Sudáfrica" ///
+                     724 "España" ///
+                     752 "Suecia" ///
+                     756 "Suiza" ///
+                     760 "Siria" ///
+                     764 "Tailandia" ///
+                     792 "Turquía" ///
+                     804 "Ucrania" ///
+                     818 "Egipto" ///
+                     826 "Reino Unido" ///
+                     840 "Estados Unidos" ///
+                     858 "Uruguay" ///
+                     862 "Venezuela" ///
+                     997 "País no declarado" ///
+                     998 "Chile" ///
+                     999 "Missing"
+
+					 
+					 * Define labels
+label define edu_level 1 "Sala cuna o jardín infantil" ///
+                     2 "Prekínder" ///
+                     3 "Kínder" ///
+                     4 "Especial o diferencial" ///
+                     5 "Educación básica" ///
+                     6 "Primaria o preparatorio (sistema antiguo)" ///
+                     7 "Científico-humanista" ///
+                     8 "Técnica profesional" ///
+                     9 "Humanidades (sistema antiguo)" ///
+                     10 "Técnica comercial, industrial/normalista (sistema antiguo)" ///
+                     11 "Técnico superior (1-3 años)" ///
+                     12 "Profesional (4 o más años)" ///
+                     13 "Magíster" ///
+                     14 "Doctorado" ///
+                     98 "No aplica" ///
+                     99 "Missing"
+
+* Apply labels to variable
+label values p15 edu_level
+* Apply labels to variable
+label values p12pais pais
+
+drop if p12pais==997
+drop if p12pais==999
+drop if p12pais==2
+drop if p12pais==5
+drop if p12pais==9
+drop if p12pais==10
+drop if p12pais==13
+drop if p12pais==21
+drop if p12pais==29
+drop if p12pais==96
+drop if p12pais==136
+drop if p12pais==142
+drop if p12pais==150
+drop if p12pais==258
+drop if p12pais==548
+drop if p12pais==626
+ 
+ gen educ_sup=.
+ drop if p15==98
+ drop if p15==99
+ replace educ_sup=1 if p15>=11
+ replace educ_sup=0 if p15<=10
+ 
+ collapse (mean) educ_sup, by(p12pais)
+  
+  graph bar  educ_sup,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ ytitle("Años") b1title("Censo 2017") ///
+ title("Porcentaje de Personas con Educación Superior")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_9.png", as(png) name("Graph") replace
+ 
+ 
+  ******************  HIJOS NACIDOS PROMEDIO ******************
+
+ 
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+ 
+ by p12pais, sort: drop if _N < 500
+
+ 
+label define pais 2 "África" ///
+                     5 "Sudamérica" ///
+                     9 "Oceanía" ///
+                     10 "Antártida" ///
+                     12 "Argelia" ///
+                     13 "Centroamérica" ///
+                     21 "Norteamérica" ///
+                     29 "Caribe" ///
+                     32 "Argentina" ///
+                     36 "Australia" ///
+                     40 "Austria" ///
+                     51 "Armenia" ///
+                     56 "Bélgica" ///
+                     68 "Bolivia" ///
+                     76 "Brasil" ///
+                     96 "Brunei Darussalam" ///
+                     100 "Bulgaria" ///
+                     124 "Canadá" ///
+                     136 "Islas Caimán" ///
+                     142 "Asia" ///
+                     150 "Europa" ///
+                     156 "China" ///
+                     158 "Taiwán" ///
+                     170 "Colombia" ///
+                     188 "Costa Rica" ///
+                     191 "Croacia" ///
+                     192 "Cuba" ///
+                     203 "República Checa" ///
+                     208 "Dinamarca" ///
+                     214 "República Dominicana" ///
+                     218 "Ecuador" ///
+                     222 "El Salvador" ///
+                     246 "Finlandia" ///
+                     250 "Francia" ///
+                     258 "Polinesia Francesa" ///
+                     275 "Palestina" ///
+                     276 "Alemania" ///
+                     300 "Grecia" ///
+                     320 "Guatemala" ///
+                     332 "Haití" ///
+                     340 "Honduras" ///
+                     348 "Hungría" ///
+                     356 "India" ///
+                     360 "Indonesia" ///
+                     364 "Irán" ///
+                     372 "Irlanda" ///
+                     376 "Israel" ///
+                     380 "Italia" ///
+                     392 "Japón" ///
+                     400 "Jordania" ///
+                     410 "Corea del Sur" ///
+                     422 "Líbano" ///
+                     484 "México" ///
+                     504 "Marruecos" ///
+                     524 "Nepal" ///
+                     528 "Países Bajos" ///
+                     548 "Vanuatu" ///
+                     554 "Nueva Zelandia" ///
+                     558 "Nicaragua" ///
+                     578 "Noruega" ///
+                     586 "Pakistán" ///
+                     591 "Panamá" ///
+                     600 "Paraguay" ///
+                     604 "Perú" ///
+                     608 "Filipinas" ///
+                     616 "Polonia" ///
+                     620 "Portugal" ///
+                     626 "Timor-Leste" ///
+                     630 "Puerto Rico" ///
+                     642 "Rumania" ///
+                     643 "Rusia" ///
+                     688 "Serbia" ///
+                     710 "Sudáfrica" ///
+                     724 "España" ///
+                     752 "Suecia" ///
+                     756 "Suiza" ///
+                     760 "Siria" ///
+                     764 "Tailandia" ///
+                     792 "Turquía" ///
+                     804 "Ucrania" ///
+                     818 "Egipto" ///
+                     826 "Reino Unido" ///
+                     840 "Estados Unidos" ///
+                     858 "Uruguay" ///
+                     862 "Venezuela" ///
+                     997 "País no declarado" ///
+                     998 "Chile" ///
+                     999 "Missing"
+
+ * Apply labels to variable
+label values p12pais pais
+
+drop if p12pais==997
+drop if p12pais==999
+drop if p12pais==2
+drop if p12pais==5
+drop if p12pais==9
+drop if p12pais==10
+drop if p12pais==13
+drop if p12pais==21
+drop if p12pais==29
+drop if p12pais==96
+drop if p12pais==136
+drop if p12pais==142
+drop if p12pais==150
+drop if p12pais==258
+drop if p12pais==548
+drop if p12pais==626
+ 
+drop if p20==98
+drop if p20==99
+collapse (mean) p20, by(p12pais)
+
+graph bar  p20,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ ytitle("Hijos") b1title("Censo 2017") ///
+ title("Hijos Promedio")  
+ graph export "D:\plataforma_migra\CENSO_2017\figura_10.png", as(png) name("Graph") replace
