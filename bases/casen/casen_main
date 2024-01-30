@@ -48,7 +48,7 @@ label values p12 labels
 replace p12=1 if p12==2
 
 
-graph bar (mean) nhogar,   over(p12)  ///
+graph bar (mean) nhogar,   over(p12, sort(1))  ///
  ytitle("Hogares Promedio") b1title("Censo 2017") ///
  title("Hogares Promedio por Vivienda")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_1.png", as(png) name("Graph") replace
@@ -105,7 +105,7 @@ drop chileno
 gen porc_hijos_chile=hijo_en_chile/extranjero
 
  
-graph bar  porc_hijos_chile,   over(p12)  ///
+graph bar  porc_hijos_chile,   over(p12, sort(1))  ///
  ytitle("Porcentaje") b1title("Censo 2017") ///
  title("Porcentaje de Mujeres en Edad Fértil con al Menos un Hijo Nacido en Chile")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_2.png", as(png) name("Graph") replace
@@ -139,7 +139,7 @@ replace p12=1 if p12==2
 collapse (mean) escolaridad, by(p12)
 drop if p12==99
 
- graph bar  escolaridad,   over(p12)  ///
+ graph bar  escolaridad,   over(p12, sort(1))  ///
  ytitle("Años") b1title("Censo 2017") ///
  title("Años Promedio de Escolaridad por País")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_3.png", as(png) name("Graph") replace
@@ -202,7 +202,7 @@ label values p15 edu_level
  collapse (mean) educ_sup, by(p12)
  
  
- graph bar  educ_sup,   over(p12)  ///
+ graph bar  educ_sup,   over(p12, sort(1))  ///
  ytitle("Porcentaje") b1title("Censo 2017") ///
  title("Porcentaje de Personas con Educación Superior")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_4.png", as(png) name("Graph") replace
@@ -236,7 +236,7 @@ drop if p20==99
 
 collapse (mean) p20, by(p12)
 
-graph bar  p20,   over(p12)  ///
+graph bar  p20,   over(p12, sort(1))  ///
  ytitle("Hijos") b1title("Censo 2017") ///
  title("Hijos Nacidos Promedio")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_5.png", as(png) name("Graph") replace
@@ -392,10 +392,11 @@ drop if p12pais==626
 replace extranjero=chileno if p12pais==998
 drop chileno
 gen porc_ext_hijos=hijo_en_chile/extranjero
-graph bar  porc_ext_hijos,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
- ytitle("Porcentaje") b1title("Censo 2017") ///
- title("Porcentaje de Población con al Menos un Hijo Nacido en Chile")  
  
+ 
+ graph bar porc_ext_hijos, over(p12pais, sort(1)  label(angle(90) labsize(vsmall))) ///
+ytitle("Porcentaje") b1title("Censo 2017") ///
+title("Porcentaje de Población con al Menos un Hijo Nacido en Chile") 
   graph export "D:\plataforma_migra\CENSO_2017\figura_6.png", as(png) name("Graph") replace
   
 **************************PRUEBA CON TODOS LOS PAISES*************************
@@ -517,7 +518,7 @@ drop if p12pais==626
  collapse (mean) nhogar, by(p12pais)
 
  
- graph bar  nhogar,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+ graph bar  nhogar,   over(p12pais, sort(1) label(angle(90) labsize(vsmall)))  ///
  ytitle("Hogares Promedio") b1title("Censo 2017") ///
  title("Hogares Promedio por Vivienda")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_7.png", as(png) name("Graph") replace
@@ -639,7 +640,7 @@ drop if p12pais==626
  
  collapse (mean) escolaridad, by(p12pais)
  
-  graph bar  escolaridad,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+  graph bar  escolaridad,   over(p12pais, sort(1) label(angle(90) labsize(vsmall)))  ///
  ytitle("Años") b1title("Censo 2017") ///
  title("Años de Escolaridad Promedio")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_8.png", as(png) name("Graph") replace
@@ -789,7 +790,7 @@ drop if p12pais==626
  
  collapse (mean) educ_sup, by(p12pais)
   
-  graph bar  educ_sup,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+  graph bar  educ_sup,   over(p12pais, sort(1)  label(angle(90) labsize(vsmall)))  ///
  ytitle("Años") b1title("Censo 2017") ///
  title("Porcentaje de Personas con Educación Superior")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_9.png", as(png) name("Graph") replace
@@ -916,7 +917,81 @@ drop if p20==98
 drop if p20==99
 collapse (mean) p20, by(p12pais)
 
-graph bar  p20,   over(p12pais, label(angle(90) labsize(vsmall)))  ///
+graph bar  p20,   over(p12pais, sort(1)   label(angle(90) labsize(vsmall)))  ///
  ytitle("Hijos") b1title("Censo 2017") ///
  title("Hijos Promedio")  
  graph export "D:\plataforma_migra\CENSO_2017\figura_10.png", as(png) name("Graph") replace
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ *******************************************************************************
+ ***************PIRAMIDES POBLACIONALES CHILENOS Y EXTRANJEROS******************
+ *******************************************************************************
+ 
+ 
+ *************EXTRANJEROS*******************************************************
+ 
+ import delimited "D:\plataforma_migra\CENSO_2017\csv-personas-censo-2017\Microdato_Censo2017-Personas.csv", clear
+
+ 
+keep if p12pais!=998
+drop if p12pais==999
+drop if p12pais==997
+
+ gen mujer=.
+ replace mujer=1 if p08==2
+ replace mujer=0 if p08==1
+ replace p09=90 if p09>90
+ 
+ 
+ gen grupos_edad=5*int(p09/5)
+label var grupos_edad "Edad (tramos de 5 años)"
+label define rangos_g  0 "0-5" 5 "5-10" 10 "10-15" 15 "15-20" 20 "20-25" 25 "25-30" ///
+30 "30-35" 35 "35-40" 40 "40-45" 45 "45-50" 50 "50-55" 55 "55-60" 60 "60-65" ///
+65 "65-70" 70 "70-75" 75 "75-80" 80 "80-85" 85 "85-90" 90 "90 +"
+label values grupos_edad rangos_g
+gen pobtot=1
+egen totpob=sum(pobtot)
+egen pop5=sum(pobtot), by(grupos_edad mujer)
+ 
+gen cero=0
+
+gen Hombres=-100*pop5/totpob if mujer==0
+gen Mujeres=100*pop5/totpob if mujer==1
+
+ 
+ 
+ 
+ twoway ///
+(bar Hombres grupos_edad  , horizontal barwidth(5) ) ///
+(bar Mujeres grupos_edad  , horizontal barwidth(5) )  ///
+(scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-8 "8" -6"6"  -4 "4" -2 "2" 0 "0" 2 "2" 4 "4" 6 "6" 8 "8") legend(order(1 "Hombres" 2 "Mujeres"))), ///
+title("Pirámide Poblacional de Extranjeros, Chile 2017") ///
+xtitle("Porcentaje de poblacion") saving(extranjero) note("Fuente: Censo 2017")
+ 
+  graph save "Graph" "D:\plataforma_migra\CENSO_2017\do_censo\piramide_extranjero.", replace
