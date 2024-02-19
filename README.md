@@ -8,3 +8,5 @@ A continuación se presentarán estadísticas correpondientes a distintas bases 
 ![figura_5](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/994cb77c-c715-4f3a-9edb-921b5b5160a9)
 ![figura_6](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/3b563940-51ab-42b3-a61d-f7e96dd4b56a)
 ![figura_7](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9daa187a-e1ac-44a0-99dd-fc5a30d510c2)
+## Servicio Nacional de Migraciones
+![agregado](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0a15e904-28d2-4ab7-884b-a9323886ce42)
