@@ -1,2 +1,3 @@
-# Plataforma_privado
-Repositorio de Pruebas y apoyo para el original.
+# Plataforma Migra
+A continuación se presentarán estadísticas correpondientes a distintas bases abiertas.
+## MINEDUC
