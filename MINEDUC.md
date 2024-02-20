@@ -1,6 +1,7 @@
 # Plataforma Migra
 A continuación se presentarán estadísticas correpondientes a distintas bases abiertas.
 ## MINEDUC
+Figura 1: 
 ![figura_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/a982f6ba-7092-4bfa-ade6-b823bc8055e3)
 ![figura_2](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/2c09abdc-5520-471c-9c65-d479dfb8c0f1)
 ![figura_3](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4a89a601-893f-46d7-af44-88787ebbbe42)
