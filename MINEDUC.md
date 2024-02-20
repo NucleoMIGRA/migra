@@ -21,5 +21,10 @@ Figura 5: Figura 1: Se puede observar la evolución del porcentaje de estudiante
 
 ![figura_5](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/994cb77c-c715-4f3a-9edb-921b5b5160a9)
 
+Figura 6: Mapa que muestra la distribución de estudiantes extranjeros en el país, para el año 2023.
+
 ![figura_6](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/3b563940-51ab-42b3-a61d-f7e96dd4b56a)
+
+Figura 7: Distribución de estudiantes extranjeros por país de origen, para el año 2023.
+
 ![figura_7](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9daa187a-e1ac-44a0-99dd-fc5a30d510c2)
