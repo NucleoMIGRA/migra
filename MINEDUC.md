@@ -13,11 +13,11 @@ Figura 3: Se puede observar la evolución del porcentaje de estudiantes extranje
 
 ![figura_3](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4a89a601-893f-46d7-af44-88787ebbbe42)
 
-Figura 4: Figura 1: Se puede observar la evolución del porcentaje de estudiantes extranjeros y la cantidad total de estudiantes en  educación media humanista-científica.
+Figura 4: Se puede observar la evolución del porcentaje de estudiantes extranjeros y la cantidad total de estudiantes en  educación media humanista-científica.
 
 ![figura_4](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/03203e6c-259f-4de7-8090-f540d443126d)
 
-Figura 5: Figura 1: Se puede observar la evolución del porcentaje de estudiantes extranjeros y la cantidad total de estudiantes en  educación media técnica.
+Figura 5: Se puede observar la evolución del porcentaje de estudiantes extranjeros y la cantidad total de estudiantes en  educación media técnica.
 
 ![figura_5](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/994cb77c-c715-4f3a-9edb-921b5b5160a9)
 
