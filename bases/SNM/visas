@@ -1,1 +1,465 @@
+*RD INDICA RESIDENCIA DEFINITIVA RT RESIDENCIA TEMPORAL.
+
+
+clear all
+set more off
+global data "D:\plataforma_migra\DEM"
+global figure "D:\plataforma_migra\DEM\figuras_DEM"
+global temp 	"D:\plataforma_migra\DEM\temp_DEM"
+
+********************SOLICITUDES RESIDENCIAS TEMPORALES**************************
+
+
+	 import excel "${data}\residencia_temporales_solicitudes_2000_al_2011.xlsx", sheet("Sheet1") firstrow clear
+	 
+ gen visa_temp_sol=1
+ 
+ 
+ 
+ 
+ 
+ 
+  save "${temp}\res_temp_2000_2011.dta", replace
+  
+import excel "${data}\residencia_temporales_solicitudes_2012_al_2016.xlsx", sheet("Sheet1") firstrow clear
+	 
+ gen visa_temp_sol=1
+ 
+ 
+ 
+ save "${temp}\res_temp_2012_2016.dta", replace
+ 
+ 
+ import excel "${data}\residencia_temporales_solicitudes_2017.xlsx", sheet("Sheet1") firstrow clear
+ 
+ gen visa_temp_sol=1
+ 
+
+ 
+ save "${temp}\res_temp_2017.dta", replace
+ 
+ 
+ clear
+
+forvalues year = 2017/2023 {
+    local excel_file "${data}\residencia_temporales_solicitudes_`year'.xlsx"
+    local dta_file "${temp}\res_temp_`year'.dta"
+    
+    import excel `excel_file', sheet("Sheet1") firstrow clear
+    gen visa_temp_sol = 1
+    save `dta_file', replace
+}
+
+
+********************APPEND DE LAS BASES*************************
+
+
+
+
+
+use "${temp}\res_temp_2000_2011.dta", clear
+
+ append using "D:\plataforma_migra\DEM\temp_DEM\res_temp_2012_2016.dta"
+ 
+ 
+  append using "D:\plataforma_migra\DEM\temp_DEM\res_temp_2017.dta"
+
+
+
+  
+forval year = 2018/2023 {
+    append using "${temp}\res_temp_`year'.dta"
+}
+	save "${temp}\res_temp_sol_2000_2023.dta" , replace
+
+	collapse (sum) visa_temp_sol, by(AÑO)
+
+graph tw   (connected visa_temp_sol AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Solicitudes de Visas Temporales ", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	
+	
+	
+	graph export "${figure}\figura_6.png", as(png) name("Graph") replace
+	
+	
+***********************VISAS TEMPORALES APROBADAS*******************************
+
+
+
+import excel "${data}\residencia_temporales_otorgadas_2000_al_2011.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen visa_temp_acep =1
+
+
+save "${temp}\res_temp_acep_2000_2011.dta", replace
+
+	
+import excel "${data}\residencia_temporales_otorgadas_2012_al_2016.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen visa_temp_acep =1
+
+
+	
+		 save "${temp}\res_temp_acep_2012_2016.dta", replace
+		 
+		 
+		 
+clear
+
+forvalues year = 2017/2022 {
+    local excel_file "${data}\residencia_temporales_otorgadas_`year'.xlsx"
+    local dta_file "${temp}\res_temp_acep_`year'.dta"
+    
+    import excel `excel_file', sheet("Sheet1") firstrow clear
+    gen visa_temp_acep = 1
+    save `dta_file', replace
+}
+
+
+	import excel "${data}\residencia_temporales_otorgadas_1er_Semestre_2023", sheet("Sheet1") firstrow clear
+gen visa_temp_acep =1
+
+gen primersemestre2023=1
+		 save "${temp}\res_temp_acep_2023_1er.dta", replace
+		 
+		 
+import excel "${data}\residencias_temporales_otorgadas_2do_Semestre_2023.xlsx", sheet("Sheet1") firstrow clear
+gen visa_temp_acep =1
+gen primersemestre2023=0
+
+	
+save "${temp}\res_temp_acep_2023_2do.dta", replace
+		 
+		 
+	********************APPEND DE LAS BASES*************************
+
+
+clear
+
+
+use "${temp}\res_temp_acep_2000_2011.dta", clear
+
+ append using "${temp}\res_temp_acep_2012_2016.dta"
+ 
+ 
+
+
+  
+forval year = 2017/2022 {
+    append using "${temp}\res_temp_acep_`year'.dta"
+}
+
+		 
+append using "${temp}\res_temp_acep_2023_1er.dta"
+
+append using "${temp}\res_temp_acep_2023_2do.dta"
+
+		 save "${temp}\res_temp_acep_2000_2023.dta", replace
+collapse (sum) visa_temp_acep, by(AÑO)
+
+graph tw   (connected visa_temp_acep AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Visas Temporales Aceptadas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	
+	
+	
+	graph export "${figure}\figura_2.png", as(png) name("Graph") replace	 
+		 
+		 
+		 
+	********************RESIDENCIAS DEFINITIVAS SOLICITUDES********************
+	
+	
+	
+	import excel "${data}\residencias_definitivas_solicitudes_2000_al_2011.xlsx", sheet("Sheet1") firstrow clear
+	
+	
+	
+	gen visa_def_sol=1
+	
+
+
+	
+
+		 save "${temp}\res_def_sol_2000_2011.dta", replace
+		 
+		 
+		 
+		 
+		 import excel "${data}\residencias_definitivas_solicitudes_2012_al_2016.xlsx", sheet("Sheet1") firstrow clear
+	
+	
+
+	gen visa_def_sol=1
+	
+	
+
+	
+
+		 save "${temp}\res_def_sol_2012_2016.dta", replace
+		 
+		 
+		 
+		 
+clear
+
+forvalues year = 2017/2023 {
+    local excel_file "${data}\residencias_definitivas_solicitudes_`year'.xlsx"
+    local dta_file "${temp}\res_def_sol_`year'.dta"
+    
+    import excel `excel_file', sheet("Sheet1") firstrow clear
+    gen visa_def_sol = 1
+    save `dta_file', replace
+}
+
+		
+		 
+clear
+use "${temp}\res_def_sol_2000_2011.dta", clear
+
+ append using "${temp}\res_def_sol_2012_2016.dta"
+ 
+ 
+
+
+  
+forval year = 2017/2023 {
+    append using "${temp}\res_def_sol_`year'.dta"
+}
+
+
+		 save "${temp}\res_def_sol_2000_2023.dta", replace
+		 
+		 
+collapse (sum) visa_def_sol, by(AÑO)
+
+graph tw   (connected visa_def_sol AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Solicitudes Visas Definitivas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+
+
+	graph export "${figure}\figura_3.png", as(png) name("Graph") replace
+
+
+		 
+		 
+		 
+*****************VISAS DEFINITIVAS ACEPTADAS***********************************
+
+
+
+
+
+import excel "${data}\residencias_definitivas_otorgadas_2000_al_2011.xlsx", sheet("Sheet1") firstrow clear
+	
+
+	
+gen visa_def_acep=1
+	
+
+	
+		 save "${temp}\res_def_acep_2000_2011.dta", replace
+		 
+		 
+		 
+		 
+		 import excel "${data}\residencias_definitivas_otorgadas_2012_al_2016.xlsx", sheet("Sheet1") firstrow clear
+	
+	
+	
+	gen visa_def_acep=1
+	
+	
+
+	
+
+		 save "${temp}\res_def_acep_2012_2016.dta", replace
+		 
+		 
+		 
+		 
+clear
+
+forvalues year = 2017/2022 {
+    local excel_file "${data}\residencias_definitivas_otorgadas_`year'.xlsx"
+    local dta_file "${temp}\res_def_acep_`year'.dta"
+    
+    import excel `excel_file', sheet("Sheet1") firstrow clear
+    gen visa_def_acep = 1
+    save `dta_file', replace
+}
+
+		import excel "${data}\residencias_definitivas_otorgadas_1er_Semestre_2023.xlsx", sheet("Sheet1") firstrow clear
+gen visa_def_acep =1
+gen primersemestre2023=1
+
+	
+		 save "${temp}\res_def_acep_2023_1er.dta", replace
+		 
+		 
+import excel "${data}\residencias_definitivas_otorgadas_2do_Semestre_2023.xlsx", sheet("Sheet1") firstrow clear
+gen visa_def_acep =1
+gen primersemestre2023=0
+
+	rename NACIONALIDAD PAÍS
+
+		 save "${temp}\res_def_acep_2023_2do.dta", replace
+		 
+		 
+
+		 
+		 
+		 
+clear
+use "${temp}\res_def_acep_2000_2011.dta", clear
+
+ append using "${temp}\res_def_acep_2012_2016.dta"
+ 
+ 
+
+
+  
+forval year = 2017/2022 {
+    append using "${temp}\res_def_acep_`year'.dta"
+}
+		 save "${temp}\res_def_acep_2000_2023.dta", replace
+
+append using "${temp}\res_def_acep_2023_1er.dta"
+
+append using "${temp}\res_def_acep_2023_2do.dta", force
+
+collapse (sum) visa_def_acep, by(AÑO)
+graph tw   (connected visa_def_acep AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Visas Definitivas Aceptadas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+
+
+	graph export "${figure}\figura_4.png", as(png) name("Graph") replace
+	
+		 
+
+		 
+		******************************MERGE TODAS LAS BASES*************************
+**************************BORRANDO DUPLICADOS**********************************		
+		
+use 	 "${temp}\res_temp_sol_2000_2023.dta" , clear
+
+duplicates drop  SEXO PAÍS NACIMIENTO, force
+		
+collapse (sum) visa_temp_sol, by(AÑO)
+
+save "${temp}\res_temp_sol_2000_2023_collapsed.dta", replace
+		
+		
+use  "${temp}\res_temp_acep_2000_2023.dta", clear
+
+duplicates drop  SEXO PAÍS NACIMIENTO, force
+		collapse (sum) visa_temp_acep, by(AÑO)
+		
+		
+save "${temp}\res_temp_acep_2000_2023_collapsed.dta", replace
+		
+		********DEF********************
+		
+		use 	 "${temp}\res_def_sol_2000_2023.dta" , clear
+
+		
+		duplicates drop  SEXO PAÍS NACIMIENTO, force
+collapse (sum) visa_def_sol, by(AÑO)
+
+save "${temp}\res_def_sol_2000_2023_collapsed.dta", replace
+		
+		
+use  "${temp}\res_def_acep_2000_2023.dta", clear
+
+duplicates drop SEXO PAÍS NACIMIENTO, force
+		collapse (sum) visa_def_acep, by(AÑO)
+		
+		
+save "${temp}\res_def_acep_2000_2023_collapsed.dta", replace
+		
+		merge 1:1 AÑO using "D:\plataforma_migra\DEM\temp_DEM\res_def_sol_2000_2023_collapsed.dta"
+		
+		drop _merge
+		
+		merge 1:1 AÑO using "D:\plataforma_migra\DEM\temp_DEM\res_temp_sol_2000_2023_collapsed.dta"
+		
+		drop _merge
+		
+		merge 1:1 AÑO using "D:\plataforma_migra\DEM\temp_DEM\res_temp_acep_2000_2023_collapsed.dta"
+		
+		gen rate_accep_def= visa_def_acep/visa_def_sol
+		gen rate_accep_temp= visa_temp_acep/visa_temp_sol
+		gen porc_rate_accep_def= rate_accep_def*100
+		gen porc_rate_accep_temp= rate_accep_temp*100
+		
+	gr tw (connected porc_rate_accep_def AÑO ) ///
+			(connected porc_rate_accep_temp AÑO) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Visa", color(navy)) ///
+    legend(pos(10) ring(0) col(1)) legend( label(1 "Definitiva") label(2 "Temporal")) ///
+	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Servicio Nacional de Migraciones")
+
+		graph export "${figure}\figura_5_sin_duplicados.png", as(png) name("Graph") replace
+
+	***************************SIN BORRAR DUPLICADOS****************************
+	
+use 	 "${temp}\res_temp_sol_2000_2023.dta" , clear
+
+		
+collapse (sum) visa_temp_sol, by(AÑO)
+
+save "${temp}\res_temp_sol_2000_2023_collapsed.dta", replace
+		
+		
+use  "${temp}\res_temp_acep_2000_2023.dta", clear
+
+		collapse (sum) visa_temp_acep, by(AÑO)
+		
+		
+save "${temp}\res_temp_acep_2000_2023_collapsed.dta", replace
+		
+		********DEF********************
+		
+		use 	 "${temp}\res_def_sol_2000_2023.dta" , clear
+
+		
+collapse (sum) visa_def_sol, by(AÑO)
+
+save "${temp}\res_def_sol_2000_2023_collapsed.dta", replace
+		
+		
+use  "${temp}\res_def_acep_2000_2023.dta", clear
+
+		collapse (sum) visa_def_acep, by(AÑO)
+		
+		
+save "${temp}\res_def_acep_2000_2023_collapsed.dta", replace
+		
+		merge 1:1 AÑO using "${temp}\res_def_sol_2000_2023_collapsed.dta"
+		
+		drop _merge
+		
+		merge 1:1 AÑO using "${temp}\res_temp_sol_2000_2023_collapsed.dta"
+		
+		drop _merge
+		
+		merge 1:1 AÑO using "${temp}\res_temp_acep_2000_2023_collapsed.dta"
+		
+		gen rate_accep_def= visa_def_acep/visa_def_sol
+		gen rate_accep_temp= visa_temp_acep/visa_temp_sol
+		gen porc_rate_accep_def= rate_accep_def*100
+		gen porc_rate_accep_temp= rate_accep_temp*100
+		
+	gr tw (connected porc_rate_accep_def AÑO ) ///
+			(connected porc_rate_accep_temp AÑO) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Visa", color(navy)) ///
+    legend(pos(10) ring(0) col(1)) legend( label(1 "Definitiva") label(2 "Temporal")) ///
+	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Servicio Nacional de Migraciones")
+
+		graph export "${figure}\figura_5_con_duplicados.png", as(png) name("Graph") replace
 
