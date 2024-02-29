@@ -1,6 +1,8 @@
 # Plataforma Migra
 A continuación se presentarán estadísticas correpondientes a distintas bases abiertas.
 ## MINEDUC
+El indicador de extranjero, se creo a partir de la misma variable en el dataset, existían observaciones marcadas por "N" que son nacionalizados, pero fueron eliminadas debido a que correpondian menos a 40 observaciones.
+Figura 1: Se puede observar 
 ![figura_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/a982f6ba-7092-4bfa-ade6-b823bc8055e3)
 ![figura_2](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/2c09abdc-5520-471c-9c65-d479dfb8c0f1)
 ![figura_3](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4a89a601-893f-46d7-af44-88787ebbbe42)
