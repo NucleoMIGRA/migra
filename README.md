@@ -11,7 +11,7 @@ Figura 2: Se puede observar que si bien desciende el total de matriculados en ed
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/3f3c7c00-89f3-4bfd-a64d-134d5de701b7)
 
-Figura 3: Se puede observar incrementos en ek  total de estudiantes en educación parvularia, así como también incrementos de porcentaje de estudiantes extranjeros.
+Figura 3: Se puede observar incrementos en el total de estudiantes en educación parvularia, así como también incrementos de porcentaje de estudiantes extranjeros.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4e762b8f-7344-4efd-bad4-7903f3143ffe)
 
