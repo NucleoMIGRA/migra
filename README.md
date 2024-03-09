@@ -137,3 +137,6 @@ Figura 8: Comparando las pirámides poblacionales, podemos notar que extranjeros
 Figura 9: En cuanto los años promedio de escolaridad, extranjeros en promedio cuentan con más años.
 
 ![fig_9](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/aba0f21a-7b4b-4552-b5df-b2d38f6c7ff1)
+
+## EPF
+Figura 1:
