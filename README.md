@@ -62,6 +62,14 @@ Figura 6.2: En esta figura se presenta la tasa de aprobación por tipo de visa, 
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/d91af72c-034a-4cb5-88fc-d14089dc045c)
 
+Figura 7: Distribución de profesiones de personas con residencia definitiva aceptada.
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/5ee5c5a5-4cd6-448e-a807-59aadf160737)
+
+Figura 8: Distribución de profesiones de personas con residencia temporal aceptada.
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9f8c3470-eec1-4665-b0ee-0561bae4184b)
+
 
 ## CENSO 2017
 El censo presenta variables que pueden identificar el origen de la persona, por lo tanto las figuras fueron creadas a partir de esa variable.
