@@ -1,1 +1,147 @@
+global data "D:\plataforma_migra\EPF"
+global temp "D:\plataforma_migra\EPF\bases_temporales"
+global figure "D:\plataforma_migra\EPF\bases_temporales\figuras_epf"
 
+use "${data}\base-personas-ix-epf-stata.dta" , clear
+
+gen extranjero=.
+
+replace extranjero=1 if mh12==2 | mh12==3
+
+replace extranjero = 0 if extranjero==.
+
+drop if mh12==-88
+drop if mh12==-99
+
+collapse (sum) ing_total , by(folio extranjero)
+
+
+duplicates drop folio, force
+
+save "${temp}\ingreso_hogares.dta", replace
+
+
+*****************MERGE MANY TO ONE CON BASE GASTOS HOGARES**********************
+
+*******************BAR GRAPH DE GASTO EXTRANJERO-NACIONAL********************************
+ 
+	
+	
+	
+	
+	
+	
+	
+	 use "${data}\base-gastos-ix-epf-stata.dta", clear
+ 
+ merge m:1 folio using "${temp}\ingreso_hogares.dta"
+ 
+ drop if extranjero==.
+ 
+ label define extranjero 1 "Extranjero" ///
+			0 "Nacional"
+ label values extranjero extranjero
+ gen categoria= real(d)
+  label define categoria    1 "Alimentación" ///
+							 2 "Alcohol y Drogas" ///
+							 3 "Vestimenta" ///
+							 4 "Vivienda" ///
+							 5 "Mobiliario" ///
+							 6 "Salud" ///
+							 7 "Transporte" ///
+							 8 "Comunicaciones" ///
+							 9 "Tecnología" ///
+							 10 "Educación" ///
+							 11 "Recreación" ///
+							 12 "Finanzas" ///
+							 13 "Otro"
+label values categoria categoria
+gen subcategoria=.
+replace subcategoria=1 if categoria==1
+replace subcategoria=4 if categoria==4
+replace subcategoria=6 if categoria==6
+replace subcategoria=10 if categoria==10
+replace subcategoria=7 if categoria==7
+replace subcategoria =11 if categoria==11
+replace subcategoria=13 if subcategoria==.
+label values subcategoria categoria
+
+gen gasto_nac=.
+replace gasto_nac=gasto if extranjero==0
+gen gasto_ext=.
+replace gasto_ext=gasto if extranjero==1
+gen ing_total_ext=.
+replace ing_total_ext=ing_total if extranjero==1
+gen ing_total_nac=.
+replace ing_total_nac=ing_total if extranjero==0
+
+collapse (sum) gasto_nac gasto_ext (mean) ing_total ing_total_ext ing_total_nac,by(subcategoria folio)
+
+replace gasto_nac=. if gasto_nac==0 
+replace gasto_ext=. if gasto_ext==0
+gen porc_gasto_nac=gasto_nac/ing_total_nac
+gen porc_gasto_ext=gasto_ext/ing_total_ext
+
+replace porc_gasto_nac=. if porc_gasto_nac>2.8863
+replace porc_gasto_ext=. if porc_gasto_ext>1.547947
+
+
+collapse (mean) porc_gasto_ext porc_gasto_nac ing_total_ext ing_total_nac ,by(subcategoria)
+
+
+graph bar  porc_gasto_nac porc_gasto_ext, over(subcategoria, sort(1))  legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
+ ytitle("Porcentaje")  ///
+ title("Porcentaje Gasto por Categoría de Extranjeros y Nacionales") ///
+ legend(pos(10) ring(0) col(1) order(1 2) )
+
+ graph export "D:\plataforma_migra\EPF\figuras_epf\figura_1.png", as(png) name("Graph") replace
+ 
+ 
+***************************FIGURA 2 GASTOS FINANCIEROS**************************
+
+
+	
+	 use "${data}\base-gastos-ix-epf-stata.dta", clear
+ 
+ merge m:1 folio using "${temp}\ingreso_hogares.dta"
+ 
+drop if extranjero==.
+
+gen deuda = strpos(glosa_ccif, "PRÉSTAMOS")>0
+replace deuda=0 if deuda==.
+
+
+
+
+gen deuda_ext=gasto if extranjero==1 & deuda==1
+gen deuda_nac=gasto if extranjero==0 & deuda==1
+gen ing_total_ext=ing_total if extranjero==1
+gen ing_total_nac=ing_total if extranjero==0
+
+
+
+collapse (sum) deuda_ext deuda_nac (mean) ing_total_nac ing_total_ext, by(folio)
+
+gen porc_deuda_nac=deuda_nac/ing_total_nac
+gen porc_deuda_ext=deuda_ext/ing_total_ext
+
+
+collapse(mean) porc_deuda_ext porc_deuda_nac
+
+
+graph bar  porc_deuda_nac porc_deuda_ext,   legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
+ ytitle("Porcentaje")  ///
+ title("Porcentaje Gasto en Deudas de Extranjeros y Nacionales")  ///
+ legend(pos(1) ring(0) col(1) order(1 2) )
+ 
+ graph export "D:\plataforma_migra\EPF\figuras_epf\figura_2.png", as(png) name("Graph") replace
+
+ 
+ *************BUSCAR CASA DE EMPEÑO O DEUDA INFORMAL variable d=12,******************************
+ 
+ 
+*********EXISTE UNA CATEGORIA LLAMADA PAGO EN PRESTAMOS A INSTITUCIONES NO REGULADAS POR CMF, PERO EXISTE UNA SOLA OBSERVACION EN ESTE ITEM**
+**FUERA DE ESTO, NO PODEMOS ENCONTRAR
+ 
+ 
+ 
