@@ -1,7 +1,7 @@
 # Plataforma Migra
-A continuación se presentarán estadísticas correpondientes a distintas bases abiertas.
+A continuación se presentarán estadísticas correpondientes a bases de datos de naturaleza pública.
 ## MINEDUC
-El indicador de extranjero, se creo a partir de la misma variable en el dataset, existían observaciones marcadas por "N" que son nacionalizados, pero fueron eliminadas debido a que correpondian menos a 40 observaciones.
+Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) el 5 de febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC)
 
 Figura 1: Se puede observar un crecimiento sostenido del porcentaje de estudiantes extranjeros en educación básica.
 
