@@ -80,9 +80,9 @@ Figura 8: Distribución de profesiones de personas con residencia temporal acept
 
 
 ## CENSO 2017
-El censo presenta variables que pueden identificar el origen de la persona, por lo tanto las figuras fueron creadas a partir de esa variable.
+Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados [de](https://www.ine.gob.cl/estadisticas/sociales/censos-de-poblacion-y-vivienda/censo-de-poblacion-y-vivienda), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/CENSO_2017).
 
-Figura 1: Se puede observar que Haití es el país que presenta mayor cantidad de hogares por vivienda. Se puede interpretar como una medida de hacinamiento.
+Figura 1: Se puede observar que Haití es el país que presenta mayor cantidad de hogares por vivienda.
 
 ![figura_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/f51fdcb7-50b3-432d-8b7f-bf03083905fa)
 
@@ -90,17 +90,22 @@ Figura 2: La figura se crea a partir de la población que tiene hijos y tienen u
 
 ![figura_2](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/49b7c763-f9fd-4e8e-84eb-17ad995cbecf)
 
-Figura 3: Se puede observar que Chile tiene menos años de escolaridad promedio.
+Figura 3: Se puede observar que Bolivia tiene menos años de escolaridad promedio.(Población entre 25-50 años.)
 
-![figura_3](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4cf23ede-6189-4f2f-b073-6e352c113643)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/f124b6bc-dd55-4418-abeb-3ab68bcc0104)
 
-Figura 4: Se puede observar que gran parte de los Venezolanos presentes en Chile, cuentan con eduación superior.
+Figura 3.1: Se puede observar que Chile tiene menos años de escolaridad promedio.(Población entre 25-50 años.)
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/37408f85-9477-4d9b-b276-28afb39ccff9)
+
+
+Figura 4: Se puede observar que gran parte de los Venezolanos presentes en Chile, cuentan con educación superior.
 
 ![figura_4](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/592efe8b-7b20-4292-b4fc-35e538482e77)
 
-Figura 5: Se puede observar que dentro de las mujeres en edad fértil, chilenas tienen en promedio mayor cantidad de hijos.
+Figura 5: Se puede observar que dentro de las mujeres en edad (15-30 años), chilenas tienen en promedio mayor cantidad de hijos.
 
-![figura_5](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/ce5a9b77-00dd-4ab9-ba97-b15bd2f854eb)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0807dde4-7058-4117-9df8-ec7e6028cced)
 
 Figura 6: Se muestra que la mayoría de hogares en Chile, no cuentan con una persona extranjera.
 
@@ -118,19 +123,21 @@ Figura 8: Es posible observar que extranjeros concentran su población entre los
 
 ## CASEN
 
+Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descargados [de](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen).
+
 Figura 1: Se puede observar la evolución de migrantes a lo largo del tiempo.
 
 ![fig_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9c8cd81f-bf1b-4f75-9d14-31a6419bcd9b)
 
-Figura 2: Se puede observar que migrantes tienen mayor porcentaje de educación superior.
+Figura 2: Se puede observar que migrantes tienen mayor porcentaje de educación superior.(Población entre 25-50 años.)
 
-![fig_2](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/8c44817f-69f0-4c20-afd3-0cb613dfb93a)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/8ea871c7-2731-407e-90fe-895aacc89450)
 
 Figura 3: Del total de personas en estado de hacinamiento, el gráfico presenta que el porcentaje de hacinamiento crítico es mayor en migrantes.
 
 ![fig_3](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7c8cda9f-7c13-4a1f-a0c2-f7ac439b0f90)
 
-Figura 4: En cuanto a las horas trabajadas, a partir de 2013 migrantes trabajan más.
+Figura 4: En cuanto a las horas trabajadas, a partir de 2013 migrantes trabajan más horas.
 
 ![fig_4](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/b2d10400-64c2-4e56-9496-c044143ace79)
 
@@ -138,9 +145,9 @@ Figura 5: En cuanto a tener un contrato de trabajo, chilenos tienen mayor porcen
 
 ![fig_5](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7d50ced9-4ca5-412f-b562-619a629cb70c)
 
-Figura 6: En cuanto a salario, migrantes ganan más que chilenos hasta el año 2017.
+Figura 6: En cuanto a salario, migrantes ganan más por hora que chilenos hasta el año 2017.
 
-![fig_6](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/43956083-99a0-4050-a0ea-7c222996f01a)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/935112ed-6967-42b4-955f-d32bb582bf2b)
 
 Figura 7: En cuanto a distribución espacial, extranjeros se encuentran concentrados en zonas urbanas.
 
@@ -150,9 +157,9 @@ Figura 8: Comparando las pirámides poblacionales, podemos notar que extranjeros
 
 ![fig_8](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/e56f8a3a-2f4c-4052-afb8-fffb70c8063c)
 
-Figura 9: En cuanto los años promedio de escolaridad, extranjeros en promedio cuentan con más años.
+Figura 9: En cuanto los años promedio de escolaridad, extranjeros en promedio cuentan con más años.(Población entre 25-50 años.)
 
-![fig_9](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/aba0f21a-7b4b-4552-b5df-b2d38f6c7ff1)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9e010634-93f5-41f1-bb20-7f066792964e)
 
 ## EPF
 Figura 1: Composición del Gasto Familiar.
