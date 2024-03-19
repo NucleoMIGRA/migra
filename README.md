@@ -162,6 +162,8 @@ Figura 9: En cuanto los años promedio de escolaridad, extranjeros en promedio c
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9e010634-93f5-41f1-bb20-7f066792964e)
 
 ## EPF
+Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados [de](https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/EPF).
+
 Figura 1: Composición del Gasto Familiar.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7543cb79-4015-4a76-b0b4-2a8450474022)
@@ -172,6 +174,7 @@ Figura 2: Porcentaje de Gasto en Deudas.
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/64a566cb-0db0-44fd-9a2f-977fd67ab8ff)
 
 ## ENE
+Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados [de](https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/ENE).
 
 Figura 1: En la figura se observa que el porcentaje de ocupación informal es similar entre ambos grupos.
 
