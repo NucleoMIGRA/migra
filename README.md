@@ -56,19 +56,19 @@ Figura 3: Se puede observar que las residencias temporales aprobadas siguen una 
 
 Figura 4: Se puede observar que existe un incremento considerable en la solicitud de residencias definitivas a partir de 2015, llegando a un máximo en 2019.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/b7581c31-723b-4074-b8cf-931d236f6a86)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/d44ada06-c8a9-4a55-95d4-db3581dea452)
 
 Figura 5: Se puede observar que las residencias definitivas aprobadas siguen una tendencia similar a las solicitudes.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0106cfa6-b8a0-49ff-88df-e675833cadc0)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/413bdf43-f321-4d10-87b7-cd6f5d91b950)
 
 Figura 6.1: En esta figura se presenta la tasa de aprobación por tipo de visa, en este gráfico se mantienen todas las observaciones, que pueden ser repetidas en un mismo año, o incluso a través de los años (Por ejemplo una persona que renueva una visa temporal cada dos años.)
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/d5b7f5ec-8972-437b-9624-f0f93842c82f)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/61793e65-e583-49bd-9bae-e428570f58d1)
 
 Figura 6.2: En esta figura se presenta la tasa de aprobación por tipo de visa, en este gráfico se borran todas las observaciones repetidas.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/d91af72c-034a-4cb5-88fc-d14089dc045c)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7820af29-6abf-4b7b-850c-bc9d3555466b)
 
 Figura 7: Distribución de profesiones de personas con residencia definitiva aceptada.
 
