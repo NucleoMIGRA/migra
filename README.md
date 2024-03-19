@@ -48,11 +48,11 @@ Figura 1: Mapas que indican la distribución de extranjeros en situación irregu
 
 Figura 2: Se puede observar que existe un incremento considerable en la solicitud de residencias temporales a partir de 2016, llegando a un máximo en 2018.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/bb538974-11cc-428b-a431-8e0fc49892c0)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9b757151-4369-4638-8c21-645c9eb9f6e2)
 
 Figura 3: Se puede observar que las residencias temporales aprobadas siguen una tendencia similar a las solicitudes.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/1135eb62-2e7c-43ff-be4e-3f96d62ee55f)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/13b86eca-4a5b-4455-a136-f0e850b52bc7)
 
 Figura 4: Se puede observar que existe un incremento considerable en la solicitud de residencias definitivas a partir de 2015, llegando a un máximo en 2019.
 
