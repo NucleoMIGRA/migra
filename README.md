@@ -1,7 +1,7 @@
 # Plataforma Migra
 A continuación se presentarán estadísticas correpondientes a bases de datos de naturaleza pública.
 ## MINEDUC
-Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) el 5 de febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC)
+Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC)
 
 Figura 1: Se puede observar un crecimiento sostenido del porcentaje de estudiantes extranjeros en educación básica.
 
@@ -31,24 +31,32 @@ Figura 7: Se puede observar que el origen de los estudiantes extranjeros para el
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/cf36f7fe-26b1-455f-ac22-827c3b0fce3c)
 
+Figura 8: Se puede observar que el origen de los estudiantes extranjeros para el año 2014, corresponde en su mayoría a estudiantes de Perú, Colombia, Bolivia y Argentina.
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9bd028dd-bea6-4426-9258-0774fb608ca9)
+
+
+
 
 ## Servicio Nacional de Migraciones
-En esta sección se utilizaron dos bases, una indicando estimadores de extranjeros en Chile en situación irregular, y una base que indica las solicitudes y aprobación de residencias temporales y definitivas.
+
+Los datos provienen del Servicio Nacional de Migraciones, fueron descargados [de](https://serviciomigraciones.cl/estudios-migratorios/datos-abiertos/), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/SNM)
+
 Figura 1: Mapas que indican la distribución de extranjeros en situación irregular dentro del país.(por región)
 
 ![agregado](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0a15e904-28d2-4ab7-884b-a9323886ce42)
 
 Figura 2: Se puede observar que existe un incremento considerable en la solicitud de residencias temporales a partir de 2016, llegando a un máximo en 2018.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/90e236fd-8e69-4cda-ad16-1e09be49c3d1)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/bb538974-11cc-428b-a431-8e0fc49892c0)
 
 Figura 3: Se puede observar que las residencias temporales aprobadas siguen una tendencia similar a las solicitudes.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/feca93ea-a3a2-425b-bf91-cee753485c5a)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/1135eb62-2e7c-43ff-be4e-3f96d62ee55f)
 
 Figura 4: Se puede observar que existe un incremento considerable en la solicitud de residencias definitivas a partir de 2015, llegando a un máximo en 2019.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/87ccecfe-041a-4ebc-a0ee-a723bac268a3)
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/b7581c31-723b-4074-b8cf-931d236f6a86)
 
 Figura 5: Se puede observar que las residencias definitivas aprobadas siguen una tendencia similar a las solicitudes.
 
