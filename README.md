@@ -62,11 +62,11 @@ Figura 5: Se puede observar que las residencias definitivas aprobadas siguen una
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/413bdf43-f321-4d10-87b7-cd6f5d91b950)
 
-Figura 6.1: En esta figura se presenta la tasa de aprobación por tipo de visa, en este gráfico se mantienen todas las observaciones, que pueden ser repetidas en un mismo año, o incluso a través de los años (Por ejemplo una persona que renueva una visa temporal cada dos años.)
+Figura 6.1: En esta figura se presenta la tasa de aprobación por tipo de residencia, en este gráfico se mantienen todas las observaciones, que pueden ser repetidas en un mismo año, o incluso a través de los años (Por ejemplo una persona que renueva una residencia temporal cada dos años.)
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/61793e65-e583-49bd-9bae-e428570f58d1)
 
-Figura 6.2: En esta figura se presenta la tasa de aprobación por tipo de visa, en este gráfico se borran todas las observaciones repetidas.
+Figura 6.2: En esta figura se presenta la tasa de aprobación por tipo de residencia, en este gráfico se borran todas las observaciones repetidas.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7820af29-6abf-4b7b-850c-bc9d3555466b)
 
