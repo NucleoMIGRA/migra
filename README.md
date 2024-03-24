@@ -1,4 +1,3 @@
-theme: jekyll-theme-minimal
 # Plataforma Migra
 A continuación se presentarán estadísticas correpondientes a bases de datos de naturaleza pública.
 ## MINEDUC
