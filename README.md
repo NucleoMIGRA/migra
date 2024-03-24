@@ -1,5 +1,13 @@
 # Plataforma Migra
 A continuación se presentarán estadísticas correpondientes a bases de datos de naturaleza pública.
+
+## Tabla de contenidos:
+
+1. [MINEDUC](#example)
+2. [Servicio Nacional de Migraciones](#example2)
+3. [CENSO 2017](#third-example)
+4. [CASEN](#fourth-examplehttpwwwfourthexamplecom)
+
 ## MINEDUC
 Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
