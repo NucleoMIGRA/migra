@@ -3,8 +3,8 @@ A continuación se presentarán estadísticas correpondientes a bases de datos d
 
 ## Tabla de contenidos:
 
-1. [MINEDUC](#example)
-2. [Servicio Nacional de Migraciones](#example2)
+1. [MINEDUC](##MINEDUC)
+2. [Servicio Nacional de Migraciones](##Servicio-Nacional-de-Migraciones)
 3. [CENSO 2017](#third-example)
 4. [CASEN](#fourth-examplehttpwwwfourthexamplecom)
 
