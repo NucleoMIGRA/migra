@@ -1,5 +1,5 @@
 ## MINEDUC
-El indicador de extranjero, se creo a partir de la misma variable en el dataset, existían observaciones marcadas por "N" que son nacionalizados, pero fueron eliminadas debido a que correpondian menos a 40 observaciones.
+Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
 Figura 1: Se puede observar un crecimiento sostenido del porcentaje de estudiantes extranjeros en educación básica.
 
@@ -9,11 +9,11 @@ Figura 2: Se puede observar que si bien desciende el total de matriculados en ed
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/3f3c7c00-89f3-4bfd-a64d-134d5de701b7)
 
-Figura 3: Se puede observar incrementos en el total de estudiantes en educación parvularia, así como también incrementos de porcentaje de estudiantes extranjeros.
+Figura 3: Se pueden observar incrementos en el total de estudiantes en educación parvularia, así como también incrementos de porcentaje de estudiantes extranjeros.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/4e762b8f-7344-4efd-bad4-7903f3143ffe)
 
-Figura 4: Se puede observar incrementos en el total de estudiantes en educación media humanista, además de incrementos del porcentaje de estudiantes extranjeros.
+Figura 4: Se pueden observar incrementos en el total de estudiantes en educación media humanista, además de incrementos del porcentaje de estudiantes extranjeros.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/278a3191-5752-459f-a031-356107908ad4)
 
@@ -25,6 +25,11 @@ Figura 6: Se puede observar que para el año 2023, el porcentaje de estudiantes 
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/adef55f9-eceb-48f7-9f25-d1321958c511)
 
-Figura 7: Se puede observar que el origen de los estudiantes extranjeros para el año 2023, corresponde en su mayoría a estudiantes de Venezuela, Bolivia, Colombiaa y Perú.
+Figura 7: Se puede observar que el origen de los estudiantes extranjeros para el año 2023, corresponde en su mayoría a estudiantes de Venezuela, Bolivia, Colombia y Perú.
 
 ![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/cf36f7fe-26b1-455f-ac22-827c3b0fce3c)
+
+Figura 8: Se puede observar que el origen de los estudiantes extranjeros para el año 2014, corresponde en su mayoría a estudiantes de Perú, Colombia, Bolivia y Argentina.
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9bd028dd-bea6-4426-9258-0774fb608ca9)
+
