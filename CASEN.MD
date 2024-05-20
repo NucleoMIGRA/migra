@@ -30,10 +30,12 @@ Figura 7: En cuanto a distribución espacial, extranjeros se encuentran concentr
 
 ![fig_7](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/1f3f392d-42ef-49d0-880b-1e29b6538534)
 
-Figura 8: Comparando las pirámides poblacionales, podemos notar que extranjeros se concentran entre los 20-45 años, mientras que la población chilena está distribuida de manera uniforme.
+
+Figura 8: En promedio, extranjeros cuentan con más años de escolaridad. Población entre 25-50 años.
+
+![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9e010634-93f5-41f1-bb20-7f066792964e)
+
+Figura 9: Comparando las pirámides poblacionales, podemos notar que extranjeros se concentran entre los 20-45 años, mientras que la población chilena está distribuida de manera uniforme.
 
 ![fig_8](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/e56f8a3a-2f4c-4052-afb8-fffb70c8063c)
 
-Figura 9: En promedio, extranjeros cuentan con más años de escolaridad. Población entre 25-50 años.
-
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9e010634-93f5-41f1-bb20-7f066792964e)
