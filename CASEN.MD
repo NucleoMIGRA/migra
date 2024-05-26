@@ -1,10 +1,9 @@
 ## CASEN
 
-Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descargados de su [página web](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen) disponible en este repositorio. 
-
-Nota: Los años omitidos en las figuras, corresponden a encuestas que no consideraban esa variable.
-
-Nota: Si desea utilizar las figuras, entrar al siguiente link, encontrará información sobre como correctamente citar.
+Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descargados de su [página web](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen) disponible en este repositorio.  
+**Nota**: Los años omitidos en las figuras, corresponden a encuestas que no consideraban esa variable.  
+**Nota**: Si desea utilizar las figuras, entrar al siguiente link, encontrará información sobre como correctamente citar.  
+**Nota**: Las figuras fueron creadas con el factor de expansión nacional.
 
 Figura 1: Se puede observar la evolución de migrantes a lo largo del tiempo.
 
