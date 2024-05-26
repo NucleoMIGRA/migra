@@ -4,7 +4,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 Figura 1: Se puede observar la evolución de migrantes a lo largo del tiempo.
 
-![fig_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/9c8cd81f-bf1b-4f75-9d14-31a6419bcd9b)
+![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/Figuras_expansion/fig_1.png?raw=true)
 
 Figura 2: Se puede observar que migrantes tienen mayor porcentaje de educación superior. Población entre 25-50 años.
 
