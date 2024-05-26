@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
+message: "Si usa este código, por favor citar de la siguiente manera."
 authors:
-  - family-names: Druskat
-    given-names: Stephan
+  - family-names: MIGRA
+    given-names: NÚCLEO
     orcid: https://orcid.org/1234-5678-9101-1121
-title: "My Research Software"
+title: "Repositorio MIGRA"
 version: 2.0.4
 identifiers:
   - type: doi
     value: 10.5281/zenodo.1234
-date-released: 2021-08-11
+date-released: 2024-05-26
