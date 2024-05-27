@@ -88,10 +88,12 @@ replace porc_gasto_ext=. if porc_gasto_ext>1.547947
 
 collapse (mean) porc_gasto_ext porc_gasto_nac ing_total_ext ing_total_nac ,by(subcategoria)
 
+gen base100_gasto_nac=porc_gasto_nac*100
+gen base100_gasto_ext=porc_gasto_ext*100
 
-graph bar  porc_gasto_nac porc_gasto_ext, over(subcategoria, sort(1))  legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
+graph bar  base100_gasto_nac base100_gasto_ext, over(subcategoria, sort(1))  legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
  ytitle("Porcentaje")  ///
- title("Porcentaje Gasto por Categoría de Extranjeros y Nacionales") ///
+ title("Porcentaje Gasto por Categoría de Extranjeros y Nacionales") caption(Fuente: Elaborado por Núcleo MIGRA con datos de la EPF) ///
  legend(pos(10) ring(0) col(1) order(1 2) )
 
  graph export "D:\plataforma_migra\EPF\figuras_epf\figura_1.png", as(png) name("Graph") replace
@@ -128,10 +130,12 @@ gen porc_deuda_ext=deuda_ext/ing_total_ext
 
 collapse(mean) porc_deuda_ext porc_deuda_nac
 
+gen base100_deuda_ext=porc_deuda_ext*100
+gen base100_deuda_nac=porc_deuda_nac*100
 
-graph bar  porc_deuda_nac porc_deuda_ext,   legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
+graph bar  base100_deuda_nac base100_deuda_ext,   legend(label(2 "Extranjeros") label(1 "Nacionales")) ///
  ytitle("Porcentaje")  ///
- title("Porcentaje Gasto en Deudas de Extranjeros y Nacionales")  ///
+ title("Porcentaje Gasto en Deudas de Extranjeros y Nacionales") caption(Fuente: Elaborado por Núcleo MIGRA con datos de la EPF)  ///
  legend(pos(1) ring(0) col(1) order(1 2) )
  
  graph export "D:\plataforma_migra\EPF\figuras_epf\figura_2.png", as(png) name("Graph") replace
@@ -141,7 +145,7 @@ graph bar  porc_deuda_nac porc_deuda_ext,   legend(label(2 "Extranjeros") label(
  
  
 *********EXISTE UNA CATEGORIA LLAMADA PAGO EN PRESTAMOS A INSTITUCIONES NO REGULADAS POR CMF, PERO EXISTE UNA SOLA OBSERVACION EN ESTE ITEM**
-**FUERA DE ESTO, NO PODEMOS ENCONTRAR
+**FUERA DE ESTO, NO PODEMOS ENCONTRAR información respecto a acceso a crédito
  
  
  
