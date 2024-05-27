@@ -208,28 +208,9 @@ grmap ratio, ///
 	
 
 
- graph combine latinoamerica.gph Argentina.gph  Peru.gph Colombia.gph Paraguay.gph Uruguay.gph Brasil.gph Ecuador.gph Bolivia.gph Venezuela.gph Haiti.gph,  title("Porcentaje de Inmigrantes Irregulares en 2022") note("Fuente: Servicio Nacional de Migraciones")
+ graph combine latinoamerica.gph Argentina.gph  Peru.gph Colombia.gph Paraguay.gph Uruguay.gph Brasil.gph Ecuador.gph Bolivia.gph Venezuela.gph Haiti.gph,  title("Porcentaje de Inmigrantes Irregulares en 2022") caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 		graph export "${figure}\agregado.png", as(png) name("Graph") replace
 
-*************************SDA PARTE FIGURAS**********
-
-*SE CREARAN FIGURAS QUE MUESTRAN PORCENTAJE DE MIGRANTES POR ORIGEN.
-set scheme modern
-
-import delimited "D:\plataforma_migra\base_snm\base-2022-regiones.csv", clear
-
-collapse (sum) rraa_irregular rraa_regular, by(pais)
-
-egen total_irregulares = total(rraa_irregular)
-
-gen porcentaje_irregulares= rraa_irregular/total_irregulares
 
 
-gen otros=pais
 
-replace otros="Otros" if porcentaje_irregulares<0.05
-
-gr pie porcentaje_irregulares, over(otros) plabel(1 "Venezuela" name, size(*1) color(black))  ///
-b1title("Año 2022") ///
- title("Porcentaje de Irregulares por Nacionalidad") /// 
- legend(off) note("Fuente: Servicio Nacional de Migraciones")
