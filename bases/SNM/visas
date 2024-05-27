@@ -75,12 +75,12 @@ forval year = 2018/2023 {
 	collapse (sum) visa_temp_sol, by(AÑO)
 
 graph tw   (connected visa_temp_sol AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
-	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Solicitudes de Visas Temporales ", color(navy) )  ///
-	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Solicitudes")  title("Solicitudes de Residencias Temporales ", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 	
 	
 	
-	graph export "${figure}\figura_6.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_1.png", as(png) name("Graph") replace
 	
 	
 ***********************VISAS TEMPORALES APROBADAS*******************************
@@ -161,8 +161,8 @@ append using "${temp}\res_temp_acep_2023_2do.dta"
 collapse (sum) visa_temp_acep, by(AÑO)
 
 graph tw   (connected visa_temp_acep AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
-	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Visas Temporales Aceptadas", color(navy) )  ///
-	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Residencias")  title("Residencias Temporales Aceptadas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 	
 	
 	
@@ -237,8 +237,8 @@ forval year = 2017/2023 {
 collapse (sum) visa_def_sol, by(AÑO)
 
 graph tw   (connected visa_def_sol AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
-	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Solicitudes Visas Definitivas", color(navy) )  ///
-	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Solicitudes")  title("Solicitudes Residencias Definitivas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 
 
 	graph export "${figure}\figura_3.png", as(png) name("Graph") replace
@@ -333,8 +333,8 @@ append using "${temp}\res_def_acep_2023_2do.dta", force
 
 collapse (sum) visa_def_acep, by(AÑO)
 graph tw   (connected visa_def_acep AÑO ) ,   graphregion(fcolor(white) lcolor(white) ///
-	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Visas")  title("Visas Definitivas Aceptadas", color(navy) )  ///
-	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Servicio Nacional de Migraciones")
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Residencias")  title("Residencias Definitivas Aceptadas", color(navy) )  ///
+	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2000 2005 2010 2015  2020 2023 ) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 
 
 	graph export "${figure}\figura_4.png", as(png) name("Graph") replace
@@ -399,9 +399,9 @@ save "${temp}\res_def_acep_2000_2023_collapsed.dta", replace
 	gr tw (connected porc_rate_accep_def AÑO ) ///
 			(connected porc_rate_accep_temp AÑO) , ///
 			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
-    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Visa", color(navy)) ///
+    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Residencia", color(navy)) ///
     legend(pos(10) ring(0) col(1)) legend( label(1 "Definitiva") label(2 "Temporal")) ///
-	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Servicio Nacional de Migraciones")
+	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 
 		graph export "${figure}\figura_5_sin_duplicados.png", as(png) name("Graph") replace
 
@@ -457,9 +457,166 @@ save "${temp}\res_def_acep_2000_2023_collapsed.dta", replace
 	gr tw (connected porc_rate_accep_def AÑO ) ///
 			(connected porc_rate_accep_temp AÑO) , ///
 			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
-    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Visa", color(navy)) ///
+    xtitle("Año") ytitle("Porcentaje") title("Tasa de Aprobación por Tipo de Residencia", color(navy)) ///
     legend(pos(10) ring(0) col(1)) legend( label(1 "Definitiva") label(2 "Temporal")) ///
-	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Servicio Nacional de Migraciones")
+	xlabel(2000 2005 2010 2015 2020 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
 
 		graph export "${figure}\figura_5_con_duplicados.png", as(png) name("Graph") replace
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+*****************************************STACK VAR DE PROFESIONES MAS REPETIDAS****************************
+		
+		
+		
+***********************STACK DE RESIDENCIAS DEF ACEPTADAS***********************************
+
+ use "${temp}\res_def_acep_2000_2023.dta" , clear
+
+bysort PROFESIÓN AÑO: gen counter = _N
+
+
+
+drop if PROFESIÓN==""
+replace PROFESIÓN="Otra" if AÑO==2000 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2001 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Medico"
+replace PROFESIÓN="Otra" if AÑO==2002 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2003 & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2004 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2005 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2006 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2007 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2008 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2009 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2010 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2011 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2012 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2013 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2014 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2015 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2016 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2017 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2018 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2019 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2020 & PROFESIÓN!="Vendedor" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2021 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Contador" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2022 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Contador" & PROFESIÓN!="Empleado"
+
+
+	
+	
+gr bar (sum) visa_def_acep, over(PROFESIÓN, sort(1)) over (AÑO, label(angle(90) labsize(vsmall))) asyvars stack percent  ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Distribución Profesiones")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title(Distribución Profesiones de Residencias Extranjeras Definitivas) ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+
+		graph export "${figure}\figura_6.png", as(png) name("Graph") replace
+
+*********************STACK DE RESIDENCIAS DEFINITIVAS SOLICITADAS***************
+
+
+use "${temp}\res_def_sol_2000_2023.dta" , clear
+
+bysort PROFESIÓN AÑO: gen counter = _N
+replace PROFESIÓN="Otra" if AÑO==2000 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2001 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2002 & PROFESIÓN!="Ingeniero" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2003 & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2004 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2005 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2006 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2007 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2008 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2009 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2010 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2011 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2012 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2013 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2014 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2015 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2016 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2017 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Jornalero" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2018 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2019 & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2020 & PROFESIÓN!="Dueña De Casa" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado" 
+replace PROFESIÓN="Otra" if AÑO==2021 & PROFESIÓN!="Administrador" & PROFESIÓN!="Estudiante" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Empleado"
+replace PROFESIÓN="Otra" if AÑO==2022 & PROFESIÓN!="Jardinero" & PROFESIÓN!="Menor De Edad" & PROFESIÓN!="Asesora Del Hogar" & PROFESIÓN!="Mecanico"
+
+gr bar (sum) visa_def_sol, over(PROFESIÓN, sort(1)) over (AÑO, label(angle(90) labsize(vsmall))) asyvars stack percent  ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Distribución Profesiones")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title(Distribución Profesiones de Residencias (Sol.) Extranjeras Definitivas) ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+		graph export "${figure}\figura_7.png", as(png) name("Graph") replace
+
+
+****************STACK RESIDENCIAS TEMPORALES ACEPTADAS***********************************
+
+use "${temp}\res_temp_acep_2000_2023.dta" , clear
+
+bysort PROFESION AÑO: gen counter = _N
+
+
+
+replace PROFESION="Otra" if AÑO==2000 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2001 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2002 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2003 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2004 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2005 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2006 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2007 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2008 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2009 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2010 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2011 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2012 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2013 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2014 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2015 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2016 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Dueña De Casa" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2017 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2018 & PROFESION!="Sin Profesion" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2019 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2020 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado" 
+replace PROFESION="Otra" if AÑO==2021 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2022 & PROFESION!="Asesora Del Hogar" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+replace PROFESION="Otra" if AÑO==2023 & PROFESION!="Dueña De Casa" & PROFESION!="Estudiante" & PROFESION!="Menor De Edad" & PROFESION!="Empleado"
+
+gr bar (sum) visa_temp_acep, over(PROFESION, sort(1)) over (AÑO, label(angle(90) labsize(vsmall))) asyvars stack percent  ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Distribución Profesiones")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title(Distribución Profesiones de Residencias Extranjeras Temporales) ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+
+		graph export "${figure}\figura_8.png", as(png) name("Graph") replace
+
+
+
 
