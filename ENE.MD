@@ -3,32 +3,32 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 Figura 1: Se observa que el porcentaje de ocupación informal es similar entre migrantes y nativos.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/bfb8ce77-5e9d-44e4-ae65-835194ea53de)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_1.png?raw=true)
 
 Figura 2: Se observa que empleadores cotizan más por trabajadores nacionales.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/5c27474e-9841-4b95-aebd-2e61fcf5cf27)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_2.png?raw=true)
 
 Figura 3: Se observa que empleadores cotizan más para salud de trabajadores nacionales.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/3394edd3-2d72-416d-b3bd-4592371b793d)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_3.png?raw=true)
 
 Figura 4: Se observa que contribuciones al seguro de cesantia son similares para nacionales y extranjeros.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/d521e4f0-495e-4cd3-9b19-8d493d9d4672)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_4.png?raw=true)
 
 Figura 5: Se observa que trabajadores extranjeros tienen menos derecho a vacaciones.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/b758c388-fb84-41ce-920f-b1291824fd48)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_5.png?raw=true)
 
 Figura 6: Se observa que trabajadores nacionales tienen mayores derechos al reportar enfermedad.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7ed39932-a2ef-4911-ae36-6530dba65452)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_6.png?raw=true)
 
 Figura 7: En cuanto a permisos de maternidad, se observa que trabajadoras nacionales tienen mayores derechos.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/ea22dbfe-5c64-436e-9648-4ac6934fd2bf)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_7.png?raw=true)
 
 Figura 8: En cuanto a servicios de guardería, se observa que trabajadoras extranjeras se ven desfavorecidas.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/6790de89-b473-4102-8e71-ab4b23d4f7c5)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_8.png?raw=true)
