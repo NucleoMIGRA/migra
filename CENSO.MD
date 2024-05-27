@@ -32,6 +32,6 @@ Figura 7: Se muestra que la mayoría de hogares en Chile, no cuentan con un jefe
 
 Figura 8: Es posible observar que extranjeros concentran su población entre los 20 y 45 años.
 
-![piramide_extranjero](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/354b0209-66c7-450c-bba1-64082e77eb44)
+![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
 
