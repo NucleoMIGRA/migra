@@ -3,35 +3,32 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 Figura 1: Se puede observar que Haití es el país que presenta mayor cantidad de hogares por vivienda.
 
-![figura_1](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/f51fdcb7-50b3-432d-8b7f-bf03083905fa)
+![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_1.png?raw=true)
 
 Figura 2: La figura se crea a partir de la población que tiene hijos y que tiene al menos un hijo posterior a la fecha de llegada al país.
 
-![figura_2](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/49b7c763-f9fd-4e8e-84eb-17ad995cbecf)
+![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
 
 Figura 3: Se puede observar que Bolivia tiene menos años de escolaridad promedio. Población entre 25-50 años.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/f124b6bc-dd55-4418-abeb-3ab68bcc0104)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
 
-Figura 3.1: Se puede observar que Chile tiene menos años de escolaridad promedio. Población entre 25-50 años.
-
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/37408f85-9477-4d9b-b276-28afb39ccff9)
 
 Figura 4: Se puede observar que gran parte de los Venezolanos presentes en Chile, cuentan con educación superior.
 
-![figura_4](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/592efe8b-7b20-4292-b4fc-35e538482e77)
+![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_4.png?raw=true)
 
 Figura 5: Se puede observar el número de hijos de mujeres entre 15 y 30 años de edad, por país de origen.
 
-![image](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0807dde4-7058-4117-9df8-ec7e6028cced)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
 
 Figura 6: Se muestra que la mayoría de hogares en Chile, no cuentan con una persona extranjera.
 
-![figura_6](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/7beb605a-2b73-413d-ba42-06b324b65d5a)
+![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
 
 Figura 7: Se muestra que la mayoría de hogares en Chile, no cuentan con un jefe de hogar extranjero.
 
-![figura_7](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/cec2f877-a1ac-4aa2-b66e-a7505d6e9420)
+![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
 
 Figura 8: Es posible observar que extranjeros concentran su población entre los 20 y 45 años.
 
