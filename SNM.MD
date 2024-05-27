@@ -4,7 +4,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 Figura 1: Se presentan mapas que indican la distribución de extranjeros en situación irregular dentro del país, por región.
 
-![agregado](https://github.com/NucleoMIGRA/Plataforma_privado/assets/154906172/0a15e904-28d2-4ab7-884b-a9323886ce42)
+![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
 
 Figura 2: Se puede observar que existe un incremento considerable en la solicitud de residencias temporales a partir de 2016, llegando a un máximo en 2018.
 
