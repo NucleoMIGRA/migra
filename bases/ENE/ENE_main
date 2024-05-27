@@ -1,1 +1,282 @@
+global data "D:\plataforma_migra\ENE"
+global figure "D:\plataforma_migra\ENE\figuras"
+
+use "${data}\ano-2022.dta"  , clear
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+gr bar (sum) persona, over(ocup_form) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("Distribución Ocupación Formal e Informal (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_1.png", as(png) name("Graph") replace
+
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7a_1==77
+drop if b7a_1==88
+drop if b7a_1==99
+
+gr bar (sum) persona, over(b7a_1) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Su Empleador Cotiza por Usted en el Sistema Previsional? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Encuesta Nacional de Empleo")
+
+
+
+graph export "${figure}\figura_2.png", as(png) name("Graph") replace
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7a_2==77
+drop if b7a_2==88
+drop if b7a_2==99
+
+gr bar (sum) persona, over(b7a_2) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Su Empleador Cotiza por Usted en el Sistema de Salud? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_3.png", as(png) name("Graph") replace
+
+
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7a_3==77
+drop if b7a_3==88
+drop if b7a_3==99
+
+gr bar (sum) persona, over(b7a_3) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Su Empleador Cotiza por Usted en el Seguro de Desempleo? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_4.png", as(png) name("Graph") replace
+
+
+
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7b_1==77
+drop if b7b_1==88
+drop if b7b_1==99
+
+gr bar (sum) persona, over(b7b_1) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Tiene Derecho a Vacaciones? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_5.png", as(png) name("Graph") replace
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7b_2==77
+drop if b7b_2==88
+drop if b7b_2==99
+
+gr bar (sum) persona, over(b7b_2) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Tiene Derecho a Días Pagados por Enfermedad? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_6.png", as(png) name("Graph") replace
+
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+keep if sexo==2
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7b_3==77
+drop if b7b_3==88
+drop if b7b_3==99
+
+gr bar (sum) persona, over(b7b_3) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Tiene Derecho a un Permiso de Maternidad? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+
+graph export "${figure}\figura_7.png", as(png) name("Graph") replace
+
+
+********************************************************************************
+
+
+
+
+use "${data}\ano-2022.dta"  , clear
+
+
+
+gen persona=1
+keep if sexo==2
+
+replace mig4=1 if mig4==2
+
+
+label define extranjero 1 "Nacionales" 3 "Extranjeros"
+
+label values mig4 extranjero
+
+
+drop if b7b_4==77
+drop if b7b_4==88
+drop if b7b_4==99
+
+gr bar (sum) persona, over(b7b_4) over(mig4) asyvars stack percent ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Porcentaje")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("¿Tiene Derecho a Servicio de Guardería? (2022)") ///
+legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+
+
+graph export "${figure}\figura_8.png", as(png) name("Graph") replace
+
+
+
 
