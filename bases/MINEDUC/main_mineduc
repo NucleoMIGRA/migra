@@ -6,6 +6,7 @@ global temp "D:\plataforma_migra\MINEDUC\Simon_Andrade\bases_temporales"
 global figure "D:\plataforma_migra\MINEDUC\Simon_Andrade\figuras_mineduc"
 global maps "D:\plataforma_migra\maps"
 import delimited "${data}\20230906_Matrícula_unica_2023_20230430_PUBL_MRUN.CSV", clear
+duplicates drop mrun, force 
 
 
 * Define labels
@@ -101,6 +102,7 @@ save "${temp}\mineduc_2023.dta", replace
 *****************************2021***********************************************
 
 import delimited "${data}\20210913_Matrícula_unica_2021_20210430_PUBL_MRUN.CSV", clear
+duplicates drop mrun, force 
 
 * Define labels
 label define label_cod_ense2 ///
@@ -196,6 +198,7 @@ save "${temp}\mineduc_2021.dta", replace
 
 ************************************2020****************************************
 import delimited "${data}\20200921_Matrícula_unica_2020_20200430_PUBL_MRUN.CSV", clear
+duplicates drop mrun, force 
 
 * Define labels
 label define label_cod_ense2 ///
@@ -294,7 +297,8 @@ save "${temp}\mineduc_2020.dta", replace
 
 
 import delimited "${data}\20191028_Matrícula_unica_2019_20190430_PUBL.CSV", clear
-
+duplicates drop mrun, force 
+		
 * Define labels
 label define label_cod_ense2 ///
 1 "Educación Parvularia" ///
@@ -393,6 +397,7 @@ save "${temp}\mineduc_2019.dta", replace
 
 
 import delimited "${data}\20181005_Matrícula_unica_2018_20180430_PUBL.CSV", clear
+duplicates drop mrun, force 
 
 * Define labels
 label define label_cod_ense2 ///
@@ -494,6 +499,7 @@ save "${temp}\mineduc_2018.dta", replace
 
 
 import delimited "${data}\20170921_Matrícula_unica_2017_20170430_PUBL.CSV", clear
+duplicates drop mrun, force 
 
 * Define labels
 label define label_cod_ense2 ///
@@ -584,12 +590,14 @@ collapse (sum) basica parvularia media basica_extranjero parvularia_extranjero m
 gen anio=2017
 
 save "${temp}\mineduc_2017.dta", replace
-***************************2015*************************************************
+***************************2016*************************************************
 
 
 
 
-import delimited "${data}\Matrícula_unica_2015publica.csv", clear
+import delimited "${data}\20160926_Matrícula_unica_2016_20160430_PUBL.csv", clear
+
+duplicates drop mrun, force 
 
 * Define labels
 label define label_cod_ense2 ///
@@ -677,11 +685,9 @@ egen total_media_tecnico_extranjero=total(media_tecnico_extranjero)
 
 collapse (sum) basica parvularia media basica_extranjero parvularia_extranjero media_extranjero basica_nacional parvularia_nacional media_nacional media_humanista_nacional media_humanista_extranjero media_tecnico_nacional media_tecnico_extranjero (mean) total_parvularia total_basica total_media total_parvularia_nacional total_basica_nacional total_media_nacional total_parvularia_extranjero total_basica_extranjero total_media_extranjero total_media_humanista_nacional total_media_tecnico_nacional total_media_humanista_extranjero total_media_tecnico_extranjero
 
-gen anio=2015
+gen anio=2016
 
-save "${temp}\mineduc_2015.dta", replace
-
-
+save "${temp}\mineduc_2016.dta", replace
 
 
 ********************************************************************************
@@ -692,10 +698,10 @@ save "${temp}\mineduc_2015.dta", replace
 	clear all
 
 	* Loop over years from 2009 to 2015
-	forvalues year = 2009/2015 {
+	forvalues year = 2008/2015 {
 		* Import data for the current year
 		import delimited "${data}\Matrícula_unica_`year'publica.csv", clear
-		
+		duplicates drop mrun, force 
 		* Define labels
 		label define label_cod_ense2 ///
 		1 "Educación Parvularia" ///
@@ -788,18 +794,18 @@ save "${temp}\mineduc_2015.dta", replace
 		gen anio = `year'
 
 		* Save the dataset with the year in the filename
-		save "${temp}\mineduc_`year'
+		save "${temp}\mineduc_`year'", replace
 	}
-	***********************APENND***************************************************
+	***********************APPEND***************************************************
 
 
 	
 	
 	clear
 
-local years "2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023"
+local years "2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023"
 
-forvalues year = 2009/2023 {
+forvalues year = 2008/2023 {
     local filepath "${temp}\mineduc_`year'.dta"
     
     capture confirm file "`filepath'"
@@ -811,7 +817,9 @@ forvalues year = 2009/2023 {
     }
 }
 
-save "${temp}/mineduc_2009_2023.dta", replace
+save "${temp}/mineduc_2008_2023.dta", replace
+
+use "${temp}/mineduc_2008_2023.dta", clear
 
 	gen media_tecnico= media_tecnico_extranjero + media_tecnico_nacional
 	gen media_humanista= media_humanista_extranjero + media_humanista_nacional
@@ -827,9 +835,9 @@ save "${temp}/mineduc_2009_2023.dta", replace
 	graph tw   (connected porcentaje_extranjeros_basica anio, yaxis(1) ) (connect total_basica anio, yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
 	ifcolor(white) ilcolor(white)) xtitle("Año Escolar") ytitle("Porcentaje", axis(1)) ytitle(Total Estudiantes , axis(2))  title("Porcentaje Estudiantes Extranjeros en Educación Básica y ", color(navy)) ///
 	subtitle("Total de Estudiantes en Educación Básica", color(navy)) legend(label(1 "Porcentaje Extranjeros") label(2 "Total Estudiantes")) ///
-	legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023) caption("Fuente: MINEDUC") ylabel(0(.025) 0.1)
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC") ylabel(0(.025) 0.1)
 
-	graph export "${figure}\figura_18.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_1.png", as(png) name("Graph") replace
 
 
 
@@ -841,27 +849,27 @@ save "${temp}/mineduc_2009_2023.dta", replace
 	graph tw   (connected porcentaje_extranjeros_media anio, yaxis(1) ) (connect total_media anio, yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
 	ifcolor(white) ilcolor(white)) xtitle("Año Escolar") ytitle("Porcentaje", axis(1)) ytitle(Total Estudiantes , axis(2))  title("Porcentaje Estudiantes Extranjeros en Educación Media y" , color(navy)) ///
 	subtitle("Total Estudiantes en Educación Media ", color(navy))legend(label(1 "Porcentaje Extranjeros") label(2 "Total Estudiantes")) ///
-	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023) caption("Fuente: MINEDUC") ylabel(0(.025) 0.1)
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC") ylabel(0(.025) 0.1)
 
-	graph export "${figure}\figura_19.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_2.png", as(png) name("Graph") replace
 
 	****************************figura_3 porcentaje extranjeros y total parvularia**
 
 	graph tw   (connected porcentaje_extranjeros_parvu anio, yaxis(1) ) (connect total_parvularia anio, yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
 	ifcolor(white) ilcolor(white)) xtitle("Año Escolar") ytitle("Porcentaje", axis(1)) ytitle(Total Estudiantes , axis(2))  title("Porcentaje Estudiantes Extranjeros en Educación Parvularia y ", color(navy)) ///
 	subtitle("Total de Estudiantes en Educación Parvularia", color(navy))legend(label(1 "Porcentaje Extranjeros") label(2 "Total Estudiantes")) ///
-	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023) caption("Fuente: MINEDUC") ylabel(0(.025) 0.1)
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC") ylabel(0(.025) 0.1)
 
-	graph export "${figure}\figura_20.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_3.png", as(png) name("Graph") replace
 
 	***************figura_4 porcentaje extranjeros y media humanista****************
 
 	graph tw   (connected porcentaje_extranjeros_media_hum anio, yaxis(1) ) (connect media_humanista anio, yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
 	ifcolor(white) ilcolor(white)) xtitle("Año Escolar") ytitle("Porcentaje", axis(1)) ytitle(Total Estudiantes , axis(2))  title("Porcentaje Estudiantes Extranjeros en Educación Media Humanista y ", color(navy)) ///
 	subtitle("Total de Estudiantes en Educación Media Humanista", color(navy)) legend(label(1 "Porcentaje Extranjeros") label(2 "Total Estudiantes")) ///
-	legend(pos(11) ring(0) col(1) order(1 2) ) xlabel(2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023) caption("Fuente: MINEDUC") ylabel(0(.025) 0.1)
+	legend(pos(11) ring(0) col(1) order(1 2) ) xlabel(2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC") ylabel(0(.025) 0.1)
 
-	graph export "${figure}\figura_21.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_4.png", as(png) name("Graph") replace
 
 
 	
@@ -870,9 +878,9 @@ save "${temp}/mineduc_2009_2023.dta", replace
 	graph tw   (connected porcentaje_extranjeros_media_tec anio, yaxis(1) ) (connect media_tecnico anio, yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
 	ifcolor(white) ilcolor(white)) xtitle("Año Escolar") ytitle("Porcentaje", axis(1)) ytitle(Total Estudiantes , axis(2))  title("Porcentaje Estudiantes Extranjeros en Educación Media Técnica y ", color(navy)) ///
 	subtitle("Total de Estudiantes Media Técnica", color(navy)) legend(label(1 "Porcentaje Extranjeros") label(2 "Total Estudiantes")) ///
-	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2009 2010 2011 2012 2013 2014 2015 2017 2018 2019 2020 2021 2023) caption("Fuente: MINEDUC") ylabel(0(.025) 0.1)
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2008 2009 2010 2011 2012 2013 2014 2015 2016 2017 2018 2019 2020 2021 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC") ylabel(0(.025) 0.1)
 
-	graph export "${figure}\figura_23.png", as(png) name("Graph") replace
+	graph export "${figure}\figura_5.png", as(png) name("Graph") replace
 
 
 	******************************MAPA 2023*****************************************
@@ -943,11 +951,11 @@ cd ${maps}
 grmap porcentaje , ///
 		clmethod(eqint) clnumber(5)  fcolor(Reds2)   ///
 		title("Porcentaje Estudiantes Extranjeros", size(*0.8))  ///
-		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") caption("Fuente: MINEDUC")
+		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.") caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC")
 		
 		
 
-graph export "${figure}\figura_24.png", as(png) name("Graph") replace
+graph export "${figure}\figura_6.png", as(png) name("Graph") replace
 
 
 
@@ -1023,11 +1031,88 @@ replace pais_origen_alu=29 if pais_origen_alu==28
 gen alumno=1
 
 
-graph pie alumno, over(pais_origen_alu)  plabel(1 percent, format(%9.2f))plabel(2 percent, format(%9.2f)) plabel(3 percent, format(%9.2f)) plabel(4 percent, format(%9.2f)) plabel(5 percent, format(%9.2f)) title("Distribución Estudiantes Extranjeros en Chile (2023) ") caption("Fuente: MINEDUC")  sort descending
+graph pie alumno, over(pais_origen_alu)  plabel(1 percent, format(%9.2f))plabel(2 percent, format(%9.2f)) plabel(3 percent, format(%9.2f)) plabel(4 percent, format(%9.2f)) plabel(5 percent, format(%9.2f)) title("Distribución Estudiantes Extranjeros en Chile (2023) ") caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC")  sort descending
 
 
 
-graph export "${figure}\figura_25.png", as(png) name("Graph") replace
+graph export "${figure}\figura_7.png", as(png) name("Graph") replace
+
+*******************************************************************************
+********************DISTR 2014*************************************************
+
+import delimited "${data}\Matrícula_unica_2014publica.csv", clear
 
 
+drop if cod_ense2==3 | cod_ense2== 4 | cod_ense2==6 | cod_ense2==8
+
+
+
+label define nacionalidad ///
+0 "Sin información (valor por defecto)" ///
+1 "Alemania" ///
+2 "Argentina" ///
+3 "Australia" ///
+4 "Bolivia" ///
+5 "Brasil" ///
+6 "Chile" ///
+7 "China" ///
+8 "Colombia" ///
+9 "Corea" ///
+10 "Cuba" ///
+11 "República Dominicana" ///
+12 "Ecuador" ///
+13 "España" ///
+14 "Estados Unidos" ///
+15 "Francia" ///
+16 "Haití" ///
+17 "Italia" ///
+18 "Japón" ///
+19 "México" ///
+20 "Panamá" ///
+21 "Paraguay" ///
+22 "Perú" ///
+23 "Rusia" ///
+24 "Suecia" ///
+25 "Suiza" ///
+26 "Uruguay" ///
+27 "Venezuela" ///
+28 "Apátrida (sin nacionalidad)" ///
+29 "Otro"
+
+* Apply the labels to the cod_nac_alu variable
+label values pais_origen_alu nacionalidad
+
+drop if pais_origen_alu==6
+
+replace pais_origen_alu=29 if pais_origen_alu==0
+replace pais_origen_alu=29 if pais_origen_alu==1
+replace pais_origen_alu=29 if pais_origen_alu==3
+replace pais_origen_alu=29 if pais_origen_alu==5
+replace pais_origen_alu=29 if pais_origen_alu==7
+replace pais_origen_alu=29 if pais_origen_alu==9
+replace pais_origen_alu=29 if pais_origen_alu==10
+replace pais_origen_alu=29 if pais_origen_alu==11
+replace pais_origen_alu=29 if pais_origen_alu==27
+replace pais_origen_alu=29 if pais_origen_alu==14
+replace pais_origen_alu=29 if pais_origen_alu==15
+replace pais_origen_alu=29 if pais_origen_alu==17
+replace pais_origen_alu=29 if pais_origen_alu==18
+replace pais_origen_alu=29 if pais_origen_alu==19
+replace pais_origen_alu=29 if pais_origen_alu==20
+replace pais_origen_alu=29 if pais_origen_alu==21
+replace pais_origen_alu=29 if pais_origen_alu==23
+replace pais_origen_alu=29 if pais_origen_alu==24
+replace pais_origen_alu=29 if pais_origen_alu==25
+replace pais_origen_alu=29 if pais_origen_alu==26
+replace pais_origen_alu=29 if pais_origen_alu==28
+
+
+gen alumno=1
+
+
+graph pie alumno, over(pais_origen_alu)  plabel(1 percent, format(%9.2f))plabel(2 percent, format(%9.2f)) plabel(3 percent, format(%9.2f)) plabel(4 percent, format(%9.2f)) plabel(5 percent, format(%9.2f)) title("Distribución Estudiantes Extranjeros en Chile (2014) ") caption("Fuente: Elaborado por Núcleo MIGRA con datos del MINEDUC")  sort descending
+
+
+
+graph export "${figure}\figura_8.png", as(png) name("Graph") replace
 
