@@ -10,7 +10,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 4. [CASEN](./CASEN.MD)
 5. [ENE](./ENE.MD)
 6. [EPF](./EPF.md)
-7. [¿Cómo citar?](./citation.MD)
+[¿Cómo citar?](./citation.MD)
 
 ## Figuras destacadas:
 
@@ -32,7 +32,7 @@ Figura 4: Del total de personas en estado de hacinamiento, el gráfico presenta 
 
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/Figuras_expansion/fig_3.png?raw=true)
 
-Figura 5: Se observa que migrantes declaran ganar más por hora que chilenos hasta el año 2017.
+Figura 5: Se observa que migrantes trabajan más horas promedio por semana.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/Figuras_expansion/fig_4.png?raw=true)
 
