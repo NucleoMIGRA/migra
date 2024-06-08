@@ -1,6 +1,16 @@
 ## MINEDUC
 Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
+1. [MINEDUC](./MINEDUC.MD)
+2. [Servicio Nacional de Migraciones](./SNM.MD)
+3. [CENSO 2017](./CENSO.MD)
+4. [CASEN](./CASEN.MD)
+5. [ENE](./ENE.MD)
+6. [EPF](./EPF.md)
+
+[¿Cómo citar?](./citation.MD)
+
+
 Figura 1: Se puede observar un crecimiento sostenido del porcentaje de estudiantes extranjeros en educación básica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_1.png?raw=true)
