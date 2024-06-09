@@ -37,3 +37,19 @@ Figura 7: Distribución de profesiones de personas con residencia definitiva ace
 Figura 8: Distribución de profesiones de personas con residencia temporal aceptada.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_8.png?raw=true)
+
+Figura 9: Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones.
+
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_5.png?raw=true)
+
+Figura 10: Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones, por sexo.
+
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_2.png?raw=true)
+
+Figura 11: Distribución de expulsiones administrativas por tipo de delito.
+
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_3.png?raw=true)
+
+Figura 12: Distribución de expulsiones administrativas por nacionalidad.
+
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura__4.png?raw=true)
