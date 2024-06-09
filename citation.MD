@@ -1,9 +1,9 @@
-## ¿Cómo citar?  
+# ¿Cómo citar?  
 Nuestro trabajo es importante, así que agradecemos si puede citar el uso del código y figuras disponibles en este repositorio.  
-# Cita formato APA
+## Cita formato APA
 MIGRA, N. (2024). Repositorio MIGRA (Version 2.0.4) [Computer software]
 
-# Cita formato BibTex
+## Cita formato BibTex
 
 @software{MIGRA_Repositorio_MIGRA_2024,
 
