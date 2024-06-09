@@ -2,6 +2,15 @@
 
 Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de su [página web](https://serviciomigraciones.cl/estudios-migratorios/datos-abiertos/), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/SNM) disponible en este repositorio.
 
+1. [MINEDUC](./MINEDUC.MD)
+2. [Servicio Nacional de Migraciones](./SNM.MD)
+3. [CENSO 2017](./CENSO.MD)
+4. [CASEN](./CASEN.MD)
+5. [ENE](./ENE.MD)
+6. [EPF](./EPF.md)
+
+[¿Cómo citar?](./citation.MD)
+
 Figura 1: Se presentan mapas que indican la distribución de extranjeros en situación irregular dentro del país, por región.
 
 ![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
