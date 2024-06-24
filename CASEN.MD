@@ -4,8 +4,8 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 **Nota**: Los años omitidos en las figuras, corresponden a encuestas que no consideraban esa variable.  
 **Nota**: Las figuras fueron creadas con el factor de expansión nacional.
 
-1. [MINEDUC](./MINEDUC.MD)
-2. [Servicio Nacional de Migraciones](./SNM.MD)
+1. [Servicio Nacional de Migraciones](./SNM.MD)
+2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
 4. [CASEN](./CASEN.MD)
 5. [ENE](./ENE.MD)
