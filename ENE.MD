@@ -1,8 +1,8 @@
 ## ENE
 Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados de su [página web](https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/ENE) disponible en este repositorio.
 
-1. [MINEDUC](./MINEDUC.MD)
-2. [Servicio Nacional de Migraciones](./SNM.MD)
+1. [Servicio Nacional de Migraciones](./SNM.MD)
+2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
 4. [CASEN](./CASEN.MD)
 5. [ENE](./ENE.MD)
