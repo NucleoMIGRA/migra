@@ -1,8 +1,8 @@
 ## MINEDUC
 Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
-1. [MINEDUC](./MINEDUC.MD)
-2. [Servicio Nacional de Migraciones](./SNM.MD)
+1. [Servicio Nacional de Migraciones](./SNM.MD)
+2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
 4. [CASEN](./CASEN.MD)
 5. [ENE](./ENE.MD)
