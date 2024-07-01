@@ -7,6 +7,7 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 4. [CASEN](./CASEN.MD)
 5. [ENE](./ENE.MD)
 6. [EPF](./EPF.md)
+7. [PDI](./PDI.MD)
 
 [¿Cómo citar?](./citation.MD)
 
