@@ -17,3 +17,11 @@ Figura 1: Se puede observar que regiones del norte y la metropolitana concentran
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_1.png?raw=true)
 
+Figura 2: Se puede observar que Venezolanos concentran los ingresos por pasos no habilitados.
+
+![fig_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_2.png?raw=true)
+
+Figura 3: Se muestra la evolución de expulsiones realizadas por la PDI.
+
+![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_3.png?raw=true)
+
