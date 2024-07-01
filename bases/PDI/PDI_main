@@ -1,11 +1,10 @@
-
 cd "D:\plataforma_migra\maps"
 
 global data "D:\plataforma_migra\PDI\data"
 global maps "D:\plataforma_migra\maps"
 global figure "D:\plataforma_migra\PDI\ingresos_ilegales\figures"
 
-use "${base}\ingresos_2023.dta", clear
+use "${data}\ingresos_2023.dta", clear
 
 rename codregeo cir_sena
 
@@ -22,17 +21,17 @@ grmap cantidad , ///
 		title("Denuncias de Ingresos Ilegales por Región en 2023", size(*0.7))  ///
 		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.")  caption(Fuente: Elaborado por Núcleo MIGRA con datos de la PDI ,size(*0.5))	
 		
-		graph save "Graph" "${figure}\figura_1.gph" , replace
-		
+graph export "${figure}\figura_1.png", as(png) name("Graph") replace		
 		
 		************************************************************************
 		****************************FIGURA 2***********************************
 		****************************PIE CHARTS DE INGRESOS NO HABILITADOS******
-		import excel "${base}\clean_pasos_no_hab.xlsx", sheet("Sheet1") firstrow clear
+		import excel "${data}\clean_pasos_no_hab.xlsx", sheet("Sheet1") firstrow clear
 		
 drop if region==""
 
 collapse (sum) cantidad, by(nacionalidad)
+
 
 
 
@@ -66,7 +65,7 @@ graph pie percentage, over(new_nacionalidad) ///
     caption("Fuente: Elaborado por Núcleo MIGRA con datos de la PDI") 
 	
 	
-	graph save "${figure}\figura_2.gph" , replace
+graph export "${figure}\figura_2.png", as(png) name("Graph") replace		
 		
 	
 	
