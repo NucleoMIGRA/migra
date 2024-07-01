@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# Estadísticas MIGRA
+# Repositorio
 El siguiente repositorio tiene como objetivo recopilar información de bases de datos de naturaleza abierta, con tal de evidenciar la situación de migrantes en Chile. Las estadísticas se encuentran divididas por tipo de base, además se incluye una sección para poder citar el repositorio.
 
 1. [Servicio Nacional de Migraciones](./SNM.MD)
