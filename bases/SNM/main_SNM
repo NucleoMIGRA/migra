@@ -212,5 +212,108 @@ grmap ratio, ///
 		graph export "${figure}\agregado.png", as(png) name("Graph") replace
 
 
+****************************************************
+********EXPULSIONES*****************************
+
+
+import excel "${base}\expulsiones_administrativas_stata.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen expulsion=1
+
+collapse (sum) expulsion, by (AÑO)
+
+
+
+
+graph tw connected   expulsion AÑO  ,   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Total")  title("Expulsiones Administrativas Dictadas por SNM", color(navy)) ///
+xlabel( 2021 2022 2023 2024) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+
+graph export "${figure}\figura_1.png", as(png) name("Graph") replace
+********************************************************************************
+**************************FIGURA 2**********************************************
+********************************************************************************
+
+
+
+import excel "${base}\expulsiones_administrativas_stata.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen expulsion=1
+
+
+collapse (sum) expulsion, by (AÑO SEXO)
+
+
+graph tw   (connected expulsion AÑO if SEXO=="Femenino", yaxis(1) ) (connect expulsion AÑO if SEXO=="Masculino", yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Mujeres", axis(1)) ytitle( "Hombres" , axis(2))  title("Expulsiones Administrativas Dictadas por SNM, por Sexo", color(navy)) ///
+	legend(label(1 "Mujeres") label(2 "Hombres")) ///
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2021 2022 2023 2024) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+	
+	
+	graph export "${figure}\figura_2.png", as(png) name("Graph") replace
+
+
+	
+********************************************************************************
+**************************FIGURA 3**********************************************
+********************************************************************************
+
+
+
+import excel "${base}\expulsiones_administrativas_stata.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen expulsion=1
+
+replace CAUSALAGRUPADA="Otros Delitos" if CAUSALAGRUPADA!="Ingreso clandestino" & CAUSALAGRUPADA!="Delitos Ley de Drogas" & CAUSALAGRUPADA!="Delitos contra la Propiedad" 
+
+gr bar (sum) expulsion, over(CAUSALAGRUPADA) over (AÑO, label(angle(90) labsize(vsmall))) asyvars stack percent   ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Distribución")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("Distribución de Expulsiones Administrativas por Tipo de Delito") ///
+legend(pos(6) ring(1) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+graph export "${figure}\figura_3.png", as(png) name("Graph") replace
+
+********************************************************************************
+**************************FIGURA 4**********************************************
+********************************************************************************
+
+
+
+import excel "${base}\expulsiones_administrativas_stata.xlsx", sheet("Sheet1") firstrow clear
+
+
+gen expulsion=1
+
+replace NACIONALIDADPAIS="Otro" if NACIONALIDADPAIS!="VENEZUELA" & NACIONALIDADPAIS!="COLOMBIA" & NACIONALIDADPAIS!="BOLIVIA" & NACIONALIDADPAIS!="PERÚ" 
+
+replace NACIONALIDADPAIS="Venezuela" if NACIONALIDADPAIS=="VENEZUELA"
+replace NACIONALIDADPAIS="Colombia" if NACIONALIDADPAIS=="COLOMBIA"
+replace NACIONALIDADPAIS="Perú" if NACIONALIDADPAIS=="PERÚ"
+replace NACIONALIDADPAIS="Bolivia" if NACIONALIDADPAIS=="BOLIVIA"
+
+
+
+gr bar (sum) expulsion, over(NACIONALIDADPAIS) over (AÑO, label(angle(90) labsize(vsmall))) asyvars stack percent   ///
+legend(cols(3) size(vsmall)) ///
+ytitle("Distribución")   ///
+ylabel(, angle(0) format(%12.0gc)) ///
+title("Distribución de Expulsiones Administrativas por Nacionalidad") ///
+legend(pos(6) ring(1) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos del SNM")
+
+
+
+graph export "${figure}\figura_4.png", as(png) name("Graph") replace
+
+
+
+
+
+
 
 
