@@ -1,1 +1,93 @@
 
+cd "D:\plataforma_migra\maps"
+
+global data "D:\plataforma_migra\PDI\data"
+global maps "D:\plataforma_migra\maps"
+global figure "D:\plataforma_migra\PDI\ingresos_ilegales\figures"
+
+use "${base}\ingresos_2023.dta", clear
+
+rename codregeo cir_sena
+
+
+**********************	FIGURA 1*************************************
+***********************MAPA INGRESOS 2023***************************
+merge 1:1 cir_sena using "${maps}\Regional"
+
+format (cantidad) %12.0f
+drop if _merge==2
+
+grmap cantidad , ///
+		clmethod(custom) clb(0 500 1000 2500 5000 11000) clnumber(5)  fcolor(Reds2)   ///
+		title("Denuncias de Ingresos Ilegales por Región en 2023", size(*0.7))  ///
+		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.")  caption(Fuente: Elaborado por Núcleo MIGRA con datos de la PDI ,size(*0.5))	
+		
+		graph save "Graph" "${figure}\figura_1.gph" , replace
+		
+		
+		************************************************************************
+		****************************FIGURA 2***********************************
+		****************************PIE CHARTS DE INGRESOS NO HABILITADOS******
+		import excel "${base}\clean_pasos_no_hab.xlsx", sheet("Sheet1") firstrow clear
+		
+drop if region==""
+
+collapse (sum) cantidad, by(nacionalidad)
+
+
+
+
+egen total = total(cantidad)
+gen percentage = (cantidad / total) * 100
+
+* Threshold for grouping into 'Other'
+local threshold = 5
+
+* Create a new variable for the modified category
+gen new_nacionalidad = nacionalidad
+
+* Identify and label categories below the threshold as 'Other'
+bysort nacionalidad: gen flag = (percentage < `threshold')
+bysort flag (percentage): replace new_nacionalidad = "Otra" if flag & _n > 1
+
+* Sum the 'Other' category
+collapse (sum) cantidad percentage, by(new_nacionalidad)
+
+* Sort the data
+sort cantidad
+replace new_nacionalidad = "Otra" if new_nacionalidad=="ARGELINO"
+
+collapse (sum) percentage, by(new_nacionalidad)
+* Create the pie chart
+graph pie percentage, over(new_nacionalidad) ///
+    plabel(1 percent, format(%9.2f) ) plabel(2 percent, format(%9.2f)) ///
+    plabel(3 percent, format(%9.2f)) plabel(4 percent, format(%9.2f)) ///
+    plabel(5 percent, format(%9.2f)) title("Distribución Ingresos Pasos no Habilitados (2021-2023)") pie(1,  color(olive)) pie(2,  color(red)) pie(3,  color(green)) pie(4,  color(navy)) ///
+    caption("Fuente: Elaborado por Núcleo MIGRA con datos de la PDI") 
+	
+	
+	graph save "${figure}\figura_2.gph" , replace
+		
+	
+	
+	****************************************************************************
+	******************************FIGURA 3*************************************
+	
+	
+import excel "${data}\expulsiones_13_24.xlsx", sheet("Sheet1") firstrow clear
+
+
+collapse (sum) administrativa judicial total , by(año)
+format año %12.0f
+
+drop if año==2024
+
+graph tw   (connected administrativa año , yaxis(1) ) (connect judicial año , yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Administrativas", axis(1)) ytitle( "Judiciales" , axis(2))  title("Expulsiones Realizadas por la PDI, por Tipo", color(navy)) ///
+	legend(label(1 "Administrativas") label(2 "Judiciales")) ///
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la PDI") 
+	graph export "${figure}\figura_3.png", as(png) name("Graph") replace
+	
+	
+	
+	
