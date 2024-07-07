@@ -21,23 +21,23 @@ Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_2.png?raw=true)
 
-Figura 3: Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Humanista-Científica.
+**Figura 3:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Humanista-Científica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_4.png?raw=true)
 
-Figura 4: Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Técnica.
+**Figura 4:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Técnica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_5.png?raw=true)
 
-Figura 5: Distribución de Estudiantes Migrantes por Región (Año 2023).
+**Figura 5:** Distribución de Estudiantes Migrantes por Región (Año 2023).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_6.png?raw=true)
 
-Figura 6: Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023).
+**Figura 6:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
-Figura 7: Distribución de Estudiantes Migrantes por Nacionalidad (Año 2014).
+**Figura 7:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2014).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_8.png?raw=true)
 
