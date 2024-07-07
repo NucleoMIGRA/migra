@@ -13,31 +13,31 @@ Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (
 [¿Cómo citar?](./citation.MD)
 
 
-Figura 1: Se puede observar un crecimiento sostenido del porcentaje de estudiantes extranjeros en educación básica.
+**Figura 1:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Básica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_1.png?raw=true)
 
-Figura 2: Se puede observar que si bien desciende el total de matriculados en educación media, existe un incrementos de estudiantes extranjeros.
+**Figura 2:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_2.png?raw=true)
 
-Figura 3: Se pueden observar incrementos en el total de estudiantes en educación media humanista, además de incrementos del porcentaje de estudiantes extranjeros.
+Figura 3: Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Humanista-Científica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_4.png?raw=true)
 
-Figura 4: Se puede observar un decrecimiento en el total de estudiante en eduación media técnica, pero un aumento en el porcentaje de estudiantes extranjeros.
+Figura 4: Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Técnica.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_5.png?raw=true)
 
-Figura 5: Se puede observar que para el año 2023, el porcentaje de estudiantes extranjeros se concentra en las regiones del norte del país.
+Figura 5: Distribución de Estudiantes Migrantes por Región (Año 2023).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_6.png?raw=true)
 
-Figura 6: Se puede observar que el origen de los estudiantes extranjeros para el año 2023, corresponde en su mayoría a estudiantes de Venezuela, Bolivia, Colombia y Perú.
+Figura 6: Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
-Figura 7: Se puede observar que el origen de los estudiantes extranjeros para el año 2014, corresponde en su mayoría a estudiantes de Perú, Colombia, Bolivia y Argentina.
+Figura 7: Distribución de Estudiantes Migrantes por Nacionalidad (Año 2014).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_8.png?raw=true)
 
