@@ -16,7 +16,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 ## Figuras destacadas:
 
-Figura 1: Se puede observar que el origen de los estudiantes extranjeros para el año 2023, corresponde en su mayoría a estudiantes de Venezuela, Bolivia, Colombia y Perú.
+**Figura 1:** Distribución Estudiantes 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
@@ -32,11 +32,11 @@ Figura 3: Es posible observar que extranjeros concentran su población entre los
 
 Figura 4: Del total de personas en estado de hacinamiento, el gráfico presenta que el porcentaje de hacinamiento crítico es mayor en migrantes.
 
-![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/Figuras_expansion/fig_3.png?raw=true)
+![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
 Figura 5: Se observa que migrantes trabajan más horas promedio por semana.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/Figuras_expansion/fig_4.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
 
 
