@@ -30,15 +30,15 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 ![fig_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
-**Figura 5:** Porcentaje de Población que Firmó Contrato de Trabajo.
+**Figura 5:** Porcentaje de Población que Firmó Contrato de Trabajo
 
 ![fig_5](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_5.png?raw=true)
 
-**Figura 6:** Salario Promedio por Hora, Ajustado por Inflación.
+**Figura 6:** Salario Promedio por Hora, Ajustado por Inflación
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_6.png?raw=true)
 
-**Figura 7:** Porcentaje de Ruralidad por Origen.
+**Figura 7:** Porcentaje de Ruralidad por
 
 ![fig_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_7.png?raw=true)
 
@@ -46,7 +46,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_9.png?raw=true)
 
-**Figura 9:** Porcentaje de Población en Situación de Pobreza, por Origen.
+**Figura 9:** Porcentaje de Población en Situación de Pobreza
 
 ![fig_10](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_10.png?raw=true)
 
