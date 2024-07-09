@@ -38,7 +38,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_6.png?raw=true)
 
-**Figura 7:** Porcentaje de Ruralidad por
+**Figura 7:** Porcentaje de Ruralidad
 
 ![fig_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_7.png?raw=true)
 
