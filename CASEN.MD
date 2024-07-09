@@ -15,18 +15,18 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Stock de Migrantes en el Tiempo, por Sexo.
+**Figura 1:** Stock de Migrantes en el Tiempo
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_1.png?raw=true)
 
-**Figura 2:** Porcentaje de Personas con Educación Superior por Origen.
+**Figura 2:** Porcentaje de Personas con Educación Superior
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_2.png?raw=true)
 
 **Figura 3:** Distribución de Personas en Estado de Hacinamiento. (Población entre 25-50 años)
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
-**Figura 4:** Horas Semanales Trabajadas por Origen.
+**Figura 4:** Horas Semanales Trabajadas
 
 ![fig_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
@@ -50,7 +50,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 ![fig_10](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_10.png?raw=true)
 
-**Figura 10:** Pirámide Poblacional de Migrantes.
+**Figura 10:** Pirámide Poblacional de Migrantes (Año 2022)
 
 ![fig_10](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_8.png?raw=true)
 
