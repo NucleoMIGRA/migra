@@ -64,4 +64,4 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 **Figura 12:** Distribución de Expulsiones Administrativas
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura__4.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_4.png?raw=true)
