@@ -6,6 +6,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 - Las figuras fueron creadas con el factor de expansión nacional.
 - Migrantes se construye a partir de lugar de residencia de la madre cuando nació.
 
+**Bases:**
 1. [Servicio Nacional de Migraciones](./SNM.MD)
 2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
