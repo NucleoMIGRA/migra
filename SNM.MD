@@ -18,7 +18,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 ![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
 
-**Figura 2:** Solicitud de Residencias Remporales
+**Figura 2:** Solicitudes de Residencias Remporales
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_1.png?raw=true)
 
