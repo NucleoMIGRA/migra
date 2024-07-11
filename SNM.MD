@@ -52,7 +52,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 **Figura 9:** Expulsiones Administrativas Dictadas por el Servicio Nacional de Migraciones.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_5.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_1.png?raw=true)
 
 **Figura 10:** Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones
 
