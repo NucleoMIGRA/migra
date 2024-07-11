@@ -1,8 +1,7 @@
 ## CASEN
 
 Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descargados de su [página web](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen) disponible en este repositorio.  
-**Notas**: 
-- Los años omitidos en las figuras, corresponden a encuestas que no consideraban esa variable.  
+**Notas**: - Los años omitidos en las figuras, corresponden a encuestas que no consideraban esa variable.  
 - Las figuras fueron creadas con el factor de expansión nacional.
 - Migrantes se construye a partir de lugar de residencia de la madre cuando nació.
 
