@@ -14,54 +14,54 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 [¿Cómo citar?](./citation.MD)
 
-Figura 1: Se presentan mapas que indican la distribución de extranjeros en situación irregular dentro del país, por región.
+**Figura 1:** Mapas de Distribución de Extranjeros en Situación Irregular Dentro del País, por Región
 
 ![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
 
-Figura 2: Se puede observar que existe un incremento considerable en la solicitud de residencias temporales a partir de 2016, llegando a un máximo en 2018.
+**Figura 2:** Solicitud de Residencias Remporales
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_1.png?raw=true)
 
-Figura 3: Se puede observar que las residencias temporales aprobadas siguen una tendencia similar a las solicitudes.
+**Figura 3:**  Residencias Temporales Aprobadas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_2.png?raw=true)
 
-Figura 4: Se puede observar que existe un incremento considerable en la solicitud de residencias definitivas a partir de 2015, llegando a un máximo en 2019.
+**Figura 4:** Solicitudes de Residencias Definitivas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_3.png?raw=true)
 
-Figura 5: Se puede observar que las residencias definitivas aprobadas siguen una tendencia similar a las solicitudes.
+**Figura 5:** Residencias Definitivas Aprobadas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_4.png?raw=true)
 
-Figura 6.1: En esta figura se presenta la tasa de aprobación por tipo de residencia, en este gráfico se mantienen todas las observaciones, e.g., se mantienen distintas solicitudes de personas que renuevan una residencia temporal cada dos años.
+**Figura 6.1:** Porcentaje de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_con_duplicados.png?raw=true)
 
-Figura 6.2: En esta figura se presenta la tasa de aprobación por tipo de residencia, en este gráfico se eliminan casos con más de una solicitud.
+**Figura 6.2:** Tasa de Aprobación por tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
-Figura 7: Distribución de profesiones de personas con residencia definitiva aceptada.
+**Figura 7:** Distribución de Profesiones de Personas con Residencia Definitiva Aceptada
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_6.png?raw=true)
 
-Figura 8: Distribución de profesiones de personas con residencia temporal aceptada.
+**Figura 8:** Distribución de Profesiones de Personas con Residencia Temporal Aceptada
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_8.png?raw=true)
 
-Figura 9: Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones.
+**Figura 9:** Expulsiones Administrativas Dictadas por el Servicio Nacional de Migraciones.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_5.png?raw=true)
 
-Figura 10: Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones, por sexo.
+**Figura 10:** Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_2.png?raw=true)
 
-Figura 11: Distribución de expulsiones administrativas por tipo de delito.
+**Figura 11:** Distribución de expulsiones Administrativas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_3.png?raw=true)
 
-Figura 12: Distribución de expulsiones administrativas por nacionalidad.
+**Figura 12:** Distribución de Expulsiones Administrativas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura__4.png?raw=true)
