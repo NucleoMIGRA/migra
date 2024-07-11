@@ -4,6 +4,7 @@ Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (
 **Notas:**
 -  Se identifica migrante con la variable que indica si estudiante es migrante o nacional.  
 
+**Bases:**
 1. [Servicio Nacional de Migraciones](./SNM.MD)
 2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
