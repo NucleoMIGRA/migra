@@ -44,7 +44,7 @@ Los datos provienen del Ministerio de Desarrollo Social y Familia, fueron descar
 
 ![fig_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_7.png?raw=true)
 
-**Figura 8:** Años Promedio de Escolaridad por Origen (Población entre 25-50 años).
+**Figura 8:** Años Promedio de Escolaridad (Población entre 25-50 años).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_9.png?raw=true)
 
