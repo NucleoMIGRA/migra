@@ -38,7 +38,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_con_duplicados.png?raw=true)
 
-**Figura 6.2:** Tasa de Aprobación por tipo de Residencia
+**Figura 6.2:** Tasa de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
@@ -54,11 +54,11 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_1.png?raw=true)
 
-**Figura 10:** Expulsiones administrativas dictadas por el Servicio Nacional de Migraciones
+**Figura 10:** Expulsiones Administrativas Dictadas por el Servicio Nacional de Migraciones
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_2.png?raw=true)
 
-**Figura 11:** Distribución de expulsiones Administrativas
+**Figura 11:** Distribución de Expulsiones Administrativas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_3.png?raw=true)
 
