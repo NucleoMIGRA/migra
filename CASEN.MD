@@ -22,18 +22,18 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_1.png?raw=true)
 
-**Figura 2:** Porcentaje de Personas con Educación Superior
+**Figura 2:** Porcentaje de Personas con Educación Superior Técnica o Universitaria (Población entre 25-50 años)
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_2.png?raw=true)
 
-**Figura 3:** Distribución de Personas en Estado de Hacinamiento. (Población entre 25-50 años)
+**Figura 3:** Distribución de Personas en Estado de Hacinamiento
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
 **Figura 4:** Horas Semanales Trabajadas
 
 ![fig_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
-**Figura 5:** Porcentaje de Población que Firmó Contrato de Trabajo
+**Figura 5:** Porcentaje de Población Ocupada con Contrato de Trabajo
 
 ![fig_5](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_5.png?raw=true)
 
@@ -45,7 +45,7 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 
 ![fig_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_7.png?raw=true)
 
-**Figura 8:** Años de Escolaridad (Población entre 25-50 años).
+**Figura 8:** Años de Escolaridad (Población entre 25-50 años)
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_9.png?raw=true)
 
