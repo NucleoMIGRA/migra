@@ -34,7 +34,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_4.png?raw=true)
 
-**Figura 6.1:** Porcentaje de Aprobación por Tipo de Residencia
+**Figura 6.1:** Tasa de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_con_duplicados.png?raw=true)
 
