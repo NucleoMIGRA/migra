@@ -33,15 +33,15 @@ Figura 3: Años de Escolaridad Promedio (Población entre 25-50 años).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
 
-Figura 6: Porcentaje de Hogares con al Menos un Migrante.
+**Figura 6:** Porcentaje de Hogares con al Menos un Migrante.
 
 ![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
 
-Figura 7: Porcentaje de Hogares con Jefe de Hogar Migrante.
+**Figura 7:** Porcentaje de Hogares con Jefe de Hogar Migrante.
 
 ![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
 
-Figura 8: Pirámide Poblacional Migrantes.
+**Figura 8:** Pirámide Poblacional Migrantes.
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
