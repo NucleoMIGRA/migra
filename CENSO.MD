@@ -13,36 +13,35 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 [¿Cómo citar?](./citation.MD)
 
 
-Figura 1: Se puede observar que Haití es el país que presenta mayor cantidad de hogares por vivienda.
+**Figura 1:** Hogares Promedio por Vivienda.
 
 ![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_1.png?raw=true)
 
-Figura 2: La figura se crea a partir de la población que tiene hijos y que tiene al menos un hijo posterior a la fecha de llegada al país.
+**Figura 2:** Porcentaje de Mujeres con al Menos un Hijo Nacido en Chile.
 
 ![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
 
-Figura 3: Se puede observar que Bolivia tiene menos años de escolaridad promedio. Población entre 25-50 años.
+Figura 3: Años de Escolaridad Promedio (Población entre 25-50 años).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
 
-
-Figura 4: Se puede observar que gran parte de los Venezolanos presentes en Chile, cuentan con educación superior.
+**Figura 4:** Porcentaje de Población con Educación Superior.
 
 ![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_4.png?raw=true)
 
-Figura 5: Se puede observar el número de hijos de mujeres entre 15 y 30 años de edad, por país de origen.
+**Figura 5:** Número de Hijos Promedio.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
 
-Figura 6: Se muestra que la mayoría de hogares en Chile, no cuentan con una persona extranjera.
+Figura 6: Porcentaje de Hogares con al Menos un Migrante.
 
 ![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
 
-Figura 7: Se muestra que la mayoría de hogares en Chile, no cuentan con un jefe de hogar extranjero.
+Figura 7: Porcentaje de Hogares con Jefe de Hogar Migrante.
 
 ![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
 
-Figura 8: Es posible observar que extranjeros concentran su población entre los 20 y 45 años.
+Figura 8: Pirámide Poblacional Migrantes.
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
