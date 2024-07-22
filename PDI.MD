@@ -2,6 +2,7 @@
 
 Los datos provienen de la Policía de Investigaciones de Chile, deben ser solicitados por transparencia.
 
+**Bases:**
 1. [Servicio Nacional de Migraciones](./SNM.MD)
 2. [MINEDUC](./MINEDUC.MD)
 3. [CENSO 2017](./CENSO.MD)
