@@ -25,7 +25,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
-**Figura 3:** Pirámide Poblacional Migrantes
+**Figura 3:** Pirámide Poblacional Migrantes (Año 2017)
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
