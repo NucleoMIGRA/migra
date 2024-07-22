@@ -16,12 +16,12 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 ## Figuras destacadas:
 
-**Figura 1:** Distribución Estudiantes 
+**Figura 1:** Distribución Estudiantes (2023)
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
 
-Figura 2: En esta figura se presenta la tasa de aprobación por tipo de residencia, en este gráfico se eliminan casos con más de una solicitud.
+Figura 2: Tasa de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
