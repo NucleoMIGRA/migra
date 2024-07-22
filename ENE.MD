@@ -12,34 +12,33 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 [¿Cómo citar?](./citation.MD)
 
 
-Figura 1: Se observa que el porcentaje de ocupación informal es similar entre migrantes y nativos.
+Figura 1: Distribución de Ocupación Formal e Informal (2022). 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_1.png?raw=true)
 
-Figura 2: Se observa que empleadores cotizan más por trabajadores nacionales.
+Figura 2: Distribución de Cotizaciones Previsionales Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_2.png?raw=true)
 
-Figura 3: Se observa que empleadores cotizan más para salud de trabajadores nacionales.
+Figura 3: Distribución de Cotizaciones de Salud Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_3.png?raw=true)
 
-Figura 4: Se observa que contribuciones al seguro de cesantia son similares para nacionales y extranjeros.
+Figura 4: Distribución de Cotizaciones de Seguro de Desempleo Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_4.png?raw=true)
 
-Figura 5: Se observa que trabajadores extranjeros tienen menos derecho a vacaciones.
+Figura 5: Distribución Derecho a Vacaciones (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_5.png?raw=true)
 
-Figura 6: Se observa que trabajadores nacionales tienen mayores derechos al reportar enfermedad.
+Figura 6: Distribución Derecho a días Pagados por Enfermedad (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_6.png?raw=true)
 
-Figura 7: En cuanto a permisos de maternidad, se observa que trabajadoras nacionales tienen mayores derechos.
-
+Figura 7: Distribución Derecho a permiso de Maternidad (2022).
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_7.png?raw=true)
 
-Figura 8: En cuanto a servicios de guardería, se observa que trabajadoras extranjeras se ven desfavorecidas.
+Figura 8: Distribución Derecho a guardería (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_8.png?raw=true)
