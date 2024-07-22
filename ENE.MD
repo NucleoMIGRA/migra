@@ -12,33 +12,33 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 [¿Cómo citar?](./citation.MD)
 
 
-Figura 1: Distribución de Ocupación Formal e Informal (2022). 
+**Figura 1:** Distribución de Ocupación Formal e Informal (2022). 
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_1.png?raw=true)
 
-Figura 2: Distribución de Cotizaciones Previsionales Realizadas por el Empleador (2022).
+**Figura 2:** Distribución de Cotizaciones Previsionales Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_2.png?raw=true)
 
-Figura 3: Distribución de Cotizaciones de Salud Realizadas por el Empleador (2022).
+**Figura 3:** Distribución de Cotizaciones de Salud Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_3.png?raw=true)
 
-Figura 4: Distribución de Cotizaciones de Seguro de Desempleo Realizadas por el Empleador (2022).
+**Figura 4:** Distribución de Cotizaciones de Seguro de Desempleo Realizadas por el Empleador (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_4.png?raw=true)
 
-Figura 5: Distribución Derecho a Vacaciones (2022).
+**Figura 5:** Distribución Derecho a Vacaciones (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_5.png?raw=true)
 
-Figura 6: Distribución Derecho a días Pagados por Enfermedad (2022).
+**Figura 6:** Distribución Derecho a Días Pagados por Enfermedad (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_6.png?raw=true)
 
-Figura 7: Distribución Derecho a permiso de Maternidad (2022).
+**Figura 7:** Distribución Derecho a Permiso de Maternidad (2022).
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_7.png?raw=true)
 
-Figura 8: Distribución Derecho a guardería (2022).
+**Figura 8:** Distribución Derecho a Guardería (2022).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/ENE/figuras/figura_8.png?raw=true)
