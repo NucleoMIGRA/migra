@@ -2,7 +2,7 @@
 Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
 **Notas:**
--  Se identifica migrante con la variable que indica si el estudiante es migrante o nacional.  
+-  Se identifica migrante con la variable que indica si el estudiante es migrante o chileno.  
 
 **Bases:**
 1. [Servicio Nacional de Migraciones](./SNM.MD)
