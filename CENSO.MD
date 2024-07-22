@@ -17,35 +17,35 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Hogares Promedio por Vivienda.
+**Figura 1:** Hogares Promedio por Vivienda (Año 2017).
 
 ![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_1.png?raw=true)
 
-**Figura 2:** Porcentaje de Mujeres con al Menos un Hijo Nacido en Chile.
+**Figura 2:** Porcentaje de Mujeres con al Menos un Hijo Nacido en Chile, (Año 2017).
 
 ![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
 
-**Figura 3:** Años de Escolaridad Promedio (Población entre 25-50 años).
+**Figura 3:** Años de Escolaridad Promedio (Población entre 25-50 años), (Año 2017).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
 
-**Figura 4:** Porcentaje de Población con Educación Superior.
+**Figura 4:** Porcentaje de Población con Educación Superior (Año 2017).
 
 ![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_4.png?raw=true)
 
-**Figura 5:** Número de Hijos Promedio.
+**Figura 5:** Número de Hijos Promedio (Año 2017).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
 
-**Figura 6:** Porcentaje de Hogares con al Menos un Migrante.
+**Figura 6:** Porcentaje de Hogares con al Menos un Migrante (Año 2017).
 
 ![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
 
-**Figura 7:** Porcentaje de Hogares con Jefe de Hogar Migrante.
+**Figura 7:** Porcentaje de Hogares con Jefe de Hogar Migrante (Año 2017).
 
 ![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
 
-**Figura 8:** Pirámide Poblacional Migrantes.
+**Figura 8:** Pirámide Poblacional Migrantes (Año 2017).
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
