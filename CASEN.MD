@@ -29,7 +29,7 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 **Figura 3:** Distribución de Personas en Estado de Hacinamiento
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
-**Figura 4:** Horas Semanales Trabajadas
+**Figura 4:** Horas Semanales Promedio Trabajadas
 
 ![fig_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
