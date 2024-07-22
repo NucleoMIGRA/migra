@@ -1,6 +1,9 @@
 ## CENSO 2017
 Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados de su [página web](https://www.ine.gob.cl/estadisticas/sociales/censos-de-poblacion-y-vivienda/censo-de-poblacion-y-vivienda), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/CENSO_2017) disponible en este repositorio.
 
+**Notas:**
+-  Se identifica migrante con la variable que indica si el estudiante es migrante o chileno.  
+
 **Bases:**
 1. [Servicio Nacional de Migraciones](./SNM.MD)
 2. [MINEDUC](./MINEDUC.MD)
@@ -22,7 +25,7 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 ![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
 
-Figura 3: Años de Escolaridad Promedio (Población entre 25-50 años).
+**Figura 3:** Años de Escolaridad Promedio (Población entre 25-50 años).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
 
