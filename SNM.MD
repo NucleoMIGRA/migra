@@ -14,7 +14,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 [¿Cómo citar?](./citation.MD)
 
-**Figura 1:** Mapas de Distribución de Extranjeros en Situación Irregular Dentro del País, por Región
+**Figura 1:** Mapas de Distribución de Extranjeros en Situación Irregular Dentro del País (Año 2023)
 
 ![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
 
