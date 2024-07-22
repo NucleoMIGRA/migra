@@ -21,19 +21,19 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
 
-Figura 2: Tasa de Aprobación por Tipo de Residencia
+**Figura 2:** Tasa de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
-Figura 3: Pirámide Poblacional Migrantes
+**Figura 3:** Pirámide Poblacional Migrantes
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
-Figura 4: Distribución de Personas en Estado de Hacinamiento
+**Figura 4:** Distribución de Personas en Estado de Hacinamiento
 
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
-Figura 5: Se observa que migrantes trabajan más horas promedio por semana.
+**Figura 5:** Horas Semanales Promedio Trabajadas
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
