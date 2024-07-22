@@ -16,7 +16,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 ## Figuras destacadas:
 
-**Figura 1:** Distribución Estudiantes (2023)
+**Figura 1:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023)
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
 
