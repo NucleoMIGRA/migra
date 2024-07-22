@@ -25,7 +25,7 @@ Figura 2: Tasa de Aprobación por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
 
-Figura 3: Es posible observar que extranjeros concentran su población entre los 20 y 45 años.
+Figura 3: Pirámide Poblacional Migrantes
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
