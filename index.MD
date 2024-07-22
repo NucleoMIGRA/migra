@@ -29,8 +29,7 @@ Figura 3: Pirámide Poblacional Migrantes
 
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/piramide_extranjero.png?raw=true)
 
-
-Figura 4: Del total de personas en estado de hacinamiento, el gráfico presenta que el porcentaje de hacinamiento crítico es mayor en migrantes.
+Figura 4: Distribución de Personas en Estado de Hacinamiento
 
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
