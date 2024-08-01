@@ -37,7 +37,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 **Figura 5:** Horas Semanales Promedio Trabajadas
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_5.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
 
 
 
