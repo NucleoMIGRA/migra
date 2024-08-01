@@ -29,7 +29,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 **Figura 3:** Pirámide Poblacional Migrantes (Año 2017)
 
-![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_3.png?raw=true)
+![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
 
 **Figura 4:** Distribución de Personas en Estado de Hacinamiento
 
@@ -37,7 +37,7 @@ El siguiente repositorio tiene como objetivo recopilar información de bases de 
 
 **Figura 5:** Horas Semanales Promedio Trabajadas
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_4.png?raw=true)
 
 
 
