@@ -6,7 +6,7 @@ layout: default
 El siguiente repositorio recopila información de bases de datos de naturaleza abierta con el objetivo de caracterizar empíricamente el fenómeno de la migración internacional en Chile. Las estadísticas se encuentran divididas por tipo de base de datos. Para citar correctamente la evidencia del repositorio, ver ¿Cómo citar?
 </div>
 
-$~$
+
 
 1. [Servicio Nacional de Migraciones (SNM)](./SNM.MD)
 2. [Policía de Investigaciones (PDI)](./PDI.MD)
