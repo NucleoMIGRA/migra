@@ -8,13 +8,13 @@ El siguiente repositorio recopila información de bases de datos de naturaleza a
 
 $~$
 
-1. [Servicio Nacional de Migraciones](./SNM.MD)
-2. [MINEDUC](./MINEDUC.MD)
+1. [Servicio Nacional de Migraciones (SNM)](./SNM.MD)
+2. [Policía de Investigaciones (PDI)](./PDI.MD)
 3. [CENSO 2017](./CENSO.MD)
-4. [CASEN](./CASEN.MD)
-5. [ENE](./ENE.MD)
-6. [EPF](./EPF.md)
-7. [PDI](./PDI.MD)
+4. [Encuesta de Caracterización Socioeconómica Nacional (CASEN)](./CASEN.MD)
+5. [Ministerio de Educación (MINEDUC)](./MINEDUC.MD)
+6. [Encuesta Nacional de Empleo (ENE)](./ENE.MD)
+7. [Encuesta de Presupuestos Familiares (EPF)](./EPF.md)
 
 [¿Cómo citar?](./citation.MD)
 
