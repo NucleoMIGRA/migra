@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-# Estadísticas MIGRA
+# Repositorio
 <div style="text-align: justify;">
 El siguiente repositorio recopila información de bases de datos de naturaleza abierta con el objetivo de caracterizar empíricamente el fenómeno de la migración internacional en Chile. Las estadísticas se encuentran divididas por tipo de base de datos. Para citar correctamente la evidencia del repositorio, ver ¿Cómo citar?
 </div>
