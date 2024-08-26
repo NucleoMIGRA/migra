@@ -7,7 +7,7 @@ El siguiente repositorio recopila información de bases de datos de naturaleza a
 </div>
 
 <br>
-
+**Bases:**
 1. [Servicio Nacional de Migraciones (SNM)](./SNM.MD)
 2. [Policía de Investigaciones (PDI)](./PDI.MD)
 3. [CENSO 2017](./CENSO.MD)
