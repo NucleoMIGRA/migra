@@ -7,13 +7,9 @@ theme: jekyll-theme-minimal
 # Navigation links
 navigation:
   - title: "Home"
-    url: / # Adjust the URL to point to your main page, if it's not the root
-  - title: "About"
-    url: /about/
-  - title: "Research"
-    url: /research/
+    url: https://datamigra.cl/  # Adjust this to the main page URL
   - title: "Contact"
-    url: /contact/
+    url: s.andrade.ftm@gmail.com # Replace with the correct URL for your Contact page
 
 plugins:
   - jekyll-feed
