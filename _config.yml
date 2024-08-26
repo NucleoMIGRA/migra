@@ -1,5 +1,19 @@
 title: Estadísticas MIGRA
 logo: assets/img/logo (2).png
 description: Núcleo Milenio de investigación sobre temáticas de migración en Chile.
-#show_downloads: true
+show_downloads: true
 theme: jekyll-theme-minimal
+
+# Navigation links
+navigation:
+  - title: "Home"
+    url: / # Adjust the URL to point to your main page, if it's not the root
+  - title: "About"
+    url: /about/
+  - title: "Research"
+    url: /research/
+  - title: "Contact"
+    url: /contact/
+
+plugins:
+  - jekyll-feed
