@@ -3,13 +3,3 @@ logo: assets/img/logo (2).png
 description: Núcleo Milenio de investigación sobre temáticas de migración en Chile.
 show_downloads: true
 theme: jekyll-theme-minimal
-
-# Navigation links
-navigation:
-  - title: "Home"
-    url: https://datamigra.cl/  # Adjust this to the main page URL
-  - title: "Contact"
-    url: s.andrade.ftm@gmail.com # Replace with the correct URL for your Contact page
-
-plugins:
-  - jekyll-feed
