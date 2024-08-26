@@ -3,3 +3,7 @@ logo: assets/img/logo (2).png
 description: Núcleo Milenio de investigación sobre temáticas de migración en Chile.
 show_downloads: true
 theme: jekyll-theme-minimal
+
+
+header_pages:
+  - index.md
