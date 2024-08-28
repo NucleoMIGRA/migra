@@ -25,7 +25,7 @@ El siguiente repositorio recopila información de bases de datos de naturaleza a
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_1.png?raw=true)
 
 
-**Figura 2:** Tasa de Aprobación por Tipo de Residencia
+**Figura 2:** Tasa de Aprobación de Residencia por Tipo de Residencia
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_2.png?raw=true)
 
