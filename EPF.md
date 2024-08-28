@@ -2,7 +2,7 @@
 Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados de su [página web](https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/EPF) disponible en este repositorio.
 
 **Notas:**
--  Se identifica migrante con la variable que indica si la persona es migrante o chileno.  
+-  Se identifica migrante con la variable que indica si la persona es migrante o chilena.  
 
 **Bases:**
 1. [Servicio Nacional de Migraciones (SNM)](./SNM.MD)
