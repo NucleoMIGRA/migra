@@ -14,9 +14,9 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 [¿Cómo citar?](./citation.MD)
 
-**Figura 1:** Mapas de Distribución de Extranjeros en Situación Irregular Dentro del País (Año 2023)
+**Figura 1:** Distribución de Extranjeros en Situación Irregular por Región, Año 2023
 
-![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/agregado.png?raw=true)
+![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/latinoamerica.png?raw=true)
 
 **Figura 2:** Solicitudes de Residencias Remporales
 
