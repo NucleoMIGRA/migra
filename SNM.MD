@@ -14,54 +14,54 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 [¿Cómo citar?](./citation.MD)
 
-**Figura 1:** Distribución de Extranjeros en Situación Irregular por Región, Año 2023
+**Figura 1:** Distribución de Extranjeros en Situación Irregular por Región, Año 2023.
 
 ![agregado](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/latinoamerica.png?raw=true)
 
-**Figura 2:** Solicitudes de Residencias Remporales
+**Figura 2:** Evolución del Número de Solicitudes de Residencias Temporales.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_1.png?raw=true)
 
-**Figura 3:**  Residencias Temporales Aprobadas
+**Figura 3:** Evolución del Número de Solicitudes de Residencias Temporales Aprobadas.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_2.png?raw=true)
 
-**Figura 4:** Solicitudes de Residencias Definitivas
+**Figura 4:** Evolución del Número de Solicitudes de Residencias Definitivas.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_3.png?raw=true)
 
-**Figura 5:** Residencias Definitivas Aprobadas
+**Figura 5:** Evolución del Número de Solicitudes de Residencias Definitivas Aprobadas.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_4.png?raw=true)
 
-**Figura 6.1:** Tasa de Aprobación por Tipo de Residencia
+**Figura 6** Tasa de Aprobación de Residencia, por Tipo.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_con_duplicados.png?raw=true)
 
-**Figura 6.2:** Tasa de Aprobación por Tipo de Residencia
-
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_sin_duplicados.png?raw=true)
-
-**Figura 7:** Distribución de Profesiones de Personas con Residencia Definitiva Aceptada
+**Figura 7:** Distribución de Actividad Principal de Personas con Residencia Definitiva Aprobada.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_6.png?raw=true)
 
-**Figura 8:** Distribución de Profesiones de Personas con Residencia Temporal Aceptada
+**Figura 8:** Distribución de Actividad Principal de Personas con Residencia Temporal Aprobada.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_8.png?raw=true)
 
-**Figura 9:** Expulsiones Administrativas Dictadas por el Servicio Nacional de Migraciones.
+**Figura 9:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
+Nacional de Migraciones.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_1.png?raw=true)
 
-**Figura 10:** Expulsiones Administrativas Dictadas por el Servicio Nacional de Migraciones
+**Figura 10:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
+Nacional de Migraciones, por Sexo.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_2.png?raw=true)
 
-**Figura 11:** Distribución de Expulsiones Administrativas
+**Figura 11:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
+Migraciones, por Tipo de Delito.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_3.png?raw=true)
 
-**Figura 12:** Distribución de Expulsiones Administrativas
+**Figura 12:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
+Migraciones, por Nacionalidad.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_4.png?raw=true)
