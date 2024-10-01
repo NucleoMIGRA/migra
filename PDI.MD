@@ -14,15 +14,14 @@ Los datos provienen de la Policía de Investigaciones de Chile, deben ser solici
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Denuncias de Ingresos Ilegales por Región (2023).
+**Figura 1:** Rango de Denuncias de Ingresos Ilegales por Región, Año 2023.
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_1.png?raw=true)
 
-**Figura 2:** Distribución Ingresos Pasos no Habilitados (2021-2023).
-
+**Figura 2:** Distribución de Ingresos por Pasos No Habilitados, por Nacionalidad (Período 2021-2023).
 ![fig_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_2.png?raw=true)
 
-**Figura 3:** Expulsiones Realizadas por la PDI, por Tipo.
+**Figura 3:** Evolución del Número de Expulsiones Realizadas por la PDI, por Tipo de Expulsión.
 
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_3.png?raw=true)
 
