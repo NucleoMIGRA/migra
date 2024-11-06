@@ -21,11 +21,11 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 ![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_1.png?raw=true)
 
-**Figura 2:** Porcentaje de Mujeres con al Menos un Hijo Nacido en Chile, (Año 2017).
+**Figura 2:** Porcentaje de Mujeres entre 18 y 50 años con al Menos un Hijo Nacido en Chile, (Año 2017).
 
 ![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
 
-**Figura 3:** Años de Escolaridad Promedio (Población entre 25-50 años), (Año 2017).
+**Figura 3:** Promedio Años de Escolaridad para Población entre 25 y 50 años (Año 2017).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
 
@@ -33,15 +33,15 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 ![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_4.png?raw=true)
 
-**Figura 5:** Número de Hijos Promedio (Año 2017).
+**Figura 5:** Número de Hijos Promedio en mujeres entre 18 y 50 años (Año 2017).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
 
-**Figura 6:** Porcentaje de Hogares con al Menos un Migrante (Año 2017).
+**Figura 6:** Porcentaje de Hogares con al Menos un miembro de origen Migrante (Año 2017).
 
 ![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
 
-**Figura 7:** Porcentaje de Hogares con Jefe de Hogar Migrante (Año 2017).
+**Figura 7:** Porcentaje de Hogares según origen del jefe de hogar (Año 2017).
 
 ![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
 
