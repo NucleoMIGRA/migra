@@ -18,7 +18,7 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Stock de Migrantes en el Tiempo.
+**Figura 1:** Stock acumulado de Migrantes en el Tiempo.
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_1.png?raw=true)
 
