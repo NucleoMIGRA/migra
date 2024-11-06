@@ -18,34 +18,35 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Stock de Migrantes en el Tiempo
+**Figura 1:** Stock de Migrantes en el Tiempo.
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_1.png?raw=true)
 
-**Figura 2:** Porcentaje de Personas con Educación Superior Técnica o Universitaria (Población entre 25-50 años)
+**Figura 2:** Porcentaje de personas entre 25 y 50 años que tienen Educación Superior Técnica o
+Universitaria.
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_2.png?raw=true)
 
-**Figura 3:** Distribución de Personas en Estado de Hacinamiento
+**Figura 3:** Distribución de Personas en Estado de Hacinamiento.
 ![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_3.png?raw=true)
 
-**Figura 4:** Horas Semanales Promedio Trabajadas
+**Figura 4:** Horas Semanales Promedio Trabajadas.
 
 ![fig_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_4.png?raw=true)
 
-**Figura 5:** Porcentaje de Población Ocupada con Contrato de Trabajo
+**Figura 5:** Porcentaje de Población Ocupada con Contrato de Trabajo.
 
 ![fig_5](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_5.png?raw=true)
 
-**Figura 6:** Salario por Hora Promedio, Ajustado por Inflación
+**Figura 6:** Salario Promedio por Hora (en pesos chilenos), ajustado por inflación (Año base 2006).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_6.png?raw=true)
 
-**Figura 7:** Porcentaje de Ruralidad
+**Figura 7:** Porcentaje de personas que vive en zonas rurales.
 
 ![fig_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_7.png?raw=true)
 
-**Figura 8:** Años de Escolaridad Promedio (Población entre 25-50 años)
+**Figura 8:** Promedio Años de Escolaridad (Población entre 25-50 años).
 
 ![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_9.png?raw=true)
 
