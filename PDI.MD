@@ -14,7 +14,7 @@ Los datos provienen de la Policía de Investigaciones de Chile, deben ser solici
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Rango de Denuncias de Ingresos Ilegales por Región, Año 2023.
+**Figura 1:** Denuncias de Ingresos por Pasos no Habilitados por Región, Año 2023.
 
 ![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_1.png?raw=true)
 
