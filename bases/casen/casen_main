@@ -333,6 +333,7 @@ rename v11 casam2
 rename o10 horas_trabajo
 rename yoprcor ing_act_prin
 rename ytrabajocor ing_del_trabajo
+rename pobreza_multi_4d pobreza_multi
 
 drop r1a sexo o16 o17
 gen año=2015
@@ -383,7 +384,7 @@ rename v12mt casam2
 rename o10 horas_trabajo
 rename yoprcor ing_act_prin
 rename ytrabajocor ing_del_trabajo
-
+rename pobreza_multi_4d pobreza_multi
 drop r1a sexo o16 o17
 
 gen año=2017
@@ -479,6 +480,8 @@ rename v12mt casam2
 rename yoprcor ing_act_prin
 rename ytrabajocor ing_del_trabajo
 rename ind_hacina hacinamiento
+rename pobreza_multi_4d pobreza_multi
+
 drop r1a sexo o18
 
 gen año=2022
@@ -513,330 +516,6 @@ save "${temp}/casen_panel_2006_2022", replace
 
 
 
-****************************SEGUNDA PARTE***************************************
-********************************************************************************
-******************************GRAFICOS******************************************
-********************************************************************************
-
-
-*****************************GRAFICO 1******************************************
-************: migrantes por año (dos series de tiempo: hombres/mujeres)*********
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-
-drop if mujer==.
-
-gen mujer_ext=.
-replace mujer_ext=1 if mujer==1 & extranjero==1
-
-gen hombre_ext=.
-replace hombre_ext=1 if mujer==0 & extranjero==1 
-
-
-
-collapse (sum) mujer_ext hombre_ext, by(año)
-
-binscatter2 (hombre_ext) (mujer_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año Encuesta CASEN") ytitle("Cantidad de Migrantes")  linetype(connect) title("Cantidad de Migrantes por Género en el Tiempo") ///
-name(fig1a, replace) legend(label(1 "Hombres") label(2 "Mujeres")) ///
-legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2009 2011 2013 2015 2017 2020 2022)
-graph export "${figure}\fig_1.png", as(png)  replace
-
-*****************************GRAFICO 2******************************************
-**********% de migrantes y nacionales con educ. superior por año****************
-
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}/casen_panel_2009_2022", clear
-
-drop if mujer==.
-
-gen ext_sup=.
-replace ext_sup=1 if educ_sup==1 & extranjero==1
-replace ext_sup=0 if educ_sup==0 & extranjero==1
-
-gen nacional_sup =.
-replace nacional_sup=1 if educ_sup==1 & extranjero==0 
-replace nacional_sup=0 if educ_sup==0 & extranjero==0
-
-collapse (mean) nacional_sup ext_sup, by(año)
-
- 
- graph bar  nacional_sup ext_sup, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
- ytitle("Porcentaje Con Educación Superior") b1title("Año Encuesta CASEN") ///
- title("Porcentaje de Personas con Educación Superior por Origen") ///
- legend(pos(10) ring(0) col(1) order(1 2) )
- 
-graph export "${figure}\fig_2.png", as(png)  replace
-
-*****************************GRAFICO 3******************************************
-****% de hacinados medio, critico, no hacinado entre migrantes y nacionales ****
-
-clear
-set more off
-
-set scheme modern, perm
-use "${data}\casen_panel_2009_2022", clear
-
-drop if mujer==.
-drop if hacinamiento==4
-drop if hacinamiento==9
-drop if hacinamiento==-88
-drop if hacinamiento==1
-
-
-*****************************************************************************
-
-label define extranjero_lbl 1 "Extranjero" 0 "Nativo"
-
-label values extranjero extranjero_lbl
-
-
-graph bar (count), over(hacinamiento) over(extranjero, label(angle(45))) over(año) asyvars stack percentages ///
- ytitle("Porcentaje") b1title("Año Encuesta CASEN") ///
- title("Porcentaje de Nivel de Hacinamiento por Origen") ///
- legend(label(1 "Medio Hacinamiento") label(2 "Hacinamiento Crítico") pos(6) ring(1) col(1) order(1 2 3) )
- 
- graph export "${figure}\fig_3.png", as(png)  replace
-
-
-*****************************GRAFICO 4******************************************
-****twoway connected # de hras trabajadas por año (dos series de tiempo: nacionales y migrantes) ****
-
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-gen horas_ext=.
-replace horas_ext=horas_trabajo if extranjero==1
-gen horas_nac=.
-replace horas_nac=horas_trabajo if extranjero==0
-
-collapse (mean) horas_trabajo horas_ext horas_nac , by(año)
-drop if año==2020
-
-binscatter2 (horas_nac) (horas_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año Encuesta CASEN") ytitle("Horas")  linetype(connect) title("Horas Promedio de Trabajo Semanales por Origen") ///
-name(fig4a, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(3) ring(0) col(1) order(1 2) ) xlabel(2009 2011 2013 2015 2017  2022)
-graph export "${temp}\fig_4.png", as(png) replace
-
-*****************************GRAFICO 5******************************************
-****twoway connected % contrato  (dos series de tiempo: nacionales y migrantes)****
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-
-gen contra_ext=.
-replace contra_ext=contrato if extranjero==1
-gen contra_nac=.
-replace contra_nac=contrato if extranjero==0
-
-collapse (mean) contra_ext  contra_nac , by(año)
-drop if año==2020
-
-graph bar  contra_nac contra_ext, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
- ytitle("Porcentaje") b1title("Año Encuesta CASEN") ///
- title("Porcentaje de Personas con Contrato de Trabajo por Origen") ///
- legend(pos(10) ring(0) col(1) order(1 2) )
- graph export "${figure}\fig_5.png", as(png) replace
-
-
-*binscatter2 (contra_ext) (contra_nac año), graphregion(fcolor(white) lcolor(white) ///
-*ifcolor(white) ilcolor(white)) xtitle("Año Encuesta CASEN") ytitle("Porcentaje")  linetype(connect) title("Porcentaje de Personas con Contrato ") ///
-*name(fig4a, replace) legend(label(1 "Extranjeros") label(2 "Nativos")) ///
-*legend(pos(3) ring(0) col(1) order(1 2) ) xlabel(2009 2011 2013 2015 2017  2022)
-*****************************GRAFICO 6******************************************
-****twoway connected % ingreso por hora(salario) (dos series de tiempo: nacionales y migrantes)****
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-drop if ing_del_trabajo>5000000
-gen salario=(ing_act_prin*inflacion)/(4*horas_trabajo)
-
-gen salario_ext=.
-replace salario_ext=salario if extranjero==1
-gen salario_nac=.
-replace salario_nac=salario if extranjero==0
-
-collapse (mean) salario_ext  salario_nac , by(año)
-drop if año==2020
-
-binscatter2 (salario_nac) (salario_ext año), graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año Encuesta CASEN") ytitle("Salario Promedio")  linetype(connect) title("Salario Promedio por Origen") ///
-name(fig6a, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(3) ring(0) col(1) order(1 2) ) xlabel(2009 2011 2013 2015 2017  2022) 
-
- graph export "${figure}\fig_6.png", as(png)  replace
- *****************************GRAFICO 7******************************************
-****barras con % rural por año(dos series de tiempo: nacionales y migrantes)****
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-
-drop if mujer==.
-drop if año==2022
-
-gen ext_rur=.
-replace ext_rur=1 if urbano==0 & extranjero==1
-replace ext_rur=0 if urbano==1 & extranjero==1
-
-gen nac_rur=.
-replace nac_rur=1 if urbano==0 & extranjero==0
-replace nac_rur=0 if urbano==1 & extranjero==0
-
-collapse (mean) nac_rur ext_rur, by(año)
-gen nac_rur_por=nac_rur*100
-gen ext_rur_por= ext_rur*100
- 
- graph bar  nac_rur_por ext_rur_por, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
- ytitle("Porcentaje") b1title("Año Encuesta CASEN") ///
- title("Porcentaje de Personas Viviendo en Zonas Rurales") ///
- legend(pos(1) ring(0) col(1) order(1 2) )
- 
-graph export "${figure}\fig_7.png", as(png)  replace
-
-
-*****************************GRAFICO 8******************************************
-****8. PIRAMIDE DEMOGRAFICA****
-*8.1 PARA TODO CHILE
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-keep if año==2022
-replace edad=90 if edad>90
-gen grupos_edad=5*int(edad/5)
-label var grupos_edad "Edad (tramos de 5 años)"
-label define rangos_g  0 "0-5" 5 "5-10" 10 "10-15" 15 "15-20" 20 "20-25" 25 "25-30" ///
-30 "30-35" 35 "35-40" 40 "40-45" 45 "45-50" 50 "50-55" 55 "55-60" 60 "60-65" ///
-65 "65-70" 70 "70-75" 75 "75-80" 80 "80-85" 85 "85-90" 90 "90 +"
-label values grupos_edad rangos_g
-gen pobtot=1
-egen totpob=sum(pobtot)
-egen pop5=sum(pobtot), by(grupos_edad mujer)
-
-gen cero=0
-
-gen Hombres=-100*pop5/totpob if mujer==0
-gen Mujeres=100*pop5/totpob if mujer==1
-
-
-
-twoway ///
-(bar Hombres grupos_edad  , horizontal barwidth(5) ) ///
-(bar Mujeres grupos_edad  , horizontal barwidth(5) )  ///
-(scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-4 "4" -2 "2" 0 "0" 2 "2" 4 "4") legend(order(1 "Hombres" 2 "Mujeres"))), ///
-title("Pirámide Poblacional, Chile 2022") ///
-xtitle("Porcentaje de Población") 
-
-****8. PIRAMIDE DEMOGRAFICA****
-*8.2 PARA EXTRANJEROS
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-keep if año==2022
-keep if extranjero==1
-replace edad=90 if edad>90
-gen grupos_edad=5*int(edad/5)
-label var grupos_edad "Edad (tramos de 5 años)"
-label define rangos_g  0 "0-5" 5 "5-10" 10 "10-15" 15 "15-20" 20 "20-25" 25 "25-30" ///
-30 "30-35" 35 "35-40" 40 "40-45" 45 "45-50" 50 "50-55" 55 "55-60" 60 "60-65" ///
-65 "65-70" 70 "70-75" 75 "75-80" 80 "80-85" 85 "85-90" 90 "90 +"
-label values grupos_edad rangos_g
-gen pobtot=1
-egen totpob=sum(pobtot)
-egen pop5=sum(pobtot), by(grupos_edad mujer)
-
-gen cero=0
-
-gen Hombres=-100*pop5/totpob if mujer==0
-gen Mujeres=100*pop5/totpob if mujer==1
-
-
-
-twoway ///
-(bar Hombres grupos_edad  , horizontal barwidth(5) ) ///
-(bar Mujeres grupos_edad  , horizontal barwidth(5) )  ///
-(scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-8 "8" -6"6"  -4 "4" -2 "2" 0 "0" 2 "2" 4 "4" 6 "6" 8 "8") legend(order(1 "Hombres" 2 "Mujeres"))), ///
-title("Pirámide Poblacional de Extranjeros, Chile 2022") ///
-xtitle("Porcentaje de Población") saving(extranjero, replace)
-
-
-****8. PIRAMIDE DEMOGRAFICA****
-*8.2 PARA NATIVOS
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-keep if año==2022
-keep if extranjero==0
-replace edad=90 if edad>90
-gen grupos_edad=5*int(edad/5)
-label var grupos_edad "Edad (tramos de 5 años)"
-label define rangos_g  0 "0-5" 5 "5-10" 10 "10-15" 15 "15-20" 20 "20-25" 25 "25-30" ///
-30 "30-35" 35 "35-40" 40 "40-45" 45 "45-50" 50 "50-55" 55 "55-60" 60 "60-65" ///
-65 "65-70" 70 "70-75" 75 "75-80" 80 "80-85" 85 "85-90" 90 "90 +"
-label values grupos_edad rangos_g
-gen pobtot=1
-egen totpob=sum(pobtot)
-egen pop5=sum(pobtot), by(grupos_edad mujer)
-
-gen cero=0
-
-gen Hombres=-100*pop5/totpob if mujer==0
-gen Mujeres=100*pop5/totpob if mujer==1
-
-
-
-twoway ///
-(bar Hombres grupos_edad  , horizontal barwidth(5) ) ///
-(bar Mujeres grupos_edad  , horizontal barwidth(5) )  ///
-(scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-8 "8" -6"6"  -4 "4" -2 "2" 0 "0" 2 "2" 4 "4" 6 "6" 8 "8") legend(order(1 "Hombres" 2 "Mujeres"))), ///
-title("Pirámide Poblacional de Nativos, Chile 2022") ///
-xtitle("Porcentaje de Población") saving(nativo, replace)
-
-gr combine extranjero.gph nativo.gph
-
-graph export "${figure}\fig_8.png", as(png)  replace
-
-*****************************GRAFICO 7******************************************
-****twoway connected % rural por año(dos series de tiempo: nacionales y migrantes)****
-
-clear
-set more off
-
-set scheme modern, perm
-use "${temp}\casen_panel_2009_2022", clear
-
-gen esc_ext=.
-replace esc_ext=esc if extranjero==1
-gen esc_nac=.
-replace esc_nac=esc if extranjero==0
-
-collapse (mean) esc_ext esc_nac , by(año)
-
-binscatter2 (esc_nac) (esc_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año Encuesta CASEN") ytitle("Años")  linetype(connect) title("Años Promedio de Escolaridad por Origen") ///
-name(fig9, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(11) ring(0) col(1) order(1 2) ) xlabel(2009 2011 2013 2015 2017 2020 2022)
-graph export "${figure}\fig_9.png", as(png)  replace
 
 
 
@@ -870,12 +549,14 @@ replace hombre_ext=1 if mujer==0 & extranjero==1
 
 collapse (sum) mujer_ext hombre_ext [fweight=expr], by(año)
 
-binscatter2 (hombre_ext) (mujer_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Cantidad de Migrantes")  linetype(connect) title("Cantidad de Migrantes por Género en el Tiempo") ///
-name(fig1a, replace) legend(label(1 "Hombres") label(2 "Mujeres")) ///
-legend(pos(10) ring(0) col(1) order(1 2) ) xlabel(2006 2009 2011 2013 2015 2017 2020 2022) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
-graph export "${figure}\fig_1.png", as(png)  replace
 
+gr tw (connected hombre_ext año , msymbol(T) mcolor(orange) lcolor(orange) ) ///
+			(connected mujer_ext año, msymbol(s) mcolor(pink) lcolor(pink)) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Cantidad de Migrantes")  ///
+    legend(pos(10) ring(0) col(1)) legend( label(1 "Hombres") label(2 "Mujeres")) ///
+	xlabel(2006 2009 2011 2013 2015 2017 2020 2022) note("{it:Nota:} Migrantes se construye a partir de lugar de residencia de la madre cuando nació" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+	graph export "${figure}\fig_1.png", as(png)  replace
 
 
 
@@ -892,6 +573,9 @@ use "${temp}/casen_panel_2006_2022", clear
 
 drop if mujer==.
 
+gen nativo=.
+replace nativo = 1 if extranjero==0
+replace nativo = 0 if nativo==.
 gen ext_sup=.
 replace ext_sup=1 if educ_sup==1 & extranjero==1
 replace ext_sup=0 if educ_sup==0 & extranjero==1
@@ -899,20 +583,26 @@ replace ext_sup=0 if educ_sup==0 & extranjero==1
 gen nacional_sup =.
 replace nacional_sup=1 if educ_sup==1 & extranjero==0 
 replace nacional_sup=0 if educ_sup==0 & extranjero==0
+drop if edad<25
+drop if edad>50
+collapse (sum) nativo extranjero nacional_sup ext_sup [fweight=expr], by(año)
 
-collapse (mean) nacional_sup ext_sup [fweight=expr], by(año)
+
+gen porcentaje_educ_sup_nativo = 100*(nacional_sup/nativo)
+gen porcentaje_educ_sup_migrante = 100*(ext_sup/extranjero)
 
  
- graph bar  nacional_sup ext_sup, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
- ytitle("Porcentaje Con Educación Superior") b1title("Año") ///
- title("Porcentaje de Personas con Educación Superior por Origen") ///
- legend(pos(10) ring(0) col(1) order(1 2) ) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
- 
+ graph bar  porcentaje_educ_sup_nativo porcentaje_educ_sup_migrante, over(año)  ///
+ bar(1, color(orange)  )  /// 
+ bar(2, color(pink) ) ///
+ legend(label(2 "Migrantes") label(1 "Chilenos")) ///
+ ytitle("Porcentaje") b1title("Año") ///
+ legend(pos(10) ring(0) col(1) order(1 2) ) note("{it:Nota:} Educación superior se construye considerando a todos los que terminaron " "educación superior técnica (CFT o IP) o universitaria " " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
 graph export "${figure}\fig_2.png", as(png)  replace
 
 
 
-*****************************GRAFICO 3******************************************
+*****************************figura 3******************************************
 ****% de hacinados medio, critico, no hacinado entre migrantes y nacionales ****
 **2006 DATO NO DISPONIBLE
 
@@ -922,31 +612,56 @@ set more off
 set scheme modern, perm
 use "${temp}\casen_panel_2006_2022", clear
 
-drop if mujer==.
-drop if hacinamiento==4
-drop if hacinamiento==9
-drop if hacinamiento==-88
-drop if hacinamiento==1
+*drop if mujer==.
+*drop if hacinamiento==4
+*drop if hacinamiento==9
+*drop if hacinamiento==-88
+*drop if hacinamiento==1
 
 
 *****************************************************************************
 
-label define extranjero_lbl 1 "Extranjero" 0 "Nativo"
+*label define extranjero_lbl 1 "Migrantes" 0 "Chilenos"
+
+*label values extranjero extranjero_lbl
+
+
+*graph bar (count) [fweight=expr], over(hacinamiento) over(extranjero, label(angle(45))) over(año) asyvars stack percentages ///
+*bar(1 , color(orange)) ///
+*bar(2 , color(pink)) ///
+ *ytitle("Porcentaje Hacinamiento") b1title("Año") ///
+  *legend(label(1 "Medio Hacinamiento") label(2 "Hacinamiento Crítico") pos(6) /// 
+  *ring(1) col(1) order(1 2 3) )  note("{it:Nota 1:} Universo de personas que se encuentran en estado de hacinamiento" "{it:Nota 2:} Hacinamiento medio corresponde a 2.5 personas o más por habitación"  "{it:Nota 3:} Hacinamiento crítico corresponde a *5 personas o más por habitación" " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+
+  
+  
+drop if mujer==.
+drop if hacinamiento==4
+drop if hacinamiento==9
+drop if hacinamiento==-88
+
+
+*****************************************************************************
+
+label define extranjero_lbl 1 "Migrantes" 0 "Chilenos"
 
 label values extranjero extranjero_lbl
 
 
 graph bar (count) [fweight=expr], over(hacinamiento) over(extranjero, label(angle(45))) over(año) asyvars stack percentages ///
- ytitle("Porcentaje") b1title("Año") ///
- title("Porcentaje de Nivel de Hacinamiento por Origen") ///
- caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN) legend(label(1 "Medio Hacinamiento") label(2 "Hacinamiento Crítico") pos(6) ring(1) col(1) order(1 2 3) ) c
-
+bar(1 , color(orange)) ///
+bar(2 , color(pink)) ///
+bar(3, color(ltblue)) ///
+ytitle("Distribución") b1title("Año") ///
+legend(label(1 "Sin Hacinamiento") label(2 "Hacinamiento Medio") label (3 "Hacinamiento Crítico") pos(6) /// 
+ring(1) col(1) order(1 2 3) )  note("{it:Nota:} Sin Hacinamiento (Menos de 2.5 personas por habitación), Hacinamiento Medio (Más de 2.5 personas por habitación)," " " "Hacinamiento Crítico (5 personas o más por habitación)." /// 
+  " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de encuesta CASEN.", size(vsmall))
 graph export "${figure}\fig_3.png", as(png) replace
 
 
 
 
-*****************************GRAFICO 4******************************************
+*****************************figura 4******************************************
 ****twoway connected # de hras trabajadas por año (dos series de tiempo: nacionales y migrantes) ****
 **DATOS PARA 2020 NO DISPONIBLE
 clear
@@ -963,13 +678,20 @@ replace horas_nac=horas_trabajo if extranjero==0
 collapse (mean) horas_trabajo horas_ext horas_nac [fweight=expr] , by(año)
 drop if año==2020
 
-binscatter2 (horas_nac) (horas_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Horas")  linetype(connect) title("Horas Promedio de Trabajo Semanales por Origen") ///
-name(fig4a, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(2) ring(0) col(1) order(1 2) ) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN) xlabel(2006 2009 2011 2013 2015 2017  2022) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
-graph export "${figure}\fig_4.png", as(png) replace
 
-*****************************GRAFICO 5******************************************
+gr tw (connected horas_nac año , msymbol(T) mcolor(orange) lcolor(orange) ) ///
+			(connected horas_ext año, msymbol(s) mcolor(pink) lcolor(pink)) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Horas Promedio")  ///
+    legend(pos(3) ring(0) col(1)) legend( label(1 "Chilenos") label(2 "Migrantes")) ///
+	xlabel(2006 2009 2011 2013 2015 2017 2020 2022) note("{it:Notas:}" "{it:i)} Horas semanales promedio del universo de personas que se encuentran ocupadas" "{it:ii)} Horas trabajadas en actividad principal" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+	graph export "${figure}\fig_4.png", as(png)  replace
+
+
+
+
+
+*****************************figura 5******************************************
 ****twoway connected % contrato  (dos series de tiempo: nacionales y migrantes)****
 *2006 ni 2020 tienen datos
 clear
@@ -984,18 +706,21 @@ gen contra_nac=.
 replace contra_nac=contrato if extranjero==0
 drop if año==2006
 collapse (mean) contra_ext  contra_nac [fweight=expr] , by(año)
+gen contra_ext_por=100*contra_ext
+gen contra_nac_por=100*contra_nac
 drop if año==2020
 
-graph bar  contra_nac contra_ext, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
+
+  graph bar  contra_nac_por contra_ext_por, over(año)  ///
+ bar(1, color(orange)  )  /// 
+ bar(2, color(pink) ) ///
+ legend(label(2 "Migrantes") label(1 "Chilenos")) ///
  ytitle("Porcentaje") b1title("Año") ///
- title("Porcentaje de Personas con Contrato de Trabajo por Origen") ///
- legend(pos(10) ring(0) col(1) order(1 2) ) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
- graph export "${figure}\fig_5.png", as(png) replace
+ legend(pos(10) ring(0) col(1) order(1 2) ) note("{it:Notas:}" "{it:i)} Universo de personas que se encuentran ocupadas" "{it:ii)} Contrato en la actividad principal " "{it:iii)} Se consideran trabajos de tiempo completo y parcial" " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+graph export "${figure}\fig_5.png", as(png)  replace
 
 
-
-
-*****************************GRAFICO 6******************************************
+*****************************figura 6******************************************
 ****twoway connected % ingreso por hora(salario) (dos series de tiempo: nacionales y migrantes)****
 clear
 set more off
@@ -1013,17 +738,19 @@ replace salario_nac=salario if extranjero==0
 collapse (mean) salario_ext  salario_nac [fweight=expr] , by(año)
 drop if año==2020
 
-binscatter2 (salario_nac) (salario_ext año), graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Salario Promedio")  linetype(connect) title("Salario Promedio por Origen") ///
-name(fig6a, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(3) ring(0) col(1) order(1 2) ) xlabel(2006 2009 2011 2013 2015 2017  2022)  caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
 
+gr tw (connected salario_nac año , msymbol(T) mcolor(orange) lcolor(orange) ) ///
+			(connected salario_ext año, msymbol(s) mcolor(pink) lcolor(pink)) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Salario Promedio por Hora (en pesos chilenos)", size(small) )  ///
+    legend(pos(3) ring(0) col(1)) legend( label(1 "Chilenos") label(2 "Migrantes")) ///
+	xlabel(2006 2009 2011 2013 2015 2017 2020 2022) note("{it:Nota:} Salario promedio por hora construido con el ingreso de la actividad principal" " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
  graph export "${figure}\fig_6.png", as(png)  replace
 
 
 
 
-*****************************GRAFICO 7******************************************
+*****************************figura 7******************************************
 ****barras con % rural por año(dos series de tiempo: nacionales y migrantes)****
 clear
 set more off
@@ -1046,16 +773,19 @@ collapse (mean) nac_rur ext_rur [fweight=expr], by(año)
 gen nac_rur_por=nac_rur*100
 gen ext_rur_por= ext_rur*100
  
- graph bar  nac_rur_por ext_rur_por, over(año)  legend(label(2 "Migrantes") label(1 "Nativos")) ///
- ytitle("Porcentaje") b1title("Año") ///
- title("Porcentaje de Personas Viviendo en Zonas Rurales") caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN) ///
- legend(pos(1) ring(0) col(1) order(1 2) )
  
+ 
+ graph bar  nac_rur_por ext_rur_por, over(año)  ///
+ bar(1, color(orange)  )  /// 
+ bar(2, color(pink) ) ///
+ legend(label(2 "Migrantes") label(1 "Chilenos")) ///
+ ytitle("Porcentaje") b1title("Año") ///
+ legend(pos(10) ring(0) col(1) order(1 2) ) note("{it:Nota:} Zona rural se define como áreas donde el 50% o más de la población reside en distritos con menos" " "  "de 150 habitantes por km² y hasta 50,000 habitantes " " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN")
 graph export "${figure}\fig_7.png", as(png)  replace
 
 
 ****8. PIRAMIDE DEMOGRAFICA****
-*8.1 PARA EXTRANJEROS
+*8.1 PARA MIGRANTES
 clear
 set more off
 
@@ -1082,11 +812,11 @@ gen Mujeres=100*pop5/totpob if mujer==1
 
 
 twoway ///
-(bar Hombres grupos_edad [fweight=expr]  , horizontal barwidth(5) ) ///
-(bar Mujeres grupos_edad [fweight=expr] , horizontal barwidth(5) )  ///
+(bar Hombres grupos_edad [fweight=expr]  , horizontal barwidth(5) color(orange)) ///
+(bar Mujeres grupos_edad [fweight=expr] , horizontal barwidth(5) color(pink))  ///
 (scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-8 "8" -6"6"  -4 "4" -2 "2" 0 "0" 2 "2" 4 "4" 6 "6" 8 "8") legend(order(1 "Hombres" 2 "Mujeres"))), ///
-title("Pirámide Poblacional de Extranjeros, Chile 2022") ///
-xtitle("Porcentaje de Población") saving(extranjero, replace)
+xtitle("Porcentaje") saving(extranjero, replace) note("{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN " )
+graph export "${figure}\fig_8.png", as(png)  replace
 
 
 ****8. PIRAMIDE DEMOGRAFICA****
@@ -1117,15 +847,15 @@ gen Mujeres=100*pop5/totpob if mujer==1
 
 
 twoway ///
-(bar Hombres grupos_edad [fweight=expr] , horizontal barwidth(5) ) ///
-(bar Mujeres grupos_edad [fweight=expr] , horizontal barwidth(5) )  ///
+(bar Hombres grupos_edad [fweight=expr] , horizontal barwidth(5) color(orange) ) ///
+(bar Mujeres grupos_edad [fweight=expr] , horizontal barwidth(5) color(pink) )  ///
 (scatter grupos_edad cero, msymbol(i) mlabel(grupos_edad) mlabstyle(p1) mlabcolor(black) mlabsize(*.5) xlabel(-8 "8" -6"6"  -4 "4" -2 "2" 0 "0" 2 "2" 4 "4" 6 "6" 8 "8") legend(order(1 "Hombres" 2 "Mujeres"))), ///
 title("Pirámide Poblacional de Nativos, Chile 2022") ///
-xtitle("Porcentaje de Población") saving(nativo, replace)
+xtitle("Porcentaje") saving(nativo, replace)
 
 gr combine extranjero.gph nativo.gph , caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
 
-graph export "${figure}\fig_8.png", as(png)  replace
+graph export "${figure}\fig_8.1.png", as(png)  replace
 *************************FIGURA 9*******************************************
 
 
@@ -1142,10 +872,85 @@ replace esc_ext=esc if extranjero==1
 gen esc_nac=.
 replace esc_nac=esc if extranjero==0
 
+drop if edad<25
+drop if edad>50
 collapse (mean) esc_ext esc_nac [fweight=expr], by(año)
 
-binscatter2 (esc_nac) (esc_ext año),  graphregion(fcolor(white) lcolor(white) ///
-ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Años")  linetype(connect) title("Años Promedio de Escolaridad por Origen") ///
-name(fig9, replace) legend(label(2 "Extranjeros") label(1 "Nativos")) ///
-legend(pos(11) ring(0) col(1) order(1 2) ) xlabel(2006 2009 2011 2013 2015 2017 2020 2022) caption(Fuente: Elaborado por Núcleo MIGRA con datos de CASEN)
+
+
+
+gr tw (connected esc_nac año , msymbol(T) mcolor(orange) lcolor(orange) ) ///
+			(connected esc_ext año, msymbol(s) mcolor(pink) lcolor(pink)) , ///
+			graphregion(fcolor(white) lcolor(white) ifcolor(white) ilcolor(white)) ///
+    xtitle("Año") ytitle("Promedio de Años de Escolaridad")  ///
+    legend(pos(10) ring(0) col(1)) legend( label(1 "Chilenos") label(2 "Migrantes")) ///
+	xlabel(2006 2009 2011 2013 2015 2017 2020 2022) note("{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+
 graph export "${figure}\fig_9.png", as(png)  replace
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+****************************POBREZA MULTIDIMENSIONAL**********************
+
+
+
+
+*AÑOS DISPONIBLES  2013 2015 2017 2022 MULTI4D
+
+
+use "${temp}\casen_panel_2006_2022", clear
+
+keep if año==2013 | año==2015 | año==2017 | año==2022
+
+ // identificar a extranjeros pobres y nacionales pobres
+ 
+ gen nativos=.
+ replace nativos=1 if extranjero==0
+ replace nativos=0 if nativos==.
+ drop if pobreza_multi==.
+ 
+ 
+ gen nativos_pobres=.
+ replace nativos_pobres=1 if nativos==1 & pobreza_multi==1
+ replace nativos_pobres=0 if nativos_pobres==.
+
+ 
+ gen migrantes_pobres=.
+ replace migrantes_pobres=1 if extranjero==1 & pobreza_multi==1
+ replace migrantes_pobres=0 if migrantes_pobres==.
+
+collapse (sum) nativos extranjero nativos_pobres migrantes_pobres [fweight=expr] , by(año)
+
+
+gen porcentaje_pobreza_nativo= 100*(nativos_pobres/nativos)
+ gen porcentaje_pobreza_migrante=100*(migrantes_pobres/extranjero)
+ 
+ 
+
+ 
+
+
+graph bar  porcentaje_pobreza_nativo porcentaje_pobreza_migrante, over(año)  ///
+ bar(1, color(orange)  )  /// 
+ bar(2, color(pink) ) ///
+ legend(label(2 "Migrantes") label(1 "Chilenos")) ///
+ ytitle("Porcentaje") b1title("Año") ///
+ legend(pos(10) ring(0) col(1) order(1 2) ) note("{it:Notas:}" " " "{it:i) }Elaborado con Pobreza multidimensional en 4 dimensiones"  " "  "{it:ii)} Las 4 dimensiones corresponden a Educación, Salud, Trabajo y Seguridad Social, y Vivienda" " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de CASEN" )
+graph export "${figure}\fig_10.png", as(png)  replace
+
+
