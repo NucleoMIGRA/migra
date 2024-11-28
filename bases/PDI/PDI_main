@@ -15,18 +15,17 @@ merge 1:1 cir_sena using "${maps}\Regional"
 
 format (cantidad) %12.0f
 drop if _merge==2
-
+**		title("Denuncias de Ingresos Ilegales por Región en 2023", size(*0.6))  ///
 grmap cantidad , ///
 		clmethod(custom) clb(0 500 1000 2500 5000 11000) clnumber(5)  fcolor(Reds2)   ///
-		title("Denuncias de Ingresos Ilegales por Región en 2023", size(*0.7))  ///
-		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.")  caption(Fuente: Elaborado por Núcleo MIGRA con datos de la PDI ,size(*0.5))	
+		legstyle(2) legend(ring(1) position(3)) ndlabel("No Obs.")  note("{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la PDI", size(vsmall))	
 		
 graph export "${figure}\figura_1.png", as(png) name("Graph") replace		
 		
 		************************************************************************
 		****************************FIGURA 2***********************************
 		****************************PIE CHARTS DE INGRESOS NO HABILITADOS******
-		import excel "${data}\clean_pasos_no_hab.xlsx", sheet("Sheet1") firstrow clear
+	import excel "${data}\clean_pasos_no_hab.xlsx", sheet("Sheet1") firstrow clear
 		
 drop if region==""
 
@@ -40,34 +39,50 @@ egen total = total(cantidad)
 gen percentage = (cantidad / total) * 100
 
 * Threshold for grouping into 'Other'
-local threshold = 5
+local threshold = 1.67
 
 * Create a new variable for the modified category
 gen new_nacionalidad = nacionalidad
 
 * Identify and label categories below the threshold as 'Other'
 bysort nacionalidad: gen flag = (percentage < `threshold')
-bysort flag (percentage): replace new_nacionalidad = "Otra" if flag & _n > 1
+bysort flag (percentage): replace new_nacionalidad = "OTRA" if flag & _n > 1
 
 * Sum the 'Other' category
 collapse (sum) cantidad percentage, by(new_nacionalidad)
 
 * Sort the data
 sort cantidad
-replace new_nacionalidad = "Otra" if new_nacionalidad=="ARGELINO"
+replace new_nacionalidad = "OTRA" if new_nacionalidad=="ARGELINO"
 
 collapse (sum) percentage, by(new_nacionalidad)
 * Create the pie chart
-graph pie percentage, over(new_nacionalidad) ///
-    plabel(1 percent, format(%9.2f) ) plabel(2 percent, format(%9.2f)) ///
+
+
+		* Create a new variable with a custom order for pie chart slices
+gen order_var = .
+replace order_var = 1 if new_nacionalidad == "VENEZOLANA"
+replace order_var = 2 if new_nacionalidad == "BOLIVIANA"
+replace order_var = 3 if new_nacionalidad == "COLOMBIANA"
+replace order_var = 4 if new_nacionalidad == "DOMINICANA REP."
+replace order_var = 5 if new_nacionalidad == "OTRA"
+
+
+label define order_labels 1 "VENEZOLANA" 2 "BOLIVIANA" 3 "COLOMBIANA" 4 "DOMINICANA" 5 "OTRA"
+
+* Step 2: Assign the labels to `order_var`
+label values order_var order_labels
+	
+	graph pie percentage, over(order_var) ///
+    plabel(1 percent, format(%9.2f)) plabel(2 percent, format(%9.2f)) ///
     plabel(3 percent, format(%9.2f)) plabel(4 percent, format(%9.2f)) ///
-    plabel(5 percent, format(%9.2f)) title("Distribución Ingresos Pasos no Habilitados (2021-2023)") pie(1,  color(olive)) pie(2,  color(red)) pie(3,  color(green)) pie(4,  color(navy)) ///
-    caption("Fuente: Elaborado por Núcleo MIGRA con datos de la PDI") 
-	
-	
+    plabel(5 percent, format(%9.2f)) ///
+    pie(1, color(red)) pie(2, color(purple)) pie(3, color(ltblue)) ///
+    pie(4, color(pink)) pie(5, color(orange)) ///
+    note("{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de PDI")
+
 graph export "${figure}\figura_2.png", as(png) name("Graph") replace		
-		
-	
+
 	
 	****************************************************************************
 	******************************FIGURA 3*************************************
@@ -80,13 +95,13 @@ collapse (sum) administrativa judicial total , by(año)
 format año %12.0f
 
 drop if año==2024
-
-graph tw   (connected administrativa año , yaxis(1) ) (connect judicial año , yaxis(2)),   graphregion(fcolor(white) lcolor(white) ///
-	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Administrativas", axis(1)) ytitle( "Judiciales" , axis(2))  title("Expulsiones Realizadas por la PDI, por Tipo", color(navy)) ///
+**title("Expulsiones Realizadas por la PDI, por Tipo", color(navy))
+graph tw   (connected administrativa año ,  msymbol(s) mcolor(pink) lcolor(pink) ) (connect judicial año , msymbol(T) mcolor(orange) lcolor(orange)),   graphregion(fcolor(white) lcolor(white) ///
+	ifcolor(white) ilcolor(white)) xtitle("Año") ytitle("Número de Expulsiones") ylabel(0 (1000) 3000)    ///
 	legend(label(1 "Administrativas") label(2 "Judiciales")) ///
-	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la PDI") 
+	legend(pos(1) ring(0) col(1) order(1 2) ) xlabel(2013 2014 2015 2016 2017 2018 2019 2020 2021 2022 2023) note("{it:Nota:} SNM decreta expulsiones Administrativas, Tribunales de Justicia decreta expulsiones Judiciales." " " "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la PDI") 
 	graph export "${figure}\figura_3.png", as(png) name("Graph") replace
 	
 	
-	
+	***(connected porcentaje_extranjeros_basica anio, yaxis(1) msymbol(s) mcolor(pink) lcolor(pink))
 	
