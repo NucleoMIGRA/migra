@@ -9,21 +9,28 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
+**title("Distribución Ocupación Formal e Informal (2022)") ///
 
-gr bar (sum) persona, over(ocup_form) over(mig4) asyvars stack percent ///
-legend(cols(3) size(vsmall)) ///
-ytitle("Porcentaje")   ///
-ylabel(, angle(0) format(%12.0gc)) ///
-title("Distribución Ocupación Formal e Informal (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
+* Step 1: Create a weighted variable
+gen persona_weighted = persona * fact_anual
 
+* Step 2: Generate the bar graph using the weighted variable
+gr bar (sum) persona_weighted, over(ocup_form) over(mig4) asyvars stack percent ///
+    legend(cols(3) size(vsmall)) ///
+    ytitle("Porcentaje") ///
+    bar(1, color(orange)) ///
+    bar(2, color(pink)) ///
+    ylabel(, angle(0) format(%12.0gc)) ///
+    legend(pos(6) ring(1) col(1)) ///
+    note("{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE")
 
-
+* Step 3: Export the graph
 graph export "${figure}\figura_1.png", as(png) name("Graph") replace
+
 
 
 ********************************************************************************
@@ -41,7 +48,7 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -49,13 +56,18 @@ label values mig4 extranjero
 drop if b7a_1==77
 drop if b7a_1==88
 drop if b7a_1==99
+**title("¿Su Empleador Cotiza por Usted en el Sistema Previsional? (2022)")
 
-gr bar (sum) persona, over(b7a_1) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7a_1) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Su Empleador Cotiza por Usted en el Sistema Previsional? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Encuesta Nacional de Empleo")
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Las cotizaciones previsionales hacen referencia al aporte obligatorio al sistema de pensiones del trabajador" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(vsmall))
 
 
 
@@ -76,7 +88,7 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -84,15 +96,18 @@ label values mig4 extranjero
 drop if b7a_2==77
 drop if b7a_2==88
 drop if b7a_2==99
+**title("¿Su Empleador Cotiza por Usted en el Sistema de Salud? (2022)") ///
 
-gr bar (sum) persona, over(b7a_2) over(mig4) asyvars stack percent ///
+
+gen persona_weighted = persona * fact_anual
+
+gr bar (sum) persona_weighted, over(b7a_2) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Su Empleador Cotiza por Usted en el Sistema de Salud? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Las cotizaciones de salud hacen referencia al aporte obligatorio al sistema de salud del trabajador" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(small))
 
 graph export "${figure}\figura_3.png", as(png) name("Graph") replace
 
@@ -113,7 +128,7 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -121,14 +136,18 @@ label values mig4 extranjero
 drop if b7a_3==77
 drop if b7a_3==88
 drop if b7a_3==99
+**title("¿Su Empleador Cotiza por Usted en el Seguro de Desempleo? (2022)") ///
 
-gr bar (sum) persona, over(b7a_3) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7a_3) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Su Empleador Cotiza por Usted en el Seguro de Desempleo? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Las cotizaciones del seguro de desempleo hacen referencia al aporte obligatorio al seguro de desempleo" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(small))
 
 
 graph export "${figure}\figura_4.png", as(png) name("Graph") replace
@@ -151,7 +170,7 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -159,14 +178,18 @@ label values mig4 extranjero
 drop if b7b_1==77
 drop if b7b_1==88
 drop if b7b_1==99
+**title("¿Tiene Derecho a Vacaciones? (2022)") ///
 
-gr bar (sum) persona, over(b7b_1) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7b_1) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Tiene Derecho a Vacaciones? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Vacaciones se refiere a vacaciones anuales, no se especifica duración" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(small))
 
 
 graph export "${figure}\figura_5.png", as(png) name("Graph") replace
@@ -186,7 +209,7 @@ gen persona=1
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -194,14 +217,18 @@ label values mig4 extranjero
 drop if b7b_2==77
 drop if b7b_2==88
 drop if b7b_2==99
+**title("¿Tiene Derecho a Días Pagados por Enfermedad? (2022)") ///
 
-gr bar (sum) persona, over(b7b_2) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7b_2) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Tiene Derecho a Días Pagados por Enfermedad? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Días pagados no especifica duración mínima o máxima" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(small))
 
 
 graph export "${figure}\figura_6.png", as(png) name("Graph") replace
@@ -222,7 +249,7 @@ keep if sexo==2
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -230,14 +257,18 @@ label values mig4 extranjero
 drop if b7b_3==77
 drop if b7b_3==88
 drop if b7b_3==99
+**title("¿Tiene Derecho a un Permiso de Maternidad? (2022)") ///
 
-gr bar (sum) persona, over(b7b_3) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7b_3) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Tiene Derecho a un Permiso de Maternidad? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Maternidad (paternidad) se refiere a si existe permiso postnatal para la crianza" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(small))
 
 
 graph export "${figure}\figura_7.png", as(png) name("Graph") replace
@@ -258,7 +289,7 @@ keep if sexo==2
 replace mig4=1 if mig4==2
 
 
-label define extranjero 1 "Nacionales" 3 "Extranjeros"
+label define extranjero 1 "Chilenos" 3 "Migrantes"
 
 label values mig4 extranjero
 
@@ -266,17 +297,20 @@ label values mig4 extranjero
 drop if b7b_4==77
 drop if b7b_4==88
 drop if b7b_4==99
+**title("¿Tiene Derecho a Servicio de Guardería? (2022)") ///
 
-gr bar (sum) persona, over(b7b_4) over(mig4) asyvars stack percent ///
+gen persona_weighted = persona * fact_anual
+
+
+gr bar (sum) persona_weighted, over(b7b_4) over(mig4) asyvars stack percent ///
 legend(cols(3) size(vsmall)) ///
+bar(1, color(orange)) ///
+bar(2, color(pink)) ///
 ytitle("Porcentaje")   ///
 ylabel(, angle(0) format(%12.0gc)) ///
-title("¿Tiene Derecho a Servicio de Guardería? (2022)") ///
-legend(pos(1) ring(0) col(1)) caption("Fuente: Elaborado por Núcleo MIGRA con datos de la ENE")
-
+legend(pos(6) ring(1) col(1)) note("{it:Notas:} " " " " {it:i)} Se considera al universo de empleados" " " "{it:ii)} Hace referencia al derecho de la trabajadora a que el empleador cubra el costo de la sala cuna para su hijo" " "  "{it:Fuente:} Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos de la ENE", size(vsmall))
 
 graph export "${figure}\figura_8.png", as(png) name("Graph") replace
-
 
 
 
