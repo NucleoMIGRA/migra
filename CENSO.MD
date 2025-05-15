@@ -19,7 +19,7 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 **Figura 1:** Hogares Promedio por Vivienda (Año 2017).
 
-![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_1.png?raw=true)
+![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_1.svg?raw=true)
 
 **Figura 2:** Porcentaje de Mujeres entre 18 y 50 años con al Menos un Hijo Nacido en Chile, (Año 2017).
 
