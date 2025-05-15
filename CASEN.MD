@@ -18,9 +18,9 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 [¿Cómo citar?](./citation.MD)
 
 
-**Figura 1:** Stock acumulado de Migrantes en el Tiempo.
+**Figura 1:** Stock acumulado de Migrantes en el Tiempo.
 
-![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras/fig_1.png?raw=true)
+![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/bases/casen/figuras_svg/fig_1.svg?raw=true)
 
 **Figura 2:** Porcentaje de personas entre 25 y 50 años que tienen Educación Superior Técnica o
 Universitaria.
