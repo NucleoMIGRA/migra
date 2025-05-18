@@ -23,27 +23,27 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 **Figura 2:** Porcentaje de Mujeres entre 18 y 50 años con al Menos un Hijo Nacido en Chile, (Año 2017).
 
-![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_2.png?raw=true)
+![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_2.svg?raw=true)
 
 **Figura 3:** Promedio Años de Escolaridad para Población entre 25 y 50 años (Año 2017).
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_3.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_3.svg?raw=true)
 
 **Figura 4:** Porcentaje de Población con Educación Superior (Año 2017).
 
-![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_4.png?raw=true)
+![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_4.svg?raw=true)
 
 **Figura 5:** Número de Hijos Promedio en mujeres entre 18 y 50 años (Año 2017).
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_5.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_5.svg?raw=true)
 
 **Figura 6:** Porcentaje de Hogares con al Menos un miembro de origen Migrante (Año 2017).
 
-![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_6.png?raw=true)
+![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_6.svg?raw=true)
 
 **Figura 7:** Porcentaje de Hogares según origen del jefe de hogar (Año 2017).
 
-![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_CENSO_2017/figura_7.png?raw=true)
+![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/bases/CENSO_2017/figuras_svg/figura_7.svg?raw=true)
 
 **Figura 8:** Pirámide Poblacional Migrantes (Año 2017).
 
