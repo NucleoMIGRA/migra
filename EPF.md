@@ -18,8 +18,8 @@ Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados 
 
 **Figura 1:** Composición del Gasto Familiar.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/EPF/figuras/figura_1.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/EPF/figuras_svg/figura_1.svg?raw=true)
 
 **Figura 2:** Porcentaje de Gasto en Deudas.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/EPF/figuras/figura_2.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/EPF/figuras_svg/figura_2.svg?raw=true)
