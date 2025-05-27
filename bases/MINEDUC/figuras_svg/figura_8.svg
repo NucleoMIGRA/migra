@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- This is a Stata 17.0 generated SVG file (http://www.stata.com) -->
+
+<svg version="1.1" width="6.00in" height="4.00in" viewBox="0 0 4320 2880" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>Stata Graph - Graph</desc>
+	
+	
+	
+	
+	<rect x="37.44" y="37.44" width="3583.49" height="2610.58" style="fill:none;stroke:#FFFFFF;stroke-opacity:0.00;stroke-width:5.76"/>
+	<defs>
+		<clipPath id="clipPath_EZOuDbfS">
+			<path d="M1829.25 1342.73 L3042.18 1062.70 A1244.84 1244.84 0 0 0 1829.25 97.88 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M1829.25 1342.73 L3042.18 1062.70 A1244.84 1244.84 0 0 0 1829.25 97.88 Z" style="stroke:none;fill:#F28E31"/>
+	<path d="M1829.25 1342.73 L3042.18 1062.70 A1244.84 1244.84 0 0 0 1829.25 97.88 Z" style="fill:none;stroke:#F0811A;stroke-width:6.00" clip-path="url(#clipPath_EZOuDbfS)"/>
+	<defs>
+		<clipPath id="clipPath_pnOFtfKI">
+			<path d="M1829.25 1342.73 L2709.48 2222.98 A1244.84 1244.84 0 0 0 3042.18 1062.70 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M1829.25 1342.73 L2709.48 2222.98 A1244.84 1244.84 0 0 0 3042.18 1062.70 Z" style="stroke:none;fill:#2BB7D7"/>
+	<path d="M1829.25 1342.73 L2709.48 2222.98 A1244.84 1244.84 0 0 0 3042.18 1062.70 Z" style="fill:none;stroke:#13AFD3;stroke-width:6.00" clip-path="url(#clipPath_pnOFtfKI)"/>
+	<defs>
+		<clipPath id="clipPath_WybxMmps">
+			<path d="M1829.25 1342.73 L1785.81 2586.83 A1244.84 1244.84 0 0 0 2709.48 2222.98 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M1829.25 1342.73 L1785.81 2586.83 A1244.84 1244.84 0 0 0 2709.48 2222.98 Z" style="stroke:none;fill:#E92B85"/>
+	<path d="M1829.25 1342.73 L1785.81 2586.83 A1244.84 1244.84 0 0 0 2709.48 2222.98 Z" style="fill:none;stroke:#E61477;stroke-width:6.00" clip-path="url(#clipPath_WybxMmps)"/>
+	<defs>
+		<clipPath id="clipPath_oynjQmkc">
+			<path d="M1829.25 1342.73 L1486.13 2539.36 A1244.84 1244.84 0 0 0 1785.81 2586.83 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M1829.25 1342.73 L1486.13 2539.36 A1244.84 1244.84 0 0 0 1785.81 2586.83 Z" style="stroke:none;fill:#86388A"/>
+	<path d="M1829.25 1342.73 L1486.13 2539.36 A1244.84 1244.84 0 0 0 1785.81 2586.83 Z" style="fill:none;stroke:#78227D;stroke-width:6.00" clip-path="url(#clipPath_oynjQmkc)"/>
+	<defs>
+		<clipPath id="clipPath_AdRKgabR">
+			<path d="M1829.25 1342.73 L1829.25 97.88 A1244.84 1244.84 0 0 0 1486.13 2539.36 Z"/>
+		</clipPath>
+	</defs>
+	<path d="M1829.25 1342.73 L1829.25 97.88 A1244.84 1244.84 0 0 0 1486.13 2539.36 Z" style="stroke:none;fill:#E22432"/>
+	<path d="M1829.25 1342.73 L1829.25 97.88 A1244.84 1244.84 0 0 0 1486.13 2539.36 Z" style="fill:none;stroke:#DF0C1B;stroke-width:6.00" clip-path="url(#clipPath_AdRKgabR)"/>
+	<text x="2344.82" y="720.43" style="font-family:Work Sans;font-size:79.92px;fill:#000000" text-anchor="middle">21.34%</text>
+	<text x="2626.56" y="1600.78" style="font-family:Work Sans;font-size:79.92px;fill:#000000" text-anchor="middle">16.26%</text>
+	<text x="2131.11" y="2143.76" style="font-family:Work Sans;font-size:79.92px;fill:#000000" text-anchor="middle">12.95%</text>
+	<text x="1698.70" y="2190.33" style="font-family:Work Sans;font-size:79.92px;fill:#000000" text-anchor="middle">3.93%</text>
+	<text x="1007.50" y="1254.37" style="font-family:Work Sans;font-size:79.92px;fill:#000000" text-anchor="middle">45.52%</text>
+	
+	<rect x="3661.24" y="1972.97" width="586.76" height="640.50" style="fill:none;stroke:#FFFFFF;stroke-opacity:0.00;stroke-width:5.76"/>
+	<rect x="3701.57" y="2023.28" width="122.31" height="59.94" style="fill:#F28E31"/>
+	<rect x="3703.07" y="2024.78" width="119.31" height="56.94" style="fill:none;stroke:#F28E31;stroke-width:3.00"/>
+	<rect x="3701.57" y="2143.29" width="122.31" height="59.94" style="fill:#2BB7D7"/>
+	<rect x="3703.07" y="2144.79" width="119.31" height="56.94" style="fill:none;stroke:#2BB7D7;stroke-width:3.00"/>
+	<rect x="3701.57" y="2263.18" width="122.31" height="60.08" style="fill:#E92B85"/>
+	<rect x="3703.07" y="2264.68" width="119.31" height="57.08" style="fill:none;stroke:#E92B85;stroke-width:3.00"/>
+	<rect x="3701.57" y="2383.19" width="122.31" height="59.94" style="fill:#86388A"/>
+	<rect x="3703.07" y="2384.69" width="119.31" height="56.94" style="fill:none;stroke:#86388A;stroke-width:3.00"/>
+	<rect x="3701.57" y="2503.21" width="122.31" height="59.94" style="fill:#E22432"/>
+	<rect x="3703.07" y="2504.71" width="119.31" height="56.94" style="fill:none;stroke:#E22432;stroke-width:3.00"/>
+	<text x="3874.91" y="2081.25" style="font-family:Work Sans;font-size:79.92px;fill:#000000">Perú</text>
+	<text x="3874.91" y="2201.27" style="font-family:Work Sans;font-size:79.92px;fill:#000000">Colombia</text>
+	<text x="3874.91" y="2321.29" style="font-family:Work Sans;font-size:79.92px;fill:#000000">Bolivia</text>
+	<text x="3874.91" y="2441.17" style="font-family:Work Sans;font-size:79.92px;fill:#000000">Argentina</text>
+	<text x="3874.91" y="2561.19" style="font-family:Work Sans;font-size:79.92px;fill:#000000">Otro</text>
+	<text x="51.84" y="2724.19" style="fill:#000000">
+		<tspan style="font-family:Work Sans;font-style:italic;font-size:79.92px">Nota:</tspan>
+		<tspan style="font-family:Work Sans;font-size:79.92px"> Se consideran las 4 nacionalidades con más estudiantes, el resto se categoriza como Otro. </tspan>
+	</text>
+	<text x="51.84" y="2804.12" style="fill:#000000">
+		<tspan style="font-family:Work Sans;font-style:italic;font-size:79.92px">Fuente:</tspan>
+		<tspan style="font-family:Work Sans;font-size:79.92px"> Elaborado por Núcleo Milenio MIGRA (datamigra.cl), con datos del MINEDUC</tspan>
+	</text>
+</svg>
