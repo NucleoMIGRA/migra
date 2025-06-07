@@ -24,44 +24,44 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 **Figura 3:** Evolución del Número de Solicitudes de Residencias Temporales Aprobadas.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_2.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_2.svg?raw=true)
 
 **Figura 4:** Evolución del Número de Solicitudes de Residencias Definitivas.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_3.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_3.svg?raw=true)
 
 **Figura 5:** Evolución del Número de Solicitudes de Residencias Definitivas Aprobadas.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_4.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_4.svg?raw=true)
 
 **Figura 6** Tasa de Aprobación de Residencia, por Tipo.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_5_con_duplicados.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_5_con_duplicados.svg?raw=true)
 
 **Figura 7:** Distribución de Actividad Principal de Personas con Residencia Definitiva Aprobada.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_6.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_6.svg?raw=true)
 
 **Figura 8:** Distribución de Actividad Principal de Personas con Residencia Temporal Aprobada.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_8.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_8.svg?raw=true)
 
 **Figura 9:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
 Nacional de Migraciones.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_1.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_1.svg?raw=true)
 
 **Figura 10:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
 Nacional de Migraciones, por Sexo.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_2.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_2.svg?raw=true)
 
 **Figura 11:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
 Migraciones, por Tipo de Delito.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_3.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_3.svg?raw=true)
 
 **Figura 12:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
 Migraciones, por Nacionalidad.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones/figura_4.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_4.svg?raw=true)
