@@ -20,7 +20,7 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 
 **Figura 2:** Evolución del Número de Solicitudes de Residencias Temporales.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figura_1.png?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_svg/figura_1.svg?raw=true)
 
 **Figura 3:** Evolución del Número de Solicitudes de Residencias Temporales Aprobadas.
 
