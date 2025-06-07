@@ -49,19 +49,19 @@ Los datos provienen del Servicio Nacional de Migraciones, fueron descargados de 
 **Figura 9:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
 Nacional de Migraciones.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_1.svg?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_expulsiones_svg/figura_1.svg?raw=true)
 
 **Figura 10:** Evolución del Número Total de Expulsiones Administrativas Dictadas por el Servicio
 Nacional de Migraciones, por Sexo.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_2.svg?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_expulsiones_svg/figura_2.svg?raw=true)
 
 **Figura 11:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
 Migraciones, por Tipo de Delito.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_3.svg?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_expulsiones_svg/figura_3.svg?raw=true)
 
 **Figura 12:** Distribución de Expulsiones Administrativas Dictadas por el Servicio Nacional de
 Migraciones, por Nacionalidad.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras/figuras_expulsiones_svg/figura_4.svg?raw=true)
+![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/SNM/figuras_expulsiones_svg/figura_4.svg?raw=true)
