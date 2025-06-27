@@ -37,7 +37,7 @@ The data comes from the National Migration Service and was downloaded from its [
 ![fig_7](https://raw.githubusercontent.com/NucleoMIGRA/migra/e3d777133dcaf35b3de393c28d8d9d81720f6bff/eng/SNM/figures_svg/figure_7.svg)
 
 **Figure 8:** Distribution of Main Activity of Individuals with Approved Temporary Residence  
-![fig_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/e3d777133dcaf35b3de393c28d8d9d81720f6bff/eng/SNM/figures_svg/figure_8.svg)
+![fig_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/338b4e8277c99b48f3f9962d7c99f4ba2bd0136f/eng/SNM/figures_svg/figure_9.svg)
 
 **Figure 9:** Evolution of Total Administrative Deportation Orders Issued by the SNM  
 ![fig_9](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/SNM/figuras_expulsiones_svg/figura_1.svg?raw=true)
