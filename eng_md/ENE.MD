@@ -18,26 +18,26 @@ The data comes from the National Institute of Statistics (INE), and was download
 ---
 
 **Figure 1:** Distribution of Formal and Informal Employment (2022)  
-![figura_1](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_1.svg?raw=true)
+![figura_1](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_1.svg)
 
 **Figure 2:** Distribution of Pension Contributions Made by the Employer (2022)  
-![figura_2](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_2.svg?raw=true)
+![figura_2](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_2.svg)
 
 **Figure 3:** Distribution of Health Contributions Made by the Employer (2022)  
-![figura_3](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_3.svg?raw=true)
+![figura_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_3.svg)
 
 **Figure 4:** Distribution of Unemployment Insurance Contributions Made by the Employer (2022)  
-![figura_4](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_4.svg?raw=true)
+![figura_4](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_4.svg)
 
 **Figure 5:** Distribution of Vacation Rights (2022)  
-![figura_5](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_5.svg?raw=true)
+![figura_5](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_5.svg)
 
 **Figure 6:** Distribution of Paid Sick Leave Rights (2022)  
-![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_6.svg?raw=true)
+![figura_6](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_6.svg)
 
 **Figure 7:** Distribution of Maternity Leave Rights (2022)  
-![figura_7](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_7.svg?raw=true)
+![figura_7](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_7.svg)
 
 **Figure 8:** Distribution of Daycare Rights (2022)  
-![figura_8](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/ENE/figuras_svg/figura_8.svg?raw=true)
+![figura_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/0429a3751ab6019093f77c141d33ea51fc527140/eng/ENE/figures_svg/figura_8.svg)
 
