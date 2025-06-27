@@ -44,7 +44,7 @@ The data comes from the CASEN survey, which was downloaded from its [official we
 ![fig_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/f34bb17095a071fa6de6e0ac9b3f5498be30ce1f/eng/casen/figure_svg/fig_9.svg)
 
 **Figure 9:** Percentage of Population Living in Poverty  
-![fig_9](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/casen/figuras/fig_10.png?raw=true)
+![fig_9](https://raw.githubusercontent.com/NucleoMIGRA/migra/1bf0808e5cf425f45267f3b56fde926105b4293a/eng/casen/figure_svg/fig_7.svg)
 
 **Figure 10:** Migrant Population Pyramid (Year 2022)  
 ![fig_10](https://raw.githubusercontent.com/NucleoMIGRA/migra/f34bb17095a071fa6de6e0ac9b3f5498be30ce1f/eng/casen/figure_svg/fig_8.svg)
