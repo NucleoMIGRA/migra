@@ -19,7 +19,7 @@ This repository compiles information from open-access databases with the objecti
 6. [National Employment Survey (ENE)](./engmd/ENE.md)
 7. [Household Budget Survey (EPF)](./engmd/EPF.md)
 
-[How to cite?](./eng_md/citation.md)
+[How to cite?](./citation.md)
 
 ## Featured Figures:
 
