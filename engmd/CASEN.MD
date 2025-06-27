@@ -1,5 +1,5 @@
 ## CASEN  
-The data comes from the CASEN survey, which was downloaded from its [official website](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen). Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen).  
+The data comes from the CASEN survey, which was downloaded from its [official website](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen). Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/casen)
 
 **Notes:**  
 - Years omitted in the figures correspond to surveys that did not include the respective variable.  
