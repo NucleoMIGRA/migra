@@ -20,7 +20,7 @@ This repository compiles publicly available datasets to empirically characterize
 6. [National Employment Survey (ENE)](./ENE.md)
 7. [Household Budget Survey (EPF)](./EPF.md)
 
-[How to cite?](./citation.md)
+[How to cite?](../citation.md)
 
 ## Featured Figures:
 
