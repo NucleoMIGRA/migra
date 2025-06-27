@@ -15,7 +15,7 @@ The data comes from the CASEN survey, which was downloaded from its [official we
 6. [National Employment Survey (ENE)](./engmd/ENE.MD)
 7. [Household Budget Survey (EPF)](./engmd/EPF.MD)
 
-[How to cite?](../citation.MD)
+[How to cite?](./citation.MD)
 
 ---
 
