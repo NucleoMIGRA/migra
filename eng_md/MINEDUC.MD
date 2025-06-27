@@ -18,23 +18,23 @@ The data comes from the Ministry of Education and was requested via email (estad
 ---
 
 **Figure 1:** Trends in Total Enrollment and Percentage of Migrant Students in Primary Education  
-![figura_1](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_1.svg)
+![figura_1](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_1.svg)
 
 **Figure 2:** Trends in Total Enrollment and Percentage of Migrant Students in Secondary Education  
-![figura_2](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_2.svg)
+![figura_2](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_2.svg)
 
 **Figure 3:** Trends in Total Enrollment and Percentage of Migrant Students in General Academic Secondary Education  
-![figura_4](https://raw.githubusercontent.com/NucleoMIGRA/migra/557c1f8c94d293fe9a4a13b9991777e5300bae12/bases/MINEDUC/figuras_svg/figura_4.svg)
+![figura_4](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_4.svg)
 
 **Figure 4:** Trends in Total Enrollment and Percentage of Migrant Students in Technical Secondary Education  
-![figura_5](https://raw.githubusercontent.com/NucleoMIGRA/migra/557c1f8c94d293fe9a4a13b9991777e5300bae12/bases/MINEDUC/figuras_svg/figura_5.svg)
+![figura_5](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_5.svg)
 
 **Figure 5:** Distribution of Migrant Students by Region (Year 2023)  
 ![figura_6](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_5.svg)
 
 **Figure 6:** Distribution of Migrant Students by Nationality (Year 2023)  
-![figura_7](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_7.svg)
+![figura_7](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_7.svg)
 
 **Figure 7:** Distribution of Migrant Students by Nationality (Year 2014)  
-![figura_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_8.svg)
+![figura_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_8.svg)
 
