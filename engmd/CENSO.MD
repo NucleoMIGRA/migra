@@ -5,15 +5,15 @@ The data comes from the National Institute of Statistics (INE), and was download
 - Migrants are identified based on the variable indicating whether the person is Chilean or a foreign national.  
 
 **Datasets:**
-1. [National Migration Service (SNM)](../eng_md/SNM.md)
-2. [Investigative Police of Chile (PDI)](../eng_md/PDI.md)
-3. [2017 Census](./CENSO.md)
-4. [National Socioeconomic Characterization Survey (CASEN)](../eng_md/CASEN.md)
-5. [Ministry of Education (MINEDUC)](../eng_md/MINEDUC.md)
-6. [National Employment Survey (ENE)](../eng_md/ENE.md)
-7. [Household Budget Survey (EPF)](../eng_md/EPF.md)
+1. [National Migration Service (SNM)](./SNM.MD)
+2. [Investigative Police of Chile (PDI)](./PDI.MD)
+3. [2017 Census](./CENSO.MD)
+4. [National Socioeconomic Characterization Survey (CASEN)](./CASEN.MD)
+5. [Ministry of Education (MINEDUC)](./MINEDUC.MD)
+6. [National Employment Survey (ENE)](./ENE.MD)
+7. [Household Budget Survey (EPF)](./EPF.MD)
 
-[How to cite?](../eng_md/citation.md)
+[How to cite?](./citation.MD)
 
 ---
 
