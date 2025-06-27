@@ -1,5 +1,5 @@
 # ¿Cómo citar?  
-Nuestro trabajo es importante, así que agradecemos si puede citar el uso del código y figuras disponibles en este repositorio.  
+Nuestro trabajo es importante para nosotros, por lo que agradecemos que cites el uso del código y las figuras disponibles en este repositorio.
 ## Cita formato APA
 MIGRA, N. (2024). Repositorio MIGRA (Version 2.0.4) [Computer software]
 
