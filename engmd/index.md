@@ -7,20 +7,20 @@ layout: default
 [🇪🇸 Versión en Español](../index.html)
 
 <div style="text-align: justify;">
-This repository compiles publicly available datasets to empirically characterize the phenomenon of international migration in Chile. The statistics are organized by data source. To properly cite the evidence from this repository, see the [How to cite?](../citation.md) section.
+This repository compiles publicly available datasets to empirically characterize the phenomenon of international migration in Chile. The statistics are organized by data source. To properly cite the evidence from this repository, see the How to cite? section.
 </div>
 
 <br>
 **Datasets:**
 1. [National Migration Service (SNM)](./SNM.MD)
-2. [Investigative Police of Chile (PDI)](./PDI.md)
-3. [2017 Census](./CENSO.md)
-4. [National Socioeconomic Characterization Survey (CASEN)](./CASEN.md)
-5. [Ministry of Education (MINEDUC)](./MINEDUC.md)
-6. [National Employment Survey (ENE)](./ENE.md)
-7. [Household Budget Survey (EPF)](./EPF.md)
+2. [Investigative Police of Chile (PDI)](./PDI.MD)
+3. [2017 Census](./CENSO.MD)
+4. [National Socioeconomic Characterization Survey (CASEN)](./CASEN.MD)
+5. [Ministry of Education (MINEDUC)](./MINEDUC.MD)
+6. [National Employment Survey (ENE)](./ENE.MD)
+7. [Household Budget Survey (EPF)](./EPF.MD)
 
-[How to cite?](../citation.md)
+[How to cite?](../citation.MD)
 
 ## Featured Figures:
 
