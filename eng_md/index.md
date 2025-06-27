@@ -24,16 +24,16 @@ This repository compiles information from open-access databases with the objecti
 ## Featured Figures:
 
 **Figure 1:** Distribution of Migrant Students by Nationality (2023)  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_1.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_1.svg)
 
 **Figure 2:** Residence Approval Rate by Type of Permit  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_2.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_2.svg)
 
 **Figure 3:** Migrant Population Pyramid (2017)  
-![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
+![piramide_extranjero]()
 
 **Figure 4:** Distribution of People Living in Overcrowded Conditions  
-![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_4.png?raw=true)
+![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_4.svg)
 
 **Figure 5:** Average Weekly Working Hours  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_5.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_5.svg)
