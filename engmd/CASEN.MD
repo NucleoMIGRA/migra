@@ -7,13 +7,13 @@ The data comes from the CASEN survey, which was downloaded from its [official we
 - The migrant variable is based on the mother's place of residence at the time of birth.
 
 **Datasets:**
-1. [National Migration Service (SNM)](./engmd/SNM.MD)
-2. [Investigative Police of Chile (PDI)](./engmd/PDI.MD)
-3. [2017 Census](./engmd/CENSO.MD)
+1. [National Migration Service (SNM)](./SNM.MD)
+2. [Investigative Police of Chile (PDI)](./PDI.MD)
+3. [2017 Census](./CENSO.MD)
 4. [National Socioeconomic Characterization Survey (CASEN)](./CASEN.MD)
-5. [Ministry of Education (MINEDUC)](./engmd/MINEDUC.MD)
-6. [National Employment Survey (ENE)](./engmd/ENE.MD)
-7. [Household Budget Survey (EPF)](./engmd/EPF.MD)
+5. [Ministry of Education (MINEDUC)](./MINEDUC.MD)
+6. [National Employment Survey (ENE)](./ENE.MD)
+7. [Household Budget Survey (EPF)](./EPF.MD)
 
 [How to cite?](./citation.MD)
 
