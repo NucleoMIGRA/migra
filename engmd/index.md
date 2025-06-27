@@ -7,12 +7,12 @@ layout: default
 [🇪🇸 Versión en Español](../index.html)
 
 <div style="text-align: justify;">
-This repository compiles publicly available datasets to empirically characterize the phenomenon of international migration in Chile. The statistics are organized by data source. To properly cite the evidence from this repository, see the [How to cite?](./citation.md) section.
+This repository compiles publicly available datasets to empirically characterize the phenomenon of international migration in Chile. The statistics are organized by data source. To properly cite the evidence from this repository, see the [How to cite?](../citation.md) section.
 </div>
 
 <br>
 **Datasets:**
-1. [National Migration Service (SNM)](./SNM.md)
+1. [National Migration Service (SNM)](./SNM.MD)
 2. [Investigative Police of Chile (PDI)](./PDI.md)
 3. [2017 Census](./CENSO.md)
 4. [National Socioeconomic Characterization Survey (CASEN)](./CASEN.md)
