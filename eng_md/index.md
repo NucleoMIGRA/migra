@@ -30,7 +30,7 @@ This repository compiles information from open-access databases with the objecti
 ![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/daf1a2cb94a90f47fa2abe558e91684ee6da479c/eng_md/index/figures_svg/figura_2.svg)
 
 **Figure 3:** Migrant Population Pyramid (2017)  
-![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
+![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/eng_md/index/figures_png/piramide_extranjero.png?raw=true)
 
 **Figure 4:** Distribution of People Living in Overcrowded Conditions  
 ![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/daf1a2cb94a90f47fa2abe558e91684ee6da479c/eng_md/index/figures_svg/figura_4.svg)
