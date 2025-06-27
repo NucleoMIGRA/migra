@@ -13,7 +13,7 @@ Los datos provienen de la encuesta CASEN, fueron descargados de su [página web]
 4. [Encuesta de Caracterización Socioeconómica Nacional (CASEN)](./CASEN.MD)
 5. [Ministerio de Educación (MINEDUC)](./MINEDUC.MD)
 6. [Encuesta Nacional de Empleo (ENE)](./ENE.MD)
-7. [Encuesta de Presupuestos Familiares (EPF)](./EPF.md)
+7. [Encuesta de Presupuestos Familiares (EPF)](./EPF.MD)
 
 [¿Cómo citar?](./citation.MD)
 
