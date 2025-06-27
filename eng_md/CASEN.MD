@@ -20,7 +20,7 @@ The data comes from the CASEN survey, which was downloaded from its [official we
 ---
 
 **Figure 1:** Cumulative Stock of Migrants Over Time  
-![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/eng/casen/figuras/fig_1.png?raw=true)
+![fig_1](https://github.com/NucleoMIGRA/migra/blob/main/eng/casen/figuras_svg/fig_1.svg?raw=true)
 
 **Figure 2:** Percentage of People Aged 25–50 with Higher Technical or University Education  
 ![fig_2](https://github.com/NucleoMIGRA/migra/blob/main/eng/casen/figuras/fig_2.png?raw=true)
