@@ -11,8 +11,8 @@ This repository compiles information from open-access databases with the objecti
 <br>
 
 **Datasets:**
-1. [National Migration Service (SNM)](./engmd/SNM.md)
-2. [Investigative Police of Chile (PDI)](./engmd/PDI.md)
+1. [National Migration Service (SNM)](./SNM.md)
+2. [Investigative Police of Chile (PDI)](./PDI.md)
 3. [2017 Census](./engmd/CENSO.md)
 4. [National Socioeconomic Characterization Survey (CASEN)](./engmd/CASEN.md)
 5. [Ministry of Education (MINEDUC)](./engmd/MINEDUC.md)
