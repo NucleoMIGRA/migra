@@ -36,4 +36,4 @@ This repository compiles information from open-access databases with the objecti
 ![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/daf1a2cb94a90f47fa2abe558e91684ee6da479c/eng_md/index/figures_svg/figura_4.svg)
 
 **Figure 5:** Average Weekly Working Hours  
-![image]([https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_5.png?raw=true](https://raw.githubusercontent.com/NucleoMIGRA/migra/daf1a2cb94a90f47fa2abe558e91684ee6da479c/eng_md/index/figures_svg/figura_5.svg))
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/daf1a2cb94a90f47fa2abe558e91684ee6da479c/eng_md/index/figures_svg/figura_5.svg)
