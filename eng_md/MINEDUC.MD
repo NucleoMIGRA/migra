@@ -30,7 +30,7 @@ The data comes from the Ministry of Education and was requested via email (estad
 ![figura_5](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_5.svg)
 
 **Figure 5:** Distribution of Migrant Students by Region (Year 2023)  
-![figura_6](https://raw.githubusercontent.com/NucleoMIGRA/migra/b66b9ebdf16f82a8d7b4bd7608c2db4559f6179d/bases/MINEDUC/figuras_svg/figura_5.svg)
+![figura_6](https://github.com/NucleoMIGRA/migra/blob/main/eng/MINEDUC/figures_png/figura_6.png?raw=true)
 
 **Figure 6:** Distribution of Migrant Students by Nationality (Year 2023)  
 ![figura_7](https://raw.githubusercontent.com/NucleoMIGRA/migra/1696c5990008a0f8a1917ec13b78d42beb2d0153/eng/MINEDUC/figures_svg/figure_7.svg)
