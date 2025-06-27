@@ -40,14 +40,14 @@ The data comes from the National Migration Service and was downloaded from its [
 ![fig_8](https://raw.githubusercontent.com/NucleoMIGRA/migra/338b4e8277c99b48f3f9962d7c99f4ba2bd0136f/eng/SNM/figures_svg/figure_9.svg)
 
 **Figure 9:** Evolution of Total Administrative Deportation Orders Issued by the SNM  
-![fig_9](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/SNM/figuras_expulsiones_svg/figura_1.svg?raw=true)
+![fig_9](https://raw.githubusercontent.com/NucleoMIGRA/migra/66d54e2d2535a984042d49a9edc52ffd38bfa7a1/eng/SNM/figures_expulsions_svg/figura_1.svg)
 
 **Figure 10:** Evolution of Administrative Deportation Orders by Sex  
-![fig_10](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/SNM/figuras_expulsiones_svg/figura_2.svg?raw=true)
+![fig_10](https://raw.githubusercontent.com/NucleoMIGRA/migra/66d54e2d2535a984042d49a9edc52ffd38bfa7a1/eng/SNM/figures_expulsions_svg/figura_2.svg)
 
 **Figure 11:** Distribution of Administrative Deportation Orders by Type of Offense  
-![fig_11](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/SNM/figuras_expulsiones_svg/figura_3.svg?raw=true)
+![fig_11](https://raw.githubusercontent.com/NucleoMIGRA/migra/66d54e2d2535a984042d49a9edc52ffd38bfa7a1/eng/SNM/figures_expulsions_svg/figura_3.svg)
 
 **Figure 12:** Distribution of Administrative Deportation Orders by Nationality  
-![fig_12](https://github.com/NucleoMIGRA/migra/blob/main/eng/bases/SNM/figuras_expulsiones_svg/figura_4.svg?raw=true)
+![fig_12](https://raw.githubusercontent.com/NucleoMIGRA/migra/66d54e2d2535a984042d49a9edc52ffd38bfa7a1/eng/SNM/figures_expulsions_svg/figura_4.svg)
 
