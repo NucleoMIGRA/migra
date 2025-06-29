@@ -19,19 +19,19 @@ Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (
 
 **Figura 1:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Básica.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_1.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_1.svg)
 
 **Figura 2:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_2.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_2.svg)
 
 **Figura 3:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Humanista-Científica.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_4.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_4.svg)
 
 **Figura 4:** Evolución Total Estudiantes y Porcentaje Estudiantes Migrantes en Educación Media Técnica.
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_5.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_5.svg)
 
 **Figura 5:** Distribución de Estudiantes Migrantes por Región (Año 2023).
 
@@ -39,9 +39,9 @@ Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (
 
 **Figura 6:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023).
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_7.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_7.svg)
 
 **Figura 7:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2014).
 
-![image](https://github.com/NucleoMIGRA/migra/blob/main/bases/MINEDUC/figuras/figura_8.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/6263ae8e7fa2de8042c12faf13bdc744f7b7d7d0/bases/MINEDUC/figuras_svg/figura_8.svg)
 
