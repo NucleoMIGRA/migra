@@ -15,5 +15,5 @@ Los datos provienen de la Policía de Investigaciones de Chile, deben ser solici
 
 **Figura 1:** Evolución del Número de Expulsiones Realizadas por la PDI, por Tipo de Expulsión.
 
-![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/bases/PDI/figuras/figura_3.png?raw=true)
+![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/aef509f55c1e63154552dd6a6b584956a6575ede/bases/PDI/figuras_svg/figura_3.svg)
 
