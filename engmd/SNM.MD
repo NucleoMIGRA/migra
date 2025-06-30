@@ -1,5 +1,7 @@
 ## National Migration Service (SNM)  
 
+[🇪🇸 Versión en Español](../SNM.html)
+
 The data comes from the National Migration Service and was downloaded from its [official website](https://serviciomigraciones.cl/estudios-migratorios/datos-abiertos/). Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/SNM).  
 
 **Datasets:**
