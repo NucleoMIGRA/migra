@@ -1,4 +1,7 @@
 ## CENSO 2017
+
+[🗣️ English version](./engmd/CENSO.html)
+
 Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados de su [página web](https://www.ine.gob.cl/estadisticas/sociales/censos-de-poblacion-y-vivienda/censo-de-poblacion-y-vivienda), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/CENSO_2017) disponible en este repositorio.
 
 **Notas:**
