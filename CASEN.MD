@@ -1,4 +1,7 @@
 ## CASEN
+
+[🗣️ English version](./engmd/CASEN.html)
+
 Los datos provienen de la encuesta CASEN, fueron descargados de su [página web](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/casen) disponible en este repositorio.  
 
  **Notas**:  
