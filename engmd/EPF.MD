@@ -1,4 +1,8 @@
 ## EPF  
+
+[🇪🇸 Versión en Español](../EPF.html)
+
+
 The data comes from the National Institute of Statistics (INE), and was downloaded from its [official website](https://www.ine.gob.cl/estadisticas/sociales/ingresos-y-gastos/encuesta-de-presupuestos-familiares). Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/EPF).  
 
 **Notes:**  
