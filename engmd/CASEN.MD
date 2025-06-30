@@ -1,4 +1,8 @@
 ## CASEN  
+
+[🇪🇸 Versión en Español](../CASEN.html)
+
+
 The data comes from the CASEN survey, which was downloaded from its [official website](https://observatorio.ministeriodesarrollosocial.gob.cl/encuesta-casen). Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/casen)
 
 **Notes:**  
