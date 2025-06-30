@@ -1,5 +1,7 @@
 ## PDI  
 
+[🇪🇸 Versión en Español](../PDI.html)
+
 The data comes from the Investigative Police of Chile (PDI) and must be requested through transparency procedures. Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/PDI).  
 
 **Datasets:**
