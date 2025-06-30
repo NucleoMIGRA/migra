@@ -24,19 +24,19 @@ El siguiente repositorio recopila información de bases de datos de naturaleza a
 ## Figuras destacadas:
 
 **Figura 1:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023)  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_1.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/76956565e31f1c12f3e27b58800d9bd9cd19dd3d/assets/img/figures_svg/figura_1.svg)
 
 **Figura 2:** Tasa de Aprobación de Residencia por Tipo de Residencia  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_2.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/76956565e31f1c12f3e27b58800d9bd9cd19dd3d/assets/img/figures_svg/figura_2.svg)
 
 **Figura 3:** Pirámide Poblacional Migrantes (Año 2017)  
 ![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
 
 **Figura 4:** Distribución de Personas en Estado de Hacinamiento  
-![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_4.png?raw=true)
+![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/76956565e31f1c12f3e27b58800d9bd9cd19dd3d/assets/img/figures_svg/figura_3.svg)
 
 **Figura 5:** Horas Semanales Promedio Trabajadas  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_5.png?raw=true)
+![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/76956565e31f1c12f3e27b58800d9bd9cd19dd3d/assets/img/figures_svg/figura_4.svg)
 
 
 
