@@ -1,4 +1,8 @@
 ## MINEDUC  
+
+[🇪🇸 Versión en Español](../MINEDUC.html)
+
+
 The data comes from the Ministry of Education and was requested via email (estadisticas@mineduc.cl) in February 2024. Details on variable construction and figure generation can be found in the following [code repository](https://github.com/NucleoMIGRA/migra/tree/main/eng/MINEDUC).  
 
 **Notes:**  
