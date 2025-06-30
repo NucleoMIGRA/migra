@@ -1,4 +1,5 @@
 ## PDI
+[🗣️ English version](./engmd/PDI.html)
 
 Los datos provienen de la Policía de Investigaciones de Chile, deben ser solicitados por transparencia, los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/PDI) disponible en este repositorio.
 
