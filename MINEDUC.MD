@@ -1,4 +1,7 @@
 ## MINEDUC
+
+[🗣️ English version](./engmd/MINEDUC.html)
+
 Los datos provienen del Ministerio de Educación, fueron solicitados vía mail (estadisticas@mineduc.cl) en febrero de 2024, los detalles de la construcción de variables y figuras se encuentra en el [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/MINEDUC) disponible en este repositorio.
 
 **Notas:**
