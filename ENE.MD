@@ -1,4 +1,7 @@
 ## ENE
+
+[🗣️ English version](./engmd/ENE.html)
+
 Los datos provienen del Instituto Nacional de Estadísticas, fueron descargados de su [página web](https://www.ine.gob.cl/estadisticas/sociales/mercado-laboral/ocupacion-y-desocupacion), los detalles de la construcción de variables y figuras se encuentra en el siguiente [código](https://github.com/NucleoMIGRA/Plataforma_privado/tree/main/bases/ENE) disponible en este repositorio.
 
 **Notas:**
