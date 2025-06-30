@@ -31,7 +31,7 @@ This repository compiles publicly available datasets to empirically characterize
 ![image](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_2.svg)
 
 **Figure 3:** Migrant Population Pyramid (2017)  
-![piramide_extranjero]()
+![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/engmd/index/figures_png/piramide_extranjero.png?raw=true)
 
 **Figure 4:** Distribution of People Living in Overcrowded Conditions  
 ![fig_3](https://raw.githubusercontent.com/NucleoMIGRA/migra/9e54219e13a373051a26042a8e0adbfbabe4aace/eng_md/index/figures_svg/figura_4.svg)
