@@ -1,39 +1,51 @@
----
-layout: default
----
+# DataMigra — sitio web
 
-# Repositorio  
-[🗣️ English version](./engmd/index.html)
-<div style="text-align: justify;">
-El siguiente repositorio recopila información de bases de datos de naturaleza abierta con el objetivo de caracterizar empíricamente el fenómeno de la migración internacional en Chile. Las estadísticas se encuentran divididas por tipo de base de datos. Para citar correctamente la evidencia del repositorio, ver ¿Cómo citar?
-</div>
+Código del sitio publicado en **https://www.datamigra.cl**
 
-<br>
+DataMigra es la plataforma pública del Núcleo Milenio MIGRA para consultar
+estadísticas oficiales sobre migración en Chile: fuentes de datos, figuras y
+materiales reutilizables.
 
-**Bases:**
-1. [Servicio Nacional de Migraciones (SNM)](./SNM.MD)
-2. [Policía de Investigaciones (PDI)](./PDI.MD)
-3. [CENSO 2017](./CENSO.MD)
-4. [Encuesta de Caracterización Socioeconómica Nacional (CASEN)](./CASEN.MD)
-5. [Ministerio de Educación (MINEDUC)](./MINEDUC.MD)
-6. [Encuesta Nacional de Empleo (ENE)](./ENE.MD)
-7. [Encuesta de Presupuestos Familiares (EPF)](./EPF.md)
+Este repositorio contiene **únicamente el sitio web** (HTML, CSS, JavaScript y
+las figuras publicadas). El código reproducible que genera los indicadores, las
+tablas espejo y los policy briefs viven en el repositorio
+[NucleoMIGRA/plataformaMIGRA](https://github.com/NucleoMIGRA/plataformaMIGRA).
 
-[¿Cómo citar?](./citation.MD)
+## Estructura
 
-## Figuras destacadas:
+```
+index.html          Portada (español)
+acerca.html         Acerca de
+figuras.html        Catálogo completo de figuras
+github.html         Repositorio: código, tablas, figuras y cómo citar
+fuentes/            Ficha por fuente de datos (CASEN, SNM, EPE/INE-SNM,
+                    Censo, MINEDUC, ENE, EPF, PDI)
+en/                 Versión en inglés, con la misma estructura
+assets/css/         Hoja de estilos
+assets/js/          Catálogo de figuras, renderizadores, lightbox y
+                    selector de idioma
+assets/figures/     126 figuras publicadas, agrupadas por fuente
+assets/img/         Logo, imágenes y favicon
+CNAME               Dominio del sitio
+sitemap.xml         Mapa del sitio para buscadores
+```
 
-**Figura 1:** Distribución de Estudiantes Migrantes por Nacionalidad (Año 2023)  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_1.png?raw=true)
+Las direcciones en mayúsculas de la raíz (`CASEN.html`, `SNM.html`, …) y la
+carpeta `engmd/` son redirecciones que conservan las URL de la versión anterior
+del sitio y llevan a la página equivalente en la versión actual.
 
-**Figura 2:** Tasa de Aprobación de Residencia por Tipo de Residencia  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_2.png?raw=true)
+## Idiomas
 
-**Figura 3:** Pirámide Poblacional Migrantes (Año 2017)  
-![piramide_extranjero](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/piramide_extranjero.png?raw=true)
+El sitio está disponible en español (raíz) e inglés (`/en/`). El selector ES/EN
+del encabezado mantiene la página en la que está el visitante al cambiar de
+idioma.
 
-**Figura 4:** Distribución de Personas en Estado de Hacinamiento  
-![fig_3](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_4.png?raw=true)
+## Publicación
 
-**Figura 5:** Horas Semanales Promedio Trabajadas  
-![image](https://github.com/NucleoMIGRA/migra/blob/main/assets/img/figura_5.png?raw=true)
+El sitio se sirve con GitHub Pages desde la rama `main`. El archivo `CNAME`
+mantiene el dominio `www.datamigra.cl` apuntando a este repositorio: **no debe
+eliminarse ni modificarse**.
+
+## Licencia
+
+Contenido y código bajo [CC0 1.0 Universal](LICENSE).
