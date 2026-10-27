@@ -1051,3 +1051,13 @@ body.lightbox-open {
     font-size: 1.6rem;
   }
 }
+/* Mobile: hide the header when scrolling down */
+@media (max-width: 768px) {
+  .site-header {
+    transition: transform 0.25s ease;
+  }
+
+  .site-header.header-hidden {
+    transform: translateY(-100%);
+  }
+}
