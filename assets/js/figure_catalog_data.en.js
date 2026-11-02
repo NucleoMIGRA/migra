@@ -38,8 +38,8 @@ window.dataMigraFigureCatalog = {
           { number: "15", src: "assets/figures/casen/figura_15_educ_sup_25_50.png", title: "Higher education among people aged 25 to 50", meta: "Comparison between migrant and Chilean populations in prime working ages.", caption: "Source: Authors' calculations using CASEN data." },
           { number: "16", src: "assets/figures/casen/figura_16_piramide_migrantes_2024.png", title: "Migrant population pyramid", meta: "Age and sex structure of the migrant population in the latest available year.", caption: "Source: Authors' calculations using CASEN data." },
           { number: "17", src: "assets/figures/casen/figura_17_piramide_nativos_2024.png", title: "Chilean population pyramid", meta: "Age and sex structure of the Chilean population in the latest available year.", caption: "Source: Authors' calculations using CASEN data." },
-          { number: "18", src: "assets/figures/casen/figura_18_perfil_socioeconomico_2024.png", title: "Comparative profile of socioeconomic integration", meta: "Higher education, labor-force participation, and employment contracts among migrant and Chilean workers.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data." },
-          { number: "19", src: "assets/figures/casen/figura_19_condiciones_vida_2024.png", title: "Living conditions and territory", meta: "Gaps in multidimensional poverty, overcrowding, and rural residence.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data." },
+          { number: "18", src: "assets/figures/casen/figura_18_perfil_socioeconomico_2024.png", title: "Comparative profile of socioeconomic integration", meta: "Higher education, labor-force participation, and employment contracts among migrant and Chilean workers.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data. Cases without a migration-status classification are excluded; estimates for each group retain their valid denominator." },
+          { number: "19", src: "assets/figures/casen/figura_19_condiciones_vida_2024.png", title: "Living conditions and territory", meta: "Gaps in multidimensional poverty, overcrowding, and rural residence.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data. Cases without a migration-status classification are excluded; estimates for each group retain their valid denominator." },
           { number: "20", src: "assets/figures/casen/figura_20_regiones_migrantes_2024.png", title: "Regions with the largest migrant populations", meta: "Estimated number of migrants and share of the regional population.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data." },
           { number: "21", src: "assets/figures/casen/figura_21_piramide_migrantes_2024.png", title: "Sex and age structure of the migrant population", meta: "Population pyramid of the migrant population using survey weights.", caption: "Source: Authors' calculations using the harmonized 2024 CASEN data." }
         ]
@@ -166,14 +166,11 @@ window.dataMigraFigureCatalog = {
         id: "tamano-territorio",
         label: "Population size and territorial distribution",
         title: "Population size and territorial distribution",
-        description: "The section begins with the size of the population born outside Chile and its distribution across regions and municipalities.",
+        description: "Population size and territorial distribution of people born outside Chile in the 2024 Census.",
         caption: "Source: Authors' calculations using official 2017 and 2024 Census microdata.",
         figures: [
-          { number: "1", src: "assets/figures/censo/figura_01_region_migrantes_2017_2024.png", title: "Population born outside Chile by region", meta: "Comparison of the population born outside Chile by region across both censuses." },
-          { number: "2", src: "assets/figures/censo/figura_02_share_migrantes_region_2017_2024.png", title: "Regional share of the population born outside Chile", meta: "Population born outside Chile as a share of each region's population in 2017 and 2024." },
-          { number: "3", src: "assets/figures/censo/figura_03_cambio_share_region_2017_2024.png", title: "Change in the migrant share by region", meta: "Change between 2017 and 2024 in the share of each region's population born outside Chile." },
-          { number: "4", src: "assets/figures/censo/figura_04_region_migrantes_2024.png", title: "Migrant population by region, 2024", meta: "Regional distribution of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "5", src: "assets/figures/censo/figura_05_top_comunas_2024.png", title: "Municipalities with the largest migrant populations, 2024", meta: "Municipal ranking by number of migrants in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." }
+          { number: "1", src: "assets/figures/censo/figura_01_region_migrantes_2024.png", title: "Migrant population by region, 2024", meta: "Regional distribution of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "2", src: "assets/figures/censo/figura_02_top_comunas_2024.png", title: "Municipalities with the largest migrant populations, 2024", meta: "Municipal ranking by number of migrants in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." }
         ]
       },
       {
@@ -182,12 +179,12 @@ window.dataMigraFigureCatalog = {
         title: "Demographic profile",
         description: "It then examines sex, age, and period of arrival to describe the recent composition of the migrant population.",
         figures: [
-          { number: "6", src: "assets/figures/censo/figura_06_piramide_migrante_2024.png", title: "Migrant population pyramid, 2024", meta: "Sex and age structure of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "7", src: "assets/figures/censo/figura_07_sexo_migrantes_2024.png", title: "Sex composition of the migrant population, 2024", meta: "Sex composition of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "8", src: "assets/figures/censo/figura_08_estructura_etaria_migrante_2024.png", title: "Age structure, 2024", meta: "Broad age groups of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "9", src: "assets/figures/censo/figura_09_periodo_llegada_2024.png", title: "Period of arrival in Chile", meta: "Arrival cohorts observed in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "10", src: "assets/figures/censo/figura_10_sexo_migrantes_2017_2024.png", title: "Sex composition of the migrant population", meta: "Comparison between 2017 and 2024." },
-          { number: "11", src: "assets/figures/censo/figura_11_estructura_etaria_migrante_2017_2024.png", title: "Age structure of the migrant population", meta: "Comparison between 2017 and 2024." }
+          { number: "3", src: "assets/figures/censo/figura_03_piramide_migrante_2024.png", title: "Migrant population pyramid, 2024", meta: "Sex and age structure of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "4", src: "assets/figures/censo/figura_04_sexo_migrantes_2024.png", title: "Sex composition of the migrant population, 2024", meta: "Sex composition of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "5", src: "assets/figures/censo/figura_05_estructura_etaria_migrante_2024.png", title: "Age structure, 2024", meta: "Broad age groups of the population born outside Chile in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "6", src: "assets/figures/censo/figura_06_periodo_llegada_2024.png", title: "Period of arrival in Chile", meta: "Arrival cohorts observed in 2024.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "7", src: "assets/figures/censo/figura_07_sexo_migrantes_2017_2024.png", title: "Sex composition of the migrant population", meta: "Comparison between 2017 and 2024." },
+          { number: "8", src: "assets/figures/censo/figura_08_estructura_etaria_migrante_2017_2024.png", title: "Age structure of the migrant population", meta: "Comparison between 2017 and 2024." }
         ]
       },
       {
@@ -196,15 +193,15 @@ window.dataMigraFigureCatalog = {
         title: "Human capital and households",
         description: "Education, households, and family ties provide evidence on gaps and the social composition of the migrant population.",
         figures: [
-          { number: "12", src: "assets/figures/censo/figura_12_escolaridad_promedio_25_50.png", title: "Average years of schooling, ages 25-50", meta: "Comparison by place of birth." },
-          { number: "13", src: "assets/figures/censo/figura_13_educacion_superior_25_50.png", title: "Higher education, ages 25-50", meta: "Comparison by place of birth." },
-          { number: "14", src: "assets/figures/censo/figura_14_escolaridad_25_50_2024.png", title: "Years of schooling among ages 25-50, 2024", meta: "Average years of schooling.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "15", src: "assets/figures/censo/figura_15_educacion_superior_2024.png", title: "Higher education, 2024", meta: "People aged 25 to 50 with higher education.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
-          { number: "16", src: "assets/figures/censo/figura_16_hogares_con_migrantes.png", title: "Households with at least one migrant member", meta: "Change between 2017 and 2024." },
-          { number: "17", src: "assets/figures/censo/figura_17_jefatura_hogar_migrante.png", title: "Migrant-headed households", meta: "Change between 2017 and 2024." },
-          { number: "18", src: "assets/figures/censo/figura_18_hijos_promedio_mujeres_18_50.png", title: "Average number of children among women aged 18 to 50", meta: "Comparison by place of birth." },
-          { number: "19", src: "assets/figures/censo/figura_19_hijo_nacido_en_chile_2017.png", title: "Women with a child born in Chile", meta: "Observed share among migrant women in the 2017 Census.", caption: "Source: Authors' calculations using official 2017 Census microdata." },
-          { number: "20", src: "assets/figures/censo/figura_20_urbano_rural_2017_2024.png", title: "Urban-rural distribution", meta: "Comparison by place of birth." }
+          { number: "9", src: "assets/figures/censo/figura_09_escolaridad_promedio_25_50.png", title: "Average years of schooling, ages 25-50", meta: "Comparison by place of birth." },
+          { number: "10", src: "assets/figures/censo/figura_10_educacion_superior_25_50.png", title: "Higher education, ages 25-50", meta: "Comparison by place of birth." },
+          { number: "11", src: "assets/figures/censo/figura_11_escolaridad_25_50_2024.png", title: "Years of schooling among ages 25-50, 2024", meta: "Average years of schooling.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "12", src: "assets/figures/censo/figura_12_educacion_superior_2024.png", title: "Higher education, 2024", meta: "People aged 25 to 50 with higher education.", caption: "Source: Authors' calculations using official 2024 Census microdata." },
+          { number: "13", src: "assets/figures/censo/figura_13_hogares_con_migrantes.png", title: "Households with at least one migrant member", meta: "Change between 2017 and 2024." },
+          { number: "14", src: "assets/figures/censo/figura_14_jefatura_hogar_migrante.png", title: "Migrant-headed households", meta: "Change between 2017 and 2024." },
+          { number: "15", src: "assets/figures/censo/figura_15_hijos_promedio_mujeres_18_50.png", title: "Average number of children among women aged 18 to 50", meta: "Comparison by place of birth." },
+          { number: "16", src: "assets/figures/censo/figura_16_hijo_nacido_en_chile_2017.png", title: "Women with a child born in Chile", meta: "Observed share among migrant women in the 2017 Census.", caption: "Source: Authors' calculations using official 2017 Census microdata." },
+          { number: "17", src: "assets/figures/censo/figura_17_urbano_rural_2017_2024.png", title: "Urban-rural distribution", meta: "Comparison by place of birth." }
         ]
       },
       {
@@ -213,9 +210,8 @@ window.dataMigraFigureCatalog = {
         title: "Countries of birth",
         description: "The section then presents the countries of birth of the population born outside Chile in both censuses and in each census snapshot.",
         figures: [
-          { number: "21", src: "assets/figures/censo/figura_21_principales_paises_nacimiento.png", title: "Main countries of birth", meta: "Comparison between 2017 and 2024." },
-          { number: "22", src: "assets/figures/censo/figura_22_principales_paises_2017.png", title: "Main countries of birth, 2017", meta: "Countries of birth in the 2017 Census.", caption: "Source: Authors' calculations using official 2017 Census microdata." },
-          { number: "23", src: "assets/figures/censo/figura_23_principales_paises_2024.png", title: "Main countries of birth, 2024", meta: "Countries of birth in the 2024 Census.", caption: "Source: Authors' calculations using official 2024 Census microdata." }
+          { number: "18", src: "assets/figures/censo/figura_18_principales_paises_2017.png", title: "Main countries of birth, 2017", meta: "Countries of birth in the 2017 Census.", caption: "Source: Authors' calculations using official 2017 Census microdata." },
+          { number: "19", src: "assets/figures/censo/figura_19_principales_paises_2024.png", title: "Main countries of birth, 2024", meta: "Countries of birth in the 2024 Census.", caption: "Source: Authors' calculations using official 2024 Census microdata." }
         ]
       },
       {
@@ -225,9 +221,9 @@ window.dataMigraFigureCatalog = {
         description: "The section closes with figures specific to the 2017 Census, completing the longer-term historical comparison.",
         caption: "Source: Authors' calculations using official 2017 Census microdata.",
         figures: [
-          { number: "24", src: "assets/figures/censo/figura_24_piramide_migrante_2017.png", title: "Migrant population pyramid, 2017", meta: "Sex and age structure of the migrant population in 2017." },
-          { number: "25", src: "assets/figures/censo/figura_25_escolaridad_25_50_2017.png", title: "Years of schooling among ages 25-50, 2017", meta: "Average years of schooling." },
-          { number: "26", src: "assets/figures/censo/figura_26_educacion_superior_2017.png", title: "Higher education, 2017", meta: "People aged 25 to 50 with higher education." }
+          { number: "20", src: "assets/figures/censo/figura_20_piramide_migrante_2017.png", title: "Migrant population pyramid, 2017", meta: "Sex and age structure of the migrant population in 2017." },
+          { number: "21", src: "assets/figures/censo/figura_21_escolaridad_25_50_2017.png", title: "Years of schooling among ages 25-50, 2017", meta: "Average years of schooling." },
+          { number: "22", src: "assets/figures/censo/figura_22_educacion_superior_2017.png", title: "Higher education, 2017", meta: "People aged 25 to 50 with higher education." }
         ]
       }
     ]
